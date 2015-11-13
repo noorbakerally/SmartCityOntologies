@@ -1,0 +1,2232 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY sc "http://schema.org/" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY geo "http://www.geonames.org/ontology/ontology_v3.1.rdf#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#"
+     xml:base="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl"
+     xmlns:sc="http://schema.org/"
+     xmlns:geo="http://www.geonames.org/ontology/ontology_v3.1.rdf#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl">
+        <rdfs:comment xml:lang="en">City Anatomy Ontology for the City Protocol Society. Based on the CPA-I-001_Anatomy</rdfs:comment>
+        <owl:versionInfo xml:lang="en">Version 0.5 2015-02-20</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPAContext -->
+
+    <owl:AnnotationProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPAContext">
+        <rdfs:subPropertyOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#referenceToCityProtocolAgreement"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPAPage -->
+
+    <owl:AnnotationProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPAPage">
+        <rdfs:subPropertyOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#referenceToCityProtocolAgreement"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPARef -->
+
+    <owl:AnnotationProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPARef">
+        <rdfs:subPropertyOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#referenceToCityProtocolAgreement"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPS_Definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPS_Definition"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Wordnet_definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Wordnet_definition"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#referenceToCityProtocolAgreement -->
+
+    <owl:AnnotationProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#referenceToCityProtocolAgreement"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#evaluates -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#evaluates"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#governs -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#governs"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasConstituent -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasConstituent">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasCost -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasCost"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasElement -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasElement">
+        <owl:inverseOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isElementOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasGranularityLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasGranularityLevel"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasImpact -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasImpact"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasInteractionWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasInteractionWith">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasLayer -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasLayer"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasOwnership -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasOwnership"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasProperty">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasPurpose -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasPurpose"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasRole"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasType"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasUse -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasUse"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasValue -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasValue"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#implements -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#implements">
+        <owl:inverseOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isImplementedBy"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isAppointed -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isAppointed"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isConstituent -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isConstituent">
+        <owl:inverseOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasConstituent"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isRelatedTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isDerivedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isDerivedFrom"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isElected -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isElected"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isElementOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isElementOf"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isFormedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isFormedBy"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isImplementedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isImplementedBy"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isMeasuredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isMeasuredBy"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isOrganizedAs -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isOrganizedAs">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isRelatedTo">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isSupportedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isSupportedBy"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#manages -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#manages"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#measures -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#measures"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#measuresProgressTowards -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#measuresProgressTowards">
+        <rdfs:subPropertyOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#measures"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#performs -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#performs"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#ranks -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#ranks"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#requires -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#requires"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#serves -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#serves"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#sets -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#sets">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#transports -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#transports"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#uses -->
+
+    <owl:ObjectProperty rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#uses"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://live.dbpedia.org/page/Telecommunications_network -->
+
+    <owl:Class rdf:about="http://live.dbpedia.org/page/Telecommunications_network">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Communication__network"/>
+    </owl:Class>
+    
+
+
+    <!-- http://live.dbpedia.org/page/Cycle_(graph_theory) -->
+
+    <owl:Class rdf:about="http://live.dbpedia.org/page/Cycle_(graph_theory)">
+        <owl:equivalentClass rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Cycle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/AdministrativeArea -->
+
+    <owl:Class rdf:about="&sc;AdministrativeArea">
+        <rdfs:subClassOf rdf:resource="&sc;Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Person -->
+
+    <owl:Class rdf:about="&sc;Person">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasRole"/>
+                <owl:someValuesFrom rdf:resource="&sc;Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isRelatedTo"/>
+                <owl:someValuesFrom rdf:resource="&sc;Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Place -->
+
+    <owl:Class rdf:about="&sc;Place">
+        <rdfs:comment xml:lang="en">Entities that have a somewhat fixed, physical extension.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Residence -->
+
+    <owl:Class rdf:about="&sc;Residence">
+        <rdfs:subClassOf rdf:resource="&sc;Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Role -->
+
+    <owl:Class rdf:about="&sc;Role">
+        <rdfs:isDefinedBy>Represents additional information about a relationship or property. For example a Role can be used to say that a &apos;member&apos; role linking some SportsTeam to a player occurred during a particular time period. Or that a Person&apos;s &apos;actor&apos; role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like &apos;member&apos; or &apos;actor&apos;.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Administrative_buildomain_element -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Administrative_buildomain_element">
+        <rdfs:subClassOf rdf:resource="&sc;AdministrativeArea"/>
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Build_domain_element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Air_compartment -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Air_compartment">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Environmental_compartment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Block -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Block">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Physical_build_domain_element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Build_domain -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Build_domain">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Structure_layer_component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#performs"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Urban_function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Build_domain_element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <CPAPage rdf:datatype="&xsd;integer">8</CPAPage>
+        <CPARef>CPA-I 001</CPARef>
+        <CPS_Definition>The built domain, public and private,includes the surrounding public space. The built domain has two distinct and essential characteristics in relation to urbanism (i.e., urban life and organization): (i) It is the main expression of the material culture of a city (i.e., it contains most physical artifacts created by people), and (ii) it fundamentally is multiscale in nature (i.e., scale is an intrinsic characteristic of the built environment)</CPS_Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Build_domain_element -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Build_domain_element">
+        <rdfs:subClassOf rdf:resource="&sc;Place"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasCost"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Cost"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#performs"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Urban_function"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasOwnership"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Ownership"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasUse"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Use"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Building -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Building">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Physical_build_domain_element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPS_City_indicator -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPS_City_indicator">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_indicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPS_Key_objective -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPS_Key_objective">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_objective"/>
+        <CPS_Definition>One of the seven key objectives defined by the CPS</CPS_Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Citizen -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Citizen">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Citizens -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Citizens">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Society_layer_component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Citizen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isOrganizedAs"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Administrative_buildomain_element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CityOS -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CityOS">
+        <owl:equivalentClass rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_operating_system"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isElementOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Information_platform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_Organization -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_Organization"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#System"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy_subsystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <CPS_Definition>The City Anatomy, an analogy to the human anatomy and its dynamic physiology, is an organizing framework for the City Protocol. It creates a foundation upon which to build a collaborative platform and tools to support effective city governance, evaluation and transformation. It offers a common language describing the city ecosystem as three key system elements: a set of physical structures (Structure); the living entities that make up a city’s society (Society); and the flow of interactions between them (Interactions).</CPS_Definition>
+        <CPARef>CPA-I 001</CPARef>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy_layer -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy_layer">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy_layer_component -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy_layer_component">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy_subsystem -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy_subsystem">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Subsystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isConstituent"/>
+                <owl:allValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasLayer"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy_layer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_application -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_application">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isElementOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Information_platform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_energy_management -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_energy_management">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_management"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_evaluation_process -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_evaluation_process">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#sets"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Transformational_project"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#measuresProgressTowards"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_vision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#evaluates"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_maturity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <CPS_Definition>City evaluation defines the methodologies and actions needed to answer the following question:
+What should be measured and evaluated in the city to help identify and prioritize needs to make the city to progress according to its vision?</CPS_Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_formal_organization -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_formal_organization">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_governance_process -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_governance_process">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#serves"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_vision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#requires"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Leadership"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#sets"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_priority"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isSupportedBy"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Law"/>
+                            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Policy"/>
+                            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Regulation"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#governs"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_Organization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_indicator -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_indicator">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Indicator"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isElementOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Information_platform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#measuresProgressTowards"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_objective"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isRelatedTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_informal_organization -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_informal_organization">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_information_portal -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_information_portal">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isRelatedTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Information"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isElementOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Information_platform"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_management -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_management">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_governance_process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isRelatedTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_objective"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_maturity -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_maturity"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_objective -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_objective">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isRelatedTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_vision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_operating_system -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_operating_system"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_operation -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_operation">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_governance_process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_priority -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_priority">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isRelatedTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_vision"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#ranks"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_objective"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_process -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_process">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_role -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_role">
+        <rdfs:subClassOf rdf:resource="&sc;Role"/>
+        <rdfs:comment>Role of a person in a city</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_transformation_process -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_transformation_process">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isRelatedTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Transformational_project"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_vision -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_vision">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isFormedBy"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_objective"/>
+                            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_priority"/>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Club -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Club">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Social_organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Communication__network -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Communication__network">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Network"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#transports"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Community -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Community">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Social_organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Consumable_good -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Consumable_good">
+        <owl:equivalentClass rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Nondurable_good"/>
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Good"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Cost -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Cost"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Culture -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Culture">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Interactions_layer_component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Cycle -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Cycle"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Data -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Data">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Transportable_thing"/>
+        <rdfs:isDefinedBy xml:lang="en">Data as an abstract concept can be viewed as the lowest level of abstraction, from which information and then knowledge are derived.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#District -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#District">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Administrative_buildomain_element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Durable_good -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Durable_good">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Good"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Economic_impact -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Economic_impact">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Impact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Economy -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Economy">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Interactions_layer_component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Education -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Education">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Functions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Electricity -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Electricity">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Energy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Energy -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Energy">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Transportable_thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Energy_cycle -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Energy_cycle">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Cycle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Entrepreneurship -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Entrepreneurship">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPS_Key_objective"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Environment -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Environment">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Structure_layer_component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Environmental_compartment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Represents the physical and geographic setting of the city, including the natural environment (“nature”). It is formed by the three basic elements, air, earth and water, interacting dynamically in a seasonally dependable way.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Environmental_compartment -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Environmental_compartment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Environmental_impact -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Environmental_impact">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Impact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Equity -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Equity">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPS_Key_objective"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Family -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Family">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Social_organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Flow -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Flow">
+        <rdfs:isDefinedBy xml:lang="en">Trasnports some transportable thing in a given amount of time</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Food -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Food">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Nondurable_good"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Functions -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Functions">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Interactions_layer_component"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Good -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Good">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Matter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Government -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Government">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Society_layer_component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#manages"/>
+                <owl:someValuesFrom rdf:resource="https://schema.org/GovernmentOrganization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isAppointed"/>
+                        <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Citizens"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isElected"/>
+                        <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Citizens"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Health -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Health">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Functions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#House -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#House">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Physical_build_domain_element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Impact -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Impact"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Indicator -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Indicator">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasPurpose"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Purpose"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isDerivedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Raw_data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#measures"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Measurable_thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isRelatedTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Information -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Information">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isDerivedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Data"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Information_flow -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Information_flow">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Flow"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#transports"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Information"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Information_platform -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Information_platform">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Interactions_layer_component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasElement"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_indicator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasElement"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_operating_system"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasElement"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_application"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasElement"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_information_portal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Infraestructure -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Infraestructure">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Structure_layer_component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#transports"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Transportable_thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasElement"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Cycle"/>
+                            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Network"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <CPAPage rdf:datatype="&xsd;integer">4</CPAPage>
+        <CPARef rdf:datatype="&xsd;string">CPA-I 001</CPARef>
+        <rdfs:comment xml:lang="en">The second  layer within the anatomy structure subsystem comprises the infrastructures, i.e., connective structures that enable people to get the resources they need, especially from the environment, and bring them to the city or that enable the flows or cycles inside the city itself.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Interaction_indicator -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Interaction_indicator">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPS_City_indicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Interactions_layer_component -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Interactions_layer_component">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy_layer_component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isConstituent"/>
+                <owl:allValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_of_interactions"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Interactions_subsystem -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Interactions_subsystem">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy_subsystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasLayer"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_of_interactions"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Internet -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Internet">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Communication__network"/>
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#System"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Investments -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Investments">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPS_Key_objective"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Knowledge -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Knowledge">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isDerivedFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Information"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Law -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Law"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Each of the individual components of a subsystem. Each layer is formed by a number of layer components.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_component -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_component">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_of_interactions -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_of_interactions">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy_layer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Interactions_layer_component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_of_society -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_of_society">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy_layer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Society_layer_component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_of_structure -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_of_structure">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy_layer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Structure_layer_component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Leadership -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Leadership"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Leisure -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Leisure">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Functions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Living -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Living">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Functions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Maintenance_cost -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Maintenance_cost">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Cost"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Man_made_flow -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Man_made_flow">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Flow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Matter -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Matter">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Transportable_thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Matter_cycle -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Matter_cycle">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Cycle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Measurable_thing -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Measurable_thing">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isMeasuredBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Indicator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A &quot;measurable thing&quot; has properties that can be measured (either qualitatively or quantitatively) by some indicator</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Metropolis -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Metropolis">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Administrative_buildomain_element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Mobility -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Mobility">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPS_Key_objective"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Mobility_network -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Mobility_network">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Network"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Natural_flow -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Natural_flow">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Flow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Nature_cycle -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Nature_cycle">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Cycle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Neighborhood -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Neighborhood">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Physical_build_domain_element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Network -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Network">
+        <Wordnet_definition>S: (n) Network: an interconnected system of things or people</Wordnet_definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Nondurable_good -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Nondurable_good">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Good"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Operational_cost -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Operational_cost">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Cost"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Ownership -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Ownership"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Performing_arts -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Performing_arts">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Functions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Physical_build_domain_element -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Physical_build_domain_element">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Build_domain_element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Pipeline -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Pipeline">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Man_made_flow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Policy -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Policy"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Primary_data -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Primary_data">
+        <owl:equivalentClass rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Raw_data"/>
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Private_organization -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Private_organization">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Private_ownership -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Private_ownership">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Ownership"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Private_use -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Private_use">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Use"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Process -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Process">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasPurpose"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Purpose"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Processed_data -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Processed_data">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Data"/>
+        <owl:disjointWith rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Raw_data"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Production_cost -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Production_cost">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Cost"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Project -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Project"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Property -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Property">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasType"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Property_type"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Property_value"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Property_type -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Property_type"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Property_value -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Property_value"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Public_organization -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Public_organization">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Public_ownership -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Public_ownership">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Ownership"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Public_space -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Public_space">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Build_domain_element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasUse"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Public_use"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <CPAPage rdf:datatype="&xsd;integer">9</CPAPage>
+        <CPS_Definition>The public space is not just a question of anatomy and infrastructure. It has intrinsic qualitative values. It has a physiological function since this public built space is where infrastructures meet the built domain of buildings, neighborhoods, etc., and also the space shared by people to meet, relax and/or to carry out activities individually or in community.</CPS_Definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Public_use -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Public_use">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Use"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Purpose -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Purpose"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Qualitative_property -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Qualitative_property">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Property_type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Quality_of_life -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Quality_of_life">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPS_Key_objective"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Quantitative_property -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Quantitative_property">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Property_type"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Raw_data -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Raw_data">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Data"/>
+        <rdfs:isDefinedBy xml:lang="en">Raw data (also known as primary data) is a term for data collected from a source. Raw data has not been subjected to processing or any other manipulation, and are also referred to as primary data.
+
+http://en.wikipedia.org/wiki/Raw_data</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Regulation -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Regulation"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Resident -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Resident">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Citizen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Resilience -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Resilience">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPS_Key_objective"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#River -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#River">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Natural_flow"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Scale -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Scale"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Security -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Security">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Functions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Self-sufficiency -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Self-sufficiency">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPS_Key_objective"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Shopping -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Shopping">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Functions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Social_impact -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Social_impact">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Impact"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Social_organization -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Social_organization">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Society_indicator -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Society_indicator">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPS_City_indicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Society_layer_component -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Society_layer_component">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy_layer_component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#performs"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Functions"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isConstituent"/>
+                <owl:allValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_of_society"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Society_subsystem -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Society_subsystem">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy_subsystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasLayer"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_of_society"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Soil_compartment -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Soil_compartment">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Environmental_compartment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Sports -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Sports">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Functions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Structure_indicator -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Structure_indicator">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#CPS_City_indicator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Structure_layer_component -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Structure_layer_component">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy_layer_component"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isConstituent"/>
+                <owl:allValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_of_structure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Structure_subsystem -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Structure_subsystem">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_anatomy_subsystem"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasLayer"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_of_structure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Subsystem -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Subsystem">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#System"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasLayer"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#System -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#System">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasInteractionWith"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#System"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasProperty"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#hasConstituent"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Subsystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <CPARef>CPA-I 001</CPARef>
+        <CPAPage>7</CPAPage>
+        <rdfs:comment>The system class denotes all kinds of systems, which may be physical or abstract. The notion of a system is defined by the following axioms, which summarize the numerous definitions of the systems concept given in the literature (e.g., von Bertalanffy, 1968; Bunge, 1979; Patzak, 1982; Klir, 1985; Gigch, 1991):
+(1) A system interacts with, or is related to, other systems.
+(2) The constituents of a system are again systems.
+(3) A system is separable from its environment by means of a conceptual or physical boundary.
+(4) A system has properties which may take different values.
+(5) The properties of a system can be explicitly declared or inferred from the properties of its
+constituent subsystems.</rdfs:comment>
+        <CPAContext>A city is a system of systems and interactions, an arrangement of, and set of relationships between, multiple layers of a relatively large and permanent human settlement, with an administrative and legal status supported by local laws, and one that is recognized worldwide.</CPAContext>
+        <Wordnet_definition>S: (n) system, scheme (a group of independent but interrelated elements comprising a unified whole) </Wordnet_definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Thing_connected_to_Internet -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Thing_connected_to_Internet">
+        <rdfs:isDefinedBy xml:lang="en">This is the basic component of the Internet of Things (IoT)</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Tourist -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Tourist">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Visitor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Transformational_objectives -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Transformational_objectives">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_objective"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isRelatedTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Transformational_project"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Transformational_project -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Transformational_project">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Project"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isMeasuredBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_indicator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isRelatedTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_evaluation_process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#isImplementedBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#City_transformation_process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Transportable_thing -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Transportable_thing">
+        <rdfs:comment>Thing that can be transported by some infrastructure (i.e., cycle or network)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Urban_function -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Urban_function">
+        <rdfs:isDefinedBy>The FUNCTION of an area is its reason, job or purpose for being.  In urban areas this relates to the purpose of a land use for residential areas, recreation, industry etc. Functions can change over time.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Use -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Use"/>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Visitor -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Visitor">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Citizen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Water_compartment -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Water_compartment">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Environmental_compartment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Water_cycle -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Water_cycle">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Cycle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Working -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Working">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Functions"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#https://schema.org/Corporation -->
+
+    <owl:Class rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#https://schema.org/Corporation">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Private_organization"/>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/GovernmentOrganization -->
+
+    <owl:Class rdf:about="https://schema.org/GovernmentOrganization">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Public_organization"/>
+        <rdfs:isDefinedBy>A governmental organization or agency.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/NGO -->
+
+    <owl:Class rdf:about="https://schema.org/NGO">
+        <rdfs:subClassOf rdf:resource="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Social_organization"/>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Organization -->
+
+    <owl:Class rdf:about="https://schema.org/Organization">
+        <rdfs:isDefinedBy>An organization such as a school, NGO, corporation, club, etc.</rdfs:isDefinedBy>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="&owl;Thing">
+        <rdfs:comment xml:lang="en">Property is a characteristic of some things that has type and value.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Air_compartment"/>
+            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Soil_compartment"/>
+            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Water_compartment"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_of_interactions"/>
+            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_of_society"/>
+            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Layer_of_structure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Interactions_layer_component"/>
+            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Society_layer_component"/>
+            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Structure_layer_component"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Interactions_subsystem"/>
+            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Society_subsystem"/>
+            <rdf:Description rdf:about="http://www.biocenit.cat/ontologies/city_anatomy/CA.owl#Structure_subsystem"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

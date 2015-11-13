@@ -1,0 +1,2198 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY TrafficDanger "http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#" >
+    <!ENTITY TrafficDanger2 "http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#30319" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:TrafficDanger="http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:TrafficDanger2="&TrafficDanger;30319"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo xml:lang="en">1.0</owl:versionInfo>
+        <dc:date xml:lang="en"
+            >25th August 2009</dc:date>
+        <rdfs:comment xml:lang="en"
+            >An example ontology defining traffic dangers, based on specified traffic conditions and location.</rdfs:comment>
+        <dc:language xml:lang="en">English</dc:language>
+        <dc:creator xml:lang="en"
+            >Jarek Waliszko, vy_cma@yahoo.com</dc:creator>
+        <dc:title xml:lang="en"
+            >Traffic Danger Ontology</dc:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="&dc;source"/>
+    <owl:AnnotationProperty rdf:about="&dc;title"/>
+    <owl:AnnotationProperty rdf:about="&dc;language"/>
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasAirPressureCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasAirPressureCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasAirPressureCondition</rdfs:label>
+        <rdfs:range rdf:resource="#AirPressureCondition"/>
+        <rdfs:subPropertyOf rdf:resource="#hasWeatherCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasAirTemperatureCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasAirTemperatureCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasAirTemperatureCondition</rdfs:label>
+        <rdfs:range rdf:resource="#AirTemperatureCondition"/>
+        <rdfs:subPropertyOf rdf:resource="#hasWeatherCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasAreaCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasAreaCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasAreaCondition</rdfs:label>
+        <rdfs:range rdf:resource="#AreaCondition"/>
+        <rdfs:subPropertyOf rdf:resource="#hasTrafficCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasBuildingMaterialCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasBuildingMaterialCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasBuildingMaterialCondition</rdfs:label>
+        <rdfs:range rdf:resource="#BuildingMaterialCondition"/>
+        <rdfs:subPropertyOf rdf:resource="#hasRoadConstructionCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasCloudinessCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasCloudinessCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasCloudinessCondition</rdfs:label>
+        <rdfs:range rdf:resource="#CloudinessCondition"/>
+        <rdfs:subPropertyOf rdf:resource="#hasWeatherCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasCongestionCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasCongestionCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasCongestionCondition</rdfs:label>
+        <rdfs:range rdf:resource="#CongestionCondition"/>
+        <rdfs:subPropertyOf rdf:resource="#hasTrafficCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasCrosswalkCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasCrosswalkCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasCrosswalkCondition</rdfs:label>
+        <rdfs:range rdf:resource="#CrosswalkCondition"/>
+        <rdfs:subPropertyOf rdf:resource="#hasRoadConstructionCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="#hasLocation">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label>hasLocation</rdfs:label>
+        <rdfs:range rdf:resource="#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasPrecipitationCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasPrecipitationCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasPrecipitationCondition</rdfs:label>
+        <rdfs:range rdf:resource="#PrecipitationCondition"/>
+        <rdfs:subPropertyOf rdf:resource="#hasWeatherCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasRailwayCrossingCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasRailwayCrossingCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasRailwayCrossingCondition</rdfs:label>
+        <rdfs:range rdf:resource="#RailwayCrossingCondition"/>
+        <rdfs:subPropertyOf rdf:resource="#hasRoadConstructionCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasRoadConstructionCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasRoadConstructionCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasRoadConstructionCondition</rdfs:label>
+        <rdfs:range rdf:resource="#RoadConstructionCondition"/>
+        <rdfs:subPropertyOf rdf:resource="#hasTrafficCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasRoadExtensionCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasRoadExtensionCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasRoadExtensionCondition</rdfs:label>
+        <rdfs:range rdf:resource="#RoadExtensionCondition"/>
+        <rdfs:subPropertyOf rdf:resource="#hasRoadConstructionCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasRoadInspectionCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasRoadInspectionCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasRoadInspectionCondition</rdfs:label>
+        <rdfs:range rdf:resource="#RoadInspectionCondition"/>
+        <rdfs:subPropertyOf rdf:resource="#hasTrafficCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasSurfaceCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasSurfaceCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasSurfaceCondition</rdfs:label>
+        <rdfs:range rdf:resource="#SurfaceCondition"/>
+        <rdfs:subPropertyOf rdf:resource="#hasRoadConstructionCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasTimeCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasTimeCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasTimeCondition</rdfs:label>
+        <rdfs:range rdf:resource="#TimeCondition"/>
+        <rdfs:subPropertyOf rdf:resource="#hasTrafficCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasTrafficCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasTrafficCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasTrafficCondition</rdfs:label>
+        <rdfs:range rdf:resource="#TrafficCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasTrafficLighsCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasTrafficLighsCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasTrafficLighsCondition</rdfs:label>
+        <rdfs:range rdf:resource="#TrafficLightsCondition"/>
+        <rdfs:subPropertyOf rdf:resource="#hasRoadConstructionCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasWeatherCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasWeatherCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasWeatherCondition</rdfs:label>
+        <rdfs:range rdf:resource="#WeatherCondition"/>
+        <rdfs:subPropertyOf rdf:resource="#hasTrafficCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasWindCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasWindCondition">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >hasWindCondition</rdfs:label>
+        <rdfs:range rdf:resource="#WindCondition"/>
+        <rdfs:subPropertyOf rdf:resource="#hasWeatherCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#isLocationOf -->
+
+    <owl:ObjectProperty rdf:about="#isLocationOf">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label>isLocationOf</rdfs:label>
+        <rdfs:domain rdf:resource="#Location"/>
+        <owl:inverseOf rdf:resource="#hasLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#isTrafficLocationOf -->
+
+    <owl:ObjectProperty rdf:about="#isTrafficLocationOf">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:label
+            >isTrafficConditionOf</rdfs:label>
+        <rdfs:domain rdf:resource="#TrafficCondition"/>
+        <owl:inverseOf rdf:resource="#hasTrafficCondition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#hasAvarageDriversDensityPerKilometer -->
+
+    <owl:DatatypeProperty rdf:about="#hasAvarageDriversDensityPerKilometer">
+        <rdfs:label
+            >hasAvarageDriversDensityPerKilometer</rdfs:label>
+        <rdfs:domain rdf:resource="#CongestionCondition"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#AboveGroundCrosswalkCondition -->
+
+    <owl:Class rdf:about="#AboveGroundCrosswalkCondition">
+        <rdfs:label xml:lang="en"
+            >AboveGroundCrosswalkCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#CrosswalkCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#AirPressureCondition -->
+
+    <owl:Class rdf:about="#AirPressureCondition">
+        <rdfs:label xml:lang="en"
+            >AirPressureCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#WeatherCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#AirTemperatureCondition -->
+
+    <owl:Class rdf:about="#AirTemperatureCondition">
+        <rdfs:label xml:lang="en"
+            >AirTemperatureCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#WeatherCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#AnimalsCollisionPossibilityDanger -->
+
+    <owl:Class rdf:about="#AnimalsCollisionPossibilityDanger">
+        <rdfs:label xml:lang="en"
+            >AnimalsCollisionPossibilityDanger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NamedTrafficDanger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAreaCondition"/>
+                <owl:someValuesFrom rdf:resource="#UnbuiltCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAreaCondition"/>
+                <owl:allValuesFrom rdf:resource="#UnbuiltCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en"
+            >Higher risk of collision with animals.</dc:description>
+        <dc:description xml:lang="pl"
+            >Wy&#380;sze prawdopodobie&#324;stwo kolizji ze zwierz&#281;tami.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#AreaCondition -->
+
+    <owl:Class rdf:about="#AreaCondition">
+        <rdfs:label xml:lang="en">AreaCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TrafficCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#AsphaltCondition -->
+
+    <owl:Class rdf:about="#AsphaltCondition">
+        <rdfs:label xml:lang="en"
+            >AsphaltCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#BuildingMaterialCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#BelowFreezingTemperatureCondition -->
+
+    <owl:Class rdf:about="#BelowFreezingTemperatureCondition">
+        <rdfs:label xml:lang="en"
+            >BelowFreezingTemperatureCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AirTemperatureCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#BlindingLightDanger -->
+
+    <owl:Class rdf:about="#BlindingLightDanger">
+        <rdfs:label xml:lang="en"
+            >BlindingLightDanger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NamedTrafficDanger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasCloudinessCondition"/>
+                <owl:allValuesFrom rdf:resource="#SunnyCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasCloudinessCondition"/>
+                <owl:someValuesFrom rdf:resource="#SunnyCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en"
+            >Lights on road can be blinding.</dc:description>
+        <dc:description xml:lang="pl"
+            >&#346;wiat&#322;o na drodze mo&#380;e by&#263; o&#347;lepiaj&#261;ce.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#BrokenLightsCondition -->
+
+    <owl:Class rdf:about="#BrokenLightsCondition">
+        <rdfs:label xml:lang="en"
+            >BrokenLightsCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TrafficLightsCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#BuildingMaterialCondition -->
+
+    <owl:Class rdf:about="#BuildingMaterialCondition">
+        <rdfs:label xml:lang="en"
+            >BuildingMaterialCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RoadConstructionCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#BuiltUpCondition -->
+
+    <owl:Class rdf:about="#BuiltUpCondition">
+        <rdfs:label xml:lang="en"
+            >BuiltUpCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AreaCondition"/>
+        <owl:disjointWith rdf:resource="#UnbuiltCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#CarelessPedestriansDanger -->
+
+    <owl:Class rdf:about="#CarelessPedestriansDanger">
+        <rdfs:label xml:lang="en"
+            >CarelessPedestriansDanger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NamedTrafficDanger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRoadExtensionCondition"/>
+                <owl:allValuesFrom rdf:resource="#NoRoadsideCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTrafficLighsCondition"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#BrokenLightsCondition"/>
+                            <rdf:Description rdf:about="#NoLightsCondition"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTrafficLighsCondition"/>
+                <owl:someValuesFrom rdf:resource="#BrokenLightsCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasCrosswalkCondition"/>
+                <owl:allValuesFrom rdf:resource="#UnsignedCrosswalkCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRoadExtensionCondition"/>
+                <owl:someValuesFrom rdf:resource="#NoRoadsideCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTrafficLighsCondition"/>
+                <owl:someValuesFrom rdf:resource="#NoLightsCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasCrosswalkCondition"/>
+                <owl:someValuesFrom rdf:resource="#UnsignedCrosswalkCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en"
+            >Higher risk of collision with careless pedestrians.</dc:description>
+        <dc:description xml:lang="pl"
+            >Wy&#380;sze prawdopodobie&#324;stwo kolizji z nieuwa&#380;nymi przechodniami.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#CloudinessCondition -->
+
+    <owl:Class rdf:about="#CloudinessCondition">
+        <rdfs:label xml:lang="en"
+            >CloudinessCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#WeatherCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#CloudyCondition -->
+
+    <owl:Class rdf:about="#CloudyCondition">
+        <rdfs:label xml:lang="en">CloudyCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#CloudinessCondition"/>
+        <owl:disjointWith rdf:resource="#SunnyCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#ConcreteCondition -->
+
+    <owl:Class rdf:about="#ConcreteCondition">
+        <rdfs:label xml:lang="en"
+            >ConcreteCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#BuildingMaterialCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#CongestionCondition -->
+
+    <owl:Class rdf:about="#CongestionCondition">
+        <rdfs:label
+            >CongestionCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TrafficCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#CrosswalkCondition -->
+
+    <owl:Class rdf:about="#CrosswalkCondition">
+        <rdfs:label xml:lang="en"
+            >CrosswalkCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RoadConstructionCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#CrosswindCondition -->
+
+    <owl:Class rdf:about="#CrosswindCondition">
+        <rdfs:label xml:lang="en"
+            >CrosswindCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#WindCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#DayCondition -->
+
+    <owl:Class rdf:about="#DayCondition">
+        <rdfs:label xml:lang="en">DayCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TimeCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#DistrictLocation -->
+
+    <owl:Class rdf:about="#DistrictLocation">
+        <rdfs:label xml:lang="en"
+            >DistrictLocation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Location"/>
+        <dc:description xml:lang="en"
+            >Location described through district name.</dc:description>
+        <dc:description xml:lang="pl"
+            >Lokalizacja definiowana poprzez nazw&#281; dzielnicy.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#DuskCondition -->
+
+    <owl:Class rdf:about="#DuskCondition">
+        <rdfs:label xml:lang="en">DuskCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TimeCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#ExcessiveSpeedPossibilityDanger -->
+
+    <owl:Class rdf:about="#ExcessiveSpeedPossibilityDanger">
+        <rdfs:label xml:lang="en"
+            >ExcessiveSpeedPossibilityDanger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NamedTrafficDanger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRoadInspectionCondition"/>
+                <owl:someValuesFrom rdf:resource="#NoInspectionCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSurfaceCondition"/>
+                <owl:allValuesFrom rdf:resource="#FirstCategorySurfaceCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSurfaceCondition"/>
+                <owl:someValuesFrom rdf:resource="#FirstCategorySurfaceCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPrecipitationCondition"/>
+                <owl:allValuesFrom rdf:resource="#NoPrecipitationCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRoadInspectionCondition"/>
+                <owl:allValuesFrom rdf:resource="#NoInspectionCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPrecipitationCondition"/>
+                <owl:someValuesFrom rdf:resource="#NoPrecipitationCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en"
+            >Vehicles speed on road can be higher than usual.</dc:description>
+        <dc:description xml:lang="pl"
+            >Pr&#281;dko&#347;&#263; pojazd&#243;w mo&#380;e by&#263; zawy&#380;ona.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#FirstCategorySurfaceCondition -->
+
+    <owl:Class rdf:about="#FirstCategorySurfaceCondition">
+        <rdfs:label xml:lang="en"
+            >FirstCategorySurfaceCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SurfaceCondition"/>
+        <owl:disjointWith rdf:resource="#SecondCategorySurfaceCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#FoggyCondition -->
+
+    <owl:Class rdf:about="#FoggyCondition">
+        <rdfs:label xml:lang="en">FoggyCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PrecipitationCondition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasCloudinessCondition"/>
+                <owl:someValuesFrom rdf:resource="#CloudyCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#FreezingSurfaceDanger -->
+
+    <owl:Class rdf:about="#FreezingSurfaceDanger">
+        <rdfs:label xml:lang="en"
+            >FreezingSurfaceDanger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NamedTrafficDanger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAirTemperatureCondition"/>
+                <owl:someValuesFrom rdf:resource="#BelowFreezingTemperatureCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAirTemperatureCondition"/>
+                <owl:allValuesFrom rdf:resource="#BelowFreezingTemperatureCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en"
+            >The road surface can be freezing and slippery.</dc:description>
+        <dc:description xml:lang="pl"
+            >Nawierzchnia drogi mo&#380;e by&#263; zmro&#380;ona.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#FullOfHolesCondition -->
+
+    <owl:Class rdf:about="#FullOfHolesCondition">
+        <rdfs:label xml:lang="en"
+            >FullOfHolesCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SecondCategorySurfaceCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#FullOfWheelTracksCondition -->
+
+    <owl:Class rdf:about="#FullOfWheelTracksCondition">
+        <rdfs:label xml:lang="en"
+            >FullOfWheelTracksCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SecondCategorySurfaceCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#GravelCondition -->
+
+    <owl:Class rdf:about="#GravelCondition">
+        <rdfs:label xml:lang="en">GravelCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#BuildingMaterialCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#GroundCrosswalkCondition -->
+
+    <owl:Class rdf:about="#GroundCrosswalkCondition">
+        <rdfs:label xml:lang="en"
+            >GroundCrosswalkCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#CrosswalkCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#HeadwindCondition -->
+
+    <owl:Class rdf:about="#HeadwindCondition">
+        <rdfs:label xml:lang="en"
+            >HeadwindCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#WindCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#HighCongestionCondition -->
+
+    <owl:Class rdf:about="#HighCongestionCondition">
+        <rdfs:label
+            >HighCongestionCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#CongestionCondition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAvarageDriversDensityPerKilometer"/>
+                <owl:someValuesFrom>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdfs;Datatype"/>
+                        <owl:onDatatype rdf:resource="&xsd;integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:minInclusive rdf:datatype="&xsd;integer">100</xsd:minInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdf:Description>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#HighPressureCondition -->
+
+    <owl:Class rdf:about="#HighPressureCondition">
+        <rdfs:label xml:lang="en"
+            >HighPressureCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AirPressureCondition"/>
+        <owl:disjointWith rdf:resource="#LowPressureCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#HighTemperatureCondition -->
+
+    <owl:Class rdf:about="#HighTemperatureCondition">
+        <rdfs:label xml:lang="en"
+            >HighTemperatureCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AirTemperatureCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#InsufficientlySlopedCondition -->
+
+    <owl:Class rdf:about="#InsufficientlySlopedCondition">
+        <rdfs:label xml:lang="en"
+            >InsufficientlySlopedCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SecondCategorySurfaceCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#LeafsOnRoadDanger -->
+
+    <owl:Class rdf:about="#LeafsOnRoadDanger">
+        <rdfs:label xml:lang="en"
+            >LeafsOnRoadDanger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NamedTrafficDanger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAreaCondition"/>
+                <owl:allValuesFrom rdf:resource="#UnbuiltCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasWindCondition"/>
+                <owl:someValuesFrom rdf:resource="#WindCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRoadExtensionCondition"/>
+                <owl:someValuesFrom rdf:resource="#TreesAlongRoadCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRoadExtensionCondition"/>
+                <owl:allValuesFrom rdf:resource="#TreesAlongRoadCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAreaCondition"/>
+                <owl:someValuesFrom rdf:resource="#UnbuiltCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasWindCondition"/>
+                <owl:allValuesFrom rdf:resource="#WindCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en"
+            >Possibility of more amount of leafs laying on road.</dc:description>
+        <dc:description xml:lang="pl"
+            >Mo&#380;liwo&#347;&#263; wyst&#261;pienia li&#347;ci le&#380;&#261;cych na drodze.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#Location -->
+
+    <owl:Class rdf:about="#Location">
+        <rdfs:label xml:lang="en">Location</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#LowCongestionCondition -->
+
+    <owl:Class rdf:about="#LowCongestionCondition">
+        <rdfs:label
+            >LowCongestionCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#CongestionCondition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAvarageDriversDensityPerKilometer"/>
+                <owl:someValuesFrom>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdfs;Datatype"/>
+                        <owl:onDatatype rdf:resource="&xsd;integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="&xsd;integer">10</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdf:Description>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#LowFrictionDanger -->
+
+    <owl:Class rdf:about="#LowFrictionDanger">
+        <rdfs:label xml:lang="en"
+            >LowFrictionDanger</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#TrafficDanger"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="#hasAirTemperatureCondition"/>
+                                        <owl:someValuesFrom rdf:resource="#HighTemperatureCondition"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="#hasBuildingMaterialCondition"/>
+                                        <owl:someValuesFrom rdf:resource="#AsphaltCondition"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="#hasPrecipitationCondition"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="#RainyCondition"/>
+                                                    <rdf:Description rdf:about="#SnowyCondition"/>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="#hasSurfaceCondition"/>
+                                        <owl:someValuesFrom rdf:resource="#PoorlyDrainedCondition"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasAirTemperatureCondition"/>
+                                <owl:someValuesFrom rdf:resource="#BelowFreezingTemperatureCondition"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <dc:description xml:lang="en"
+            >Traffic dangers connected with low friction.</dc:description>
+        <dc:description xml:lang="pl"
+            >Zagro&#380;enia drogowe powi&#261;zane ze s&#322;ab&#261; przyczepno&#347;ci&#261; do nawierzchni.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#LowPressureCondition -->
+
+    <owl:Class rdf:about="#LowPressureCondition">
+        <rdfs:label xml:lang="en"
+            >LowPressureCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AirPressureCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#LowTemperatureCondition -->
+
+    <owl:Class rdf:about="#LowTemperatureCondition">
+        <rdfs:label xml:lang="en"
+            >LowTemperatureCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AirTemperatureCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#MediumTemperatureCondition -->
+
+    <owl:Class rdf:about="#MediumTemperatureCondition">
+        <rdfs:label xml:lang="en"
+            >MediumTemperatureCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AirTemperatureCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#MeltingAsphaltDanger -->
+
+    <owl:Class rdf:about="#MeltingAsphaltDanger">
+        <rdfs:label xml:lang="en"
+            >MeltingAsphaltDanger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NamedTrafficDanger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasBuildingMaterialCondition"/>
+                <owl:allValuesFrom rdf:resource="#AsphaltCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAirTemperatureCondition"/>
+                <owl:someValuesFrom rdf:resource="#HighTemperatureCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAirTemperatureCondition"/>
+                <owl:allValuesFrom rdf:resource="#HighTemperatureCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasBuildingMaterialCondition"/>
+                <owl:someValuesFrom rdf:resource="#AsphaltCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en"
+            >Asphalt surface of road can be melting.</dc:description>
+        <dc:description xml:lang="pl"
+            >Nawierzchnia asfaltowa mo&#380;e si&#281; topi&#263;.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#NamedTrafficDanger -->
+
+    <owl:Class rdf:about="#NamedTrafficDanger">
+        <rdfs:label xml:lang="en"
+            >NamedTrafficDanger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TrafficDanger"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#NegativeBiometricConditionDanger -->
+
+    <owl:Class rdf:about="#NegativeBiometricConditionDanger">
+        <rdfs:label xml:lang="en"
+            >NegativeBiometricConditionDanger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NamedTrafficDanger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAirTemperatureCondition"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#HighTemperatureCondition"/>
+                            <rdf:Description rdf:about="#LowTemperatureCondition"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAirPressureCondition"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#HighPressureCondition"/>
+                            <rdf:Description rdf:about="#LowPressureCondition"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAirPressureCondition"/>
+                <owl:someValuesFrom rdf:resource="#HighPressureCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAirTemperatureCondition"/>
+                <owl:someValuesFrom rdf:resource="#HighTemperatureCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAirPressureCondition"/>
+                <owl:someValuesFrom rdf:resource="#LowPressureCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAirTemperatureCondition"/>
+                <owl:someValuesFrom rdf:resource="#LowTemperatureCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en"
+            >Adverse biometric conditions.</dc:description>
+        <dc:description xml:lang="pl"
+            >Niekorzystne warunki biometryczne.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#NightCondition -->
+
+    <owl:Class rdf:about="#NightCondition">
+        <rdfs:label xml:lang="en">NightCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TimeCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#NoInspectionCondition -->
+
+    <owl:Class rdf:about="#NoInspectionCondition">
+        <rdfs:label xml:lang="en"
+            >NoInspectionCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RoadInspectionCondition"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#PhotoRadarCondition"/>
+                            <rdf:Description rdf:about="#PoliceControlCondition"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#NoLightsCondition -->
+
+    <owl:Class rdf:about="#NoLightsCondition">
+        <rdfs:label xml:lang="en"
+            >NoLightsCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TrafficLightsCondition"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#BrokenLightsCondition"/>
+                            <rdf:Description rdf:about="#WorkingLightsCondition"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#NoPrecipitationCondition -->
+
+    <owl:Class rdf:about="#NoPrecipitationCondition">
+        <rdfs:label xml:lang="en"
+            >NoPrecipitationCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PrecipitationCondition"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#FoggyCondition"/>
+                            <rdf:Description rdf:about="#RainyCondition"/>
+                            <rdf:Description rdf:about="#SnowyCondition"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#NoRoadsideCondition -->
+
+    <owl:Class rdf:about="#NoRoadsideCondition">
+        <rdfs:label xml:lang="en"
+            >NoRoadsideCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RoadExtensionCondition"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="#RoadsideCondition"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#NoSafetyBarriersCondition -->
+
+    <owl:Class rdf:about="#NoSafetyBarriersCondition">
+        <rdfs:label xml:lang="en"
+            >NoSafetyBarriersCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RoadExtensionCondition"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="#SafetyBarriersCondition"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#NormalCongestionCondition -->
+
+    <owl:Class rdf:about="#NormalCongestionCondition">
+        <rdfs:label
+            >NormalCongestionCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#CongestionCondition"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasAvarageDriversDensityPerKilometer"/>
+                        <owl:someValuesFrom>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdfs;Datatype"/>
+                                <owl:onDatatype rdf:resource="&xsd;integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="&xsd;integer">11</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdf:Description>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasAvarageDriversDensityPerKilometer"/>
+                        <owl:someValuesFrom>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdfs;Datatype"/>
+                                <owl:onDatatype rdf:resource="&xsd;integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="&xsd;integer">99</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdf:Description>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#PhotoRadarCondition -->
+
+    <owl:Class rdf:about="#PhotoRadarCondition">
+        <rdfs:label xml:lang="en"
+            >PhotoRadarCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RoadInspectionCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#PoliceControlCondition -->
+
+    <owl:Class rdf:about="#PoliceControlCondition">
+        <rdfs:label xml:lang="en"
+            >PoliceControlCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RoadInspectionCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#PoorVisibilityDanger -->
+
+    <owl:Class rdf:about="#PoorVisibilityDanger">
+        <rdfs:label xml:lang="en"
+            >PoorVisibilityDanger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NamedTrafficDanger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSurfaceCondition"/>
+                <owl:someValuesFrom rdf:resource="#InsufficientlySlopedCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTimeCondition"/>
+                <owl:allValuesFrom rdf:resource="#NightCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPrecipitationCondition"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#FoggyCondition"/>
+                            <rdf:Description rdf:about="#RainyCondition"/>
+                            <rdf:Description rdf:about="#SnowyCondition"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPrecipitationCondition"/>
+                <owl:someValuesFrom rdf:resource="#FoggyCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPrecipitationCondition"/>
+                <owl:someValuesFrom rdf:resource="#RainyCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPrecipitationCondition"/>
+                <owl:someValuesFrom rdf:resource="#SnowyCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTimeCondition"/>
+                <owl:someValuesFrom rdf:resource="#NightCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSurfaceCondition"/>
+                <owl:allValuesFrom rdf:resource="#InsufficientlySlopedCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en"
+            >Visibility on road can be bad.</dc:description>
+        <dc:description xml:lang="pl"
+            >Widoczno&#347;&#263; na drodze mo&#380;e by&#263; utrudniona.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#PoorlyDrainedCondition -->
+
+    <owl:Class rdf:about="#PoorlyDrainedCondition">
+        <rdfs:label xml:lang="en"
+            >PoorlyDrainedCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SecondCategorySurfaceCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#PostalCodeLocation -->
+
+    <owl:Class rdf:about="#PostalCodeLocation">
+        <rdfs:label xml:lang="en"
+            >PostalCodeLocation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Location"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasLocation"/>
+                <owl:someValuesFrom rdf:resource="#StreetLocation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en"
+            >Location described through postal code value.</dc:description>
+        <dc:description xml:lang="pl"
+            >Lokalizacja definiowana poprzez warto&#347;&#263; kodu pocztowego.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#PrecipitationCondition -->
+
+    <owl:Class rdf:about="#PrecipitationCondition">
+        <rdfs:label xml:lang="en"
+            >PrecipitationCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#WeatherCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#PullingOutFromRoadDanger -->
+
+    <owl:Class rdf:about="#PullingOutFromRoadDanger">
+        <rdfs:label xml:lang="en"
+            >PullingOutOfRoadDanger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NamedTrafficDanger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSurfaceCondition"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#FullOfHolesCondition"/>
+                            <rdf:Description rdf:about="#FullOfWheelTracksCondition"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasWindCondition"/>
+                <owl:allValuesFrom rdf:resource="#CrosswindCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSurfaceCondition"/>
+                <owl:someValuesFrom rdf:resource="#FullOfHolesCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasWindCondition"/>
+                <owl:someValuesFrom rdf:resource="#CrosswindCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSurfaceCondition"/>
+                <owl:someValuesFrom rdf:resource="#FullOfWheelTracksCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en"
+            >Possibility of pulling out of road.</dc:description>
+        <dc:description xml:lang="pl"
+            >Mo&#380;liwo&#347;&#263; wybicia z trajektorii jazdy.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#RailwayCrossingCondition -->
+
+    <owl:Class rdf:about="#RailwayCrossingCondition">
+        <rdfs:label xml:lang="en"
+            >RailwayCrossingCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RoadConstructionCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#RainyCondition -->
+
+    <owl:Class rdf:about="#RainyCondition">
+        <rdfs:label xml:lang="en">RainyCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PrecipitationCondition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasCloudinessCondition"/>
+                <owl:someValuesFrom rdf:resource="#CloudyCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#RoadConstructionCondition -->
+
+    <owl:Class rdf:about="#RoadConstructionCondition">
+        <rdfs:label xml:lang="en"
+            >RoadConstructionCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TrafficCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#RoadConstructionDanger -->
+
+    <owl:Class rdf:about="#RoadConstructionDanger">
+        <rdfs:label xml:lang="en"
+            >RoadConstructionDanger</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#TrafficDanger"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasRoadConstructionCondition"/>
+                        <owl:someValuesFrom rdf:resource="#RoadConstructionCondition"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <dc:description xml:lang="en"
+            >Traffic dangers connected with construction of the road.</dc:description>
+        <dc:description xml:lang="pl"
+            >Zagro&#380;enia drogowe powi&#261;zane z konstrukcj&#261; drogi.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#RoadExtensionCondition -->
+
+    <owl:Class rdf:about="#RoadExtensionCondition">
+        <rdfs:label xml:lang="en"
+            >RoadExtensionCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RoadConstructionCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#RoadInspectionCondition -->
+
+    <owl:Class rdf:about="#RoadInspectionCondition">
+        <rdfs:label xml:lang="en"
+            >RoadInspectionCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TrafficCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#RoadObstaclesDanger -->
+
+    <owl:Class rdf:about="#RoadObstaclesDanger">
+        <rdfs:label xml:lang="en"
+            >RoadObstaclesDanger</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#TrafficDanger"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasAreaCondition"/>
+                                <owl:someValuesFrom rdf:resource="#UnbuiltCondition"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasRoadExtensionCondition"/>
+                                <owl:someValuesFrom rdf:resource="#TreesAlongRoadCondition"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="#hasSurfaceCondition"/>
+                                <owl:someValuesFrom rdf:resource="#FullOfHolesCondition"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <dc:description xml:lang="en"
+            >Traffic dangers connected with obstacles on the road.</dc:description>
+        <dc:description xml:lang="pl"
+            >Zagro&#380;enia drogowe powi&#261;zane z przeszkodami na drodze.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#RoadsideCondition -->
+
+    <owl:Class rdf:about="#RoadsideCondition">
+        <rdfs:label xml:lang="en"
+            >RoadsideCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RoadExtensionCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#SafetyBarriersCondition -->
+
+    <owl:Class rdf:about="#SafetyBarriersCondition">
+        <rdfs:label xml:lang="en"
+            >SafetyBarriersCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RoadExtensionCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#SecondCategoryRoadDanger -->
+
+    <owl:Class rdf:about="#SecondCategoryRoadDanger">
+        <rdfs:label xml:lang="en"
+            >SecondCategoryRoadDanger</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#TrafficDanger"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasSurfaceCondition"/>
+                        <owl:someValuesFrom rdf:resource="#SecondCategorySurfaceCondition"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <dc:description xml:lang="en"
+            >Traffic dangers connected with second category roads.</dc:description>
+        <dc:description xml:lang="pl"
+            >Zagro&#380;enia drogowe powi&#261;zane z drogami drugiej kategorii.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#SecondCategorySurfaceCondition -->
+
+    <owl:Class rdf:about="#SecondCategorySurfaceCondition">
+        <rdfs:label xml:lang="en"
+            >SecondCategorySurfaceCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SurfaceCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#SignedCrossingCondition -->
+
+    <owl:Class rdf:about="#SignedCrossingCondition">
+        <rdfs:label xml:lang="en"
+            >SignedCrossingCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RailwayCrossingCondition"/>
+        <owl:disjointWith rdf:resource="#UnsignedCrossingCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#SignedCrosswalkCondition -->
+
+    <owl:Class rdf:about="#SignedCrosswalkCondition">
+        <rdfs:label xml:lang="en"
+            >SignedCrosswalkCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#GroundCrosswalkCondition"/>
+        <owl:disjointWith rdf:resource="#UnsignedCrosswalkCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#SmoothCondition -->
+
+    <owl:Class rdf:about="#SmoothCondition">
+        <rdfs:label xml:lang="en">SmoothCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#FirstCategorySurfaceCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#SnowyCondition -->
+
+    <owl:Class rdf:about="#SnowyCondition">
+        <rdfs:label xml:lang="en">SnowyCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#PrecipitationCondition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasCloudinessCondition"/>
+                <owl:someValuesFrom rdf:resource="#CloudyCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#StreetLocation -->
+
+    <owl:Class rdf:about="#StreetLocation">
+        <rdfs:label xml:lang="en">StreetLocation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Location"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasLocation"/>
+                <owl:someValuesFrom rdf:resource="#DistrictLocation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en"
+            >Location described through street name.</dc:description>
+        <dc:description xml:lang="pl"
+            >Lokalizacja definiowana poprzez nazw&#281; ulicy.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#SunnyCondition -->
+
+    <owl:Class rdf:about="#SunnyCondition">
+        <rdfs:label xml:lang="en">SunnyCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#CloudinessCondition"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf rdf:resource="#CloudyCondition"/>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#SurfaceCondition -->
+
+    <owl:Class rdf:about="#SurfaceCondition">
+        <rdfs:label xml:lang="en"
+            >SurfaceCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RoadConstructionCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#TailwindCondition -->
+
+    <owl:Class rdf:about="#TailwindCondition">
+        <rdfs:label xml:lang="en"
+            >TailwindCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#WindCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#TimeCondition -->
+
+    <owl:Class rdf:about="#TimeCondition">
+        <rdfs:label xml:lang="en">TimeCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TrafficCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#TrafficCondition -->
+
+    <owl:Class rdf:about="#TrafficCondition">
+        <rdfs:label xml:lang="en"
+            >TrafficCondition</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasLocation"/>
+                <owl:someValuesFrom rdf:resource="#PostalCodeLocation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#TrafficCongestionDanger -->
+
+    <owl:Class rdf:about="#TrafficCongestionDanger">
+        <rdfs:label xml:lang="en"
+            >TrafficCongestionDanger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NamedTrafficDanger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasCongestionCondition"/>
+                <owl:allValuesFrom rdf:resource="#HighCongestionCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasCongestionCondition"/>
+                <owl:someValuesFrom rdf:resource="#HighCongestionCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en"
+            >Traffic congestion is higher than usual.</dc:description>
+        <dc:description xml:lang="pl"
+            >Zag&#281;szczenie ruchu jest wy&#380;sze ni&#380; zazwyczaj.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#TrafficDanger -->
+
+    <owl:Class rdf:about="#TrafficDanger">
+        <rdfs:label xml:lang="en">TrafficDanger</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTrafficCondition"/>
+                <owl:someValuesFrom rdf:resource="#TrafficCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en">Traffic danger</dc:description>
+        <dc:description xml:lang="pl"
+            >Zagro&#380;enie drogowe</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#TrafficLightsCondition -->
+
+    <owl:Class rdf:about="#TrafficLightsCondition">
+        <rdfs:label xml:lang="en"
+            >TrafficLighsCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RoadConstructionCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#TrainCollisionPossibilityDanger -->
+
+    <owl:Class rdf:about="#TrainCollisionPossibilityDanger">
+        <rdfs:label xml:lang="en"
+            >TrainCollisionPossibilityDanger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NamedTrafficDanger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRailwayCrossingCondition"/>
+                <owl:someValuesFrom rdf:resource="#UnsignedCrossingCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRailwayCrossingCondition"/>
+                <owl:allValuesFrom rdf:resource="#UnsignedCrossingCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en"
+            >Possibility of collision with train.</dc:description>
+        <dc:description xml:lang="pl"
+            >Mo&#380;liwo&#347;&#263; kolizji z poci&#261;giem.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#TreeCollisionPossibilityDanger -->
+
+    <owl:Class rdf:about="#TreeCollisionPossibilityDanger">
+        <rdfs:label xml:lang="en"
+            >TreeCollisionPossibilityDanger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NamedTrafficDanger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRoadExtensionCondition"/>
+                <owl:someValuesFrom rdf:resource="#TreesAlongRoadCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRoadExtensionCondition"/>
+                <owl:someValuesFrom rdf:resource="#NoSafetyBarriersCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRoadExtensionCondition"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#NoSafetyBarriersCondition"/>
+                            <rdf:Description rdf:about="#TreesAlongRoadCondition"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en"
+            >Higher possibility of collision with trees.</dc:description>
+        <dc:description xml:lang="pl"
+            >Wy&#380;sze prawdopodobie&#324;stwo uderzenia w drzewo.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#TreesAlongRoadCondition -->
+
+    <owl:Class rdf:about="#TreesAlongRoadCondition">
+        <rdfs:label xml:lang="en"
+            >TreesAlongRoadCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RoadExtensionCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#UnbuiltCondition -->
+
+    <owl:Class rdf:about="#UnbuiltCondition">
+        <rdfs:label xml:lang="en"
+            >UnbuiltCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AreaCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#UndergroundCrosswalkCondition -->
+
+    <owl:Class rdf:about="#UndergroundCrosswalkCondition">
+        <rdfs:label xml:lang="en"
+            >UndergroundCrosswalkCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#CrosswalkCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#UnsignedCrossingCondition -->
+
+    <owl:Class rdf:about="#UnsignedCrossingCondition">
+        <rdfs:label xml:lang="en"
+            >UnsignedCrossingCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RailwayCrossingCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#UnsignedCrosswalkCondition -->
+
+    <owl:Class rdf:about="#UnsignedCrosswalkCondition">
+        <rdfs:label xml:lang="en"
+            >UnsignedCrosswalkCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#GroundCrosswalkCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#WeatherCondition -->
+
+    <owl:Class rdf:about="#WeatherCondition">
+        <rdfs:label xml:lang="en"
+            >WeatherCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TrafficCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#WeatherDanger -->
+
+    <owl:Class rdf:about="#WeatherDanger">
+        <rdfs:label xml:lang="en">WeatherDanger</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#TrafficDanger"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasWeatherCondition"/>
+                        <owl:someValuesFrom rdf:resource="#WeatherCondition"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <dc:description xml:lang="en"
+            >Traffic dangers connected with weather.</dc:description>
+        <dc:description xml:lang="pl"
+            >Zagro&#380;enia drogowe powi&#261;zane z warunkami pogodowymi.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#WetSurfaceDanger -->
+
+    <owl:Class rdf:about="#WetSurfaceDanger">
+        <rdfs:label xml:lang="en"
+            >WetSurfaceDanger</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NamedTrafficDanger"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPrecipitationCondition"/>
+                <owl:someValuesFrom rdf:resource="#SnowyCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSurfaceCondition"/>
+                <owl:someValuesFrom rdf:resource="#PoorlyDrainedCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPrecipitationCondition"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#RainyCondition"/>
+                            <rdf:Description rdf:about="#SnowyCondition"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasPrecipitationCondition"/>
+                <owl:someValuesFrom rdf:resource="#RainyCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasSurfaceCondition"/>
+                <owl:allValuesFrom rdf:resource="#PoorlyDrainedCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:description xml:lang="en"
+            >Surface of road can be wet and slippery.</dc:description>
+        <dc:description xml:lang="pl"
+            >Nawierzchnia drogi mo&#380;e by&#347; mokra i &#347;liska.</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#WindCondition -->
+
+    <owl:Class rdf:about="#WindCondition">
+        <rdfs:label xml:lang="en">WindCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#WeatherCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/7/TrafficDanger.owl#WorkingLightsCondition -->
+
+    <owl:Class rdf:about="#WorkingLightsCondition">
+        <rdfs:label xml:lang="en"
+            >WorkingLightsCondition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TrafficLightsCondition"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#FoggyCondition"/>
+            <rdf:Description rdf:about="#NoPrecipitationCondition"/>
+            <rdf:Description rdf:about="#RainyCondition"/>
+            <rdf:Description rdf:about="#SnowyCondition"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#DistrictLocation"/>
+            <rdf:Description rdf:about="#PostalCodeLocation"/>
+            <rdf:Description rdf:about="#StreetLocation"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#CrosswindCondition"/>
+            <rdf:Description rdf:about="#HeadwindCondition"/>
+            <rdf:Description rdf:about="#TailwindCondition"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#NoInspectionCondition"/>
+            <rdf:Description rdf:about="#PhotoRadarCondition"/>
+            <rdf:Description rdf:about="#PoliceControlCondition"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#AreaCondition"/>
+            <rdf:Description rdf:about="#RoadConstructionCondition"/>
+            <rdf:Description rdf:about="#RoadInspectionCondition"/>
+            <rdf:Description rdf:about="#TimeCondition"/>
+            <rdf:Description rdf:about="#WeatherCondition"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#FullOfHolesCondition"/>
+            <rdf:Description rdf:about="#FullOfWheelTracksCondition"/>
+            <rdf:Description rdf:about="#InsufficientlySlopedCondition"/>
+            <rdf:Description rdf:about="#PoorlyDrainedCondition"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#NoRoadsideCondition"/>
+            <rdf:Description rdf:about="#NoSafetyBarriersCondition"/>
+            <rdf:Description rdf:about="#RoadsideCondition"/>
+            <rdf:Description rdf:about="#SafetyBarriersCondition"/>
+            <rdf:Description rdf:about="#TreesAlongRoadCondition"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#AirPressureCondition"/>
+            <rdf:Description rdf:about="#AirTemperatureCondition"/>
+            <rdf:Description rdf:about="#CloudinessCondition"/>
+            <rdf:Description rdf:about="#PrecipitationCondition"/>
+            <rdf:Description rdf:about="#WindCondition"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#DayCondition"/>
+            <rdf:Description rdf:about="#DuskCondition"/>
+            <rdf:Description rdf:about="#NightCondition"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#BuildingMaterialCondition"/>
+            <rdf:Description rdf:about="#CrosswalkCondition"/>
+            <rdf:Description rdf:about="#RailwayCrossingCondition"/>
+            <rdf:Description rdf:about="#RoadExtensionCondition"/>
+            <rdf:Description rdf:about="#SurfaceCondition"/>
+            <rdf:Description rdf:about="#TrafficLightsCondition"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#BelowFreezingTemperatureCondition"/>
+            <rdf:Description rdf:about="#HighTemperatureCondition"/>
+            <rdf:Description rdf:about="#LowTemperatureCondition"/>
+            <rdf:Description rdf:about="#MediumTemperatureCondition"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#AsphaltCondition"/>
+            <rdf:Description rdf:about="#ConcreteCondition"/>
+            <rdf:Description rdf:about="#GravelCondition"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Location"/>
+            <rdf:Description rdf:about="#TrafficCondition"/>
+            <rdf:Description rdf:about="#TrafficDanger"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#AnimalsCollisionPossibilityDanger"/>
+            <rdf:Description rdf:about="#BlindingLightDanger"/>
+            <rdf:Description rdf:about="#CarelessPedestriansDanger"/>
+            <rdf:Description rdf:about="#ExcessiveSpeedPossibilityDanger"/>
+            <rdf:Description rdf:about="#FreezingSurfaceDanger"/>
+            <rdf:Description rdf:about="#LeafsOnRoadDanger"/>
+            <rdf:Description rdf:about="#MeltingAsphaltDanger"/>
+            <rdf:Description rdf:about="#NegativeBiometricConditionDanger"/>
+            <rdf:Description rdf:about="#PoorVisibilityDanger"/>
+            <rdf:Description rdf:about="#PullingOutFromRoadDanger"/>
+            <rdf:Description rdf:about="#TrafficCongestionDanger"/>
+            <rdf:Description rdf:about="#TrainCollisionPossibilityDanger"/>
+            <rdf:Description rdf:about="#TreeCollisionPossibilityDanger"/>
+            <rdf:Description rdf:about="#WetSurfaceDanger"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#BrokenLightsCondition"/>
+            <rdf:Description rdf:about="#NoLightsCondition"/>
+            <rdf:Description rdf:about="#WorkingLightsCondition"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#AboveGroundCrosswalkCondition"/>
+            <rdf:Description rdf:about="#GroundCrosswalkCondition"/>
+            <rdf:Description rdf:about="#UndergroundCrosswalkCondition"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

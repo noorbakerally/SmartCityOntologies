@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY swrl "http://www.w3.org/2003/11/swrl#" >
+    <!ENTITY owl2 "http://www.w3.org/2006/12/owl2#" >
+    <!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#" >
+    <!ENTITY vcard "http://www.w3.org/2006/vcard/ns#" >
+    <!ENTITY swrlx "http://www.w3.org/2003/11/swrlx#" >
+    <!ENTITY geonames "http://www.geonames.org/ontology#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY localizacion "http://purl.org/ctic/infraestructuras/localizacion#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.org/ctic/infraestructuras/localizacion#"
+     xml:base="http://purl.org/ctic/infraestructuras/localizacion"
+     xmlns:swrlx="http://www.w3.org/2003/11/swrlx#"
+     xmlns:owl2="http://www.w3.org/2006/12/owl2#"
+     xmlns:geonames="http://www.geonames.org/ontology#"
+     xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:localizacion="http://purl.org/ctic/infraestructuras/localizacion#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	 xmlns:cc="http://creativecommons.org/ns#" 
+	 xmlns:dc="http://purl.org/dc/elements/1.1/" 
+	 xmlns:dcterms="http://purl.org/dc/terms/" 
+	 xmlns:dctype="http://purl.org/dc/dcmitype/" 
+	 xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+	 xmlns:skos="http://www.w3.org/2004/02/skos/core#" 
+	 xmlns:vann="http://purl.org/vocab/vann/"
+     >
+     
+     
+    <owl:Ontology rdf:about="http://purl.org/ctic/infraestructuras/localizacion">
+		<!-- **************************** La información sobre el esquema ****************************** -->
+		<!-- La URI de la versión del esquema -->
+		<dc:identifier>http://data.fundacionctic.org/vocab/infraestructuras/localizacion_20111105</dc:identifier>
+		<dc:date>2011-11-05</dc:date>
+		<dcterms:issued>2010-10-01</dcterms:issued>
+		<dc:title xml:lang="es">Vocabulario de Localizaciones</dc:title>
+		<rdfs:comment xml:lang="es">
+			Este vocabulario se utiliza para modelar las localizaciones físicas de lugares públicos. 
+			Utiliza elementos de Geonames para identificar las distintas características geográficas.
+		</rdfs:comment>
+		<dcterms:isVersionOf rdf:resource="http://purl.org/ctic/infraestructuras/localizacion"/>
+		<dc:creator>CTIC CT. Martín Álvarez (martin.alvarez[at]fundacionctic.org)</dc:creator>
+		<dc:creator>CTIC CT. Rubén Martín (ruben.martin[at]fundacionctic.org)</dc:creator>
+		<cc:license rdf:resource="http://creativecommons.org/licenses/by-nc-sa/3.0"/>
+		<dc:rights xml:lang="es">CTIC CT - Creative Commons 3.0 (BY-NC-SA)</dc:rights>
+		<dc:rights xml:lang="en">CTIC CT - Creative Commons 3.0 (BY-NC-SA)</dc:rights>
+		<!-- En las actualizaciones, indica que se reemplaza el documento anterior-->
+		<dcterms:replaces rdf:resource="http://data.fundacionctic.org/vocab/infraestructuras/localizacion_20101001"/>
+		<vann:preferredNamespaceUri>http://purl.org/ctic/infraestructuras/localizacion#</vann:preferredNamespaceUri>
+		<vann:preferredNamespacePrefix>loc</vann:preferredNamespacePrefix>
+		<!-- El formato del documento HTML -->
+		<dcterms:hasFormat>
+			<dctype:Text rdf:about="http://data.fundacionctic.org/vocab/infraestructuras/localizacion_20111105.html">
+				<dc:format>
+					<dcterms:IMT>
+						<rdf:value>text/html</rdf:value>
+						<rdfs:label>HTML</rdfs:label>
+					</dcterms:IMT>
+				</dc:format>
+			</dctype:Text>
+		</dcterms:hasFormat>
+		<!-- El formato del documento RDF -->
+		<dcterms:hasFormat>
+			<dctype:Text rdf:about="http://data.fundacionctic.org/vocab/infraestructuras/localizacion_20111105.rdf">
+				<dc:format>
+					<dcterms:IMT>
+						<rdf:value>application/rdf+xml</rdf:value>
+						<rdfs:label>RDF</rdfs:label>
+					</dcterms:IMT>
+				</dc:format>
+			</dctype:Text>
+		</dcterms:hasFormat>  
+		<skos:historyNote rdf:parseType="Resource">
+			<rdf:value xml:lang="es">Añadidas las clases: País, Autonomía, Provincia y Municipio</rdf:value>
+			<dc:date>2011-10-05</dc:date>
+			<dc:creator>CTIC-CT</dc:creator>
+		</skos:historyNote>
+    </owl:Ontology>
+    
+    
+       
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;isDefinedBy"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ctic/infraestructuras/localizacion#barrio -->
+
+    <owl:ObjectProperty rdf:about="&localizacion;barrio">
+        <rdfs:label xml:lang="es">Barrio</rdfs:label>
+        <rdfs:comment xml:lang="es">Barrio al que pertenece una direcci&#243;n de un edificio</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ctic/infraestructuras/localizacion"/>
+        <rdfs:range rdf:resource="&localizacion;Barrio"/>
+        <rdfs:domain rdf:resource="&localizacion;Direccion"/>
+        <rdfs:subPropertyOf rdf:resource="&geonames;locatedIn"/>
+        <dcterms:issued>2010-10-01</dcterms:issued>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ctic/infraestructuras/localizacion#calle -->
+
+    <owl:ObjectProperty rdf:about="&localizacion;calle">
+        <rdfs:label xml:lang="es">Calle</rdfs:label>
+        <rdfs:comment xml:lang="es">Calle a la que pertenece una direcci&#243;n de un edificio</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ctic/infraestructuras/localizacion"/>
+        <rdfs:range rdf:resource="&localizacion;Calle"/>
+        <rdfs:domain rdf:resource="&localizacion;Direccion"/>
+        <rdfs:subPropertyOf rdf:resource="&geonames;locatedIn"/>
+        <dcterms:issued>2010-10-01</dcterms:issued>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/ctic/infraestructuras/localizacion#juntaAdministrativa -->
+
+    <owl:ObjectProperty rdf:about="&localizacion;juntaAdministrativa">
+        <rdfs:label xml:lang="es">Junta administrativa</rdfs:label>
+        <rdfs:comment xml:lang="es">Junta Administrativa a la que pertenece una direcci&#243;n de un edificio</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ctic/infraestructuras/localizacion"/>
+        <rdfs:domain rdf:resource="&localizacion;Direccion"/>
+        <rdfs:range rdf:resource="&localizacion;JuntaAdministrativa"/>
+        <rdfs:subPropertyOf rdf:resource="&geonames;locatedIn"/>
+        <dcterms:issued>2010-10-01</dcterms:issued>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.geonames.org/ontology#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="&geonames;locatedIn"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ctic/infraestructuras/localizacion#iae -->
+
+    <owl:DatatypeProperty rdf:about="&localizacion;iae">
+        <rdfs:label xml:lang="es">IAE</rdfs:label>
+        <rdfs:comment xml:lang="es">Valor del Impuesto sobre Actividades Econ&#243;micas relativo al tramo de calle</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ctic/infraestructuras/localizacion"/>
+        <rdfs:domain rdf:resource="&localizacion;TramoCalle"/>
+        <dcterms:issued>2010-10-01</dcterms:issued>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ctic/infraestructuras/localizacion#numeroFinTramo -->
+
+    <owl:DatatypeProperty rdf:about="&localizacion;numeroFinTramo">
+        <rdfs:label xml:lang="es">N&#250;mero final de la calle (par o impar)</rdfs:label>
+        <rdfs:comment xml:lang="es">N&#250;mero de la calle donde finaliza el tramo</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ctic/infraestructuras/localizacion"/>
+        <rdfs:domain rdf:resource="&localizacion;TramoCalle"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <dcterms:issued>2010-10-01</dcterms:issued>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/ctic/infraestructuras/localizacion#numeroInicioTramo -->
+
+    <owl:DatatypeProperty rdf:about="&localizacion;numeroInicioTramo">
+        <rdfs:label xml:lang="es">N&#250;mero inicial de la calle (par o impar)</rdfs:label>
+        <rdfs:comment xml:lang="es">N&#250;mero de la calle donde comienza el tramo</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ctic/infraestructuras/localizacion"/>
+        <rdfs:domain rdf:resource="&localizacion;TramoCalle"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <dcterms:issued>2010-10-01</dcterms:issued>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ctic/infraestructuras/localizacion#Barrio -->
+
+    <owl:Class rdf:about="&localizacion;Barrio">
+        <rdfs:label xml:lang="es">Barrio</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geonames;Feature"/>
+        <rdfs:comment xml:lang="es">Cada una de las partes en que se dividen los distritos de los municipios</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ctic/infraestructuras/localizacion"/>
+        <dcterms:issued>2010-10-01</dcterms:issued>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ctic/infraestructuras/localizacion#Calle -->
+
+    <owl:Class rdf:about="&localizacion;Calle">
+        <rdfs:label xml:lang="es">Calle</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geonames;Feature"/>
+        <rdfs:comment xml:lang="es">V&#237;a urbana</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ctic/infraestructuras/localizacion"/>
+        <dcterms:issued>2010-10-01</dcterms:issued>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ctic/infraestructuras/localizacion#Direccion -->
+
+    <owl:Class rdf:about="&localizacion;Direccion">
+        <rdfs:label xml:lang="es">Direcci&#243;n</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geonames;Feature"/>
+        <rdfs:subClassOf rdf:resource="&vcard;Address"/>
+        <rdfs:comment xml:lang="es">Direcci&#243;n postal</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ctic/infraestructuras/localizacion"/>
+        <dcterms:issued>2010-10-01</dcterms:issued>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ctic/infraestructuras/localizacion#Distrito -->
+
+    <owl:Class rdf:about="&localizacion;Distrito">
+        <rdfs:label xml:lang="es">Distrito</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geonames;Feature"/>
+        <rdfs:comment xml:lang="es">Cada una de las demarcaciones en que se subdivide un territorio o una poblaci&#243;n para distribuir y ordenar el ejercicio de los derechos civiles y pol&#237;ticos, o de las funciones p&#250;blicas, o de los servicios administrativos</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ctic/infraestructuras/localizacion"/>
+        <dcterms:issued>2010-10-01</dcterms:issued>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ctic/infraestructuras/localizacion#JuntaAdministrativa -->
+
+    <owl:Class rdf:about="&localizacion;JuntaAdministrativa">
+        <rdfs:label xml:lang="es">Junta administrativa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geonames;Feature"/>
+        <rdfs:comment xml:lang="es">Junta administrativa que rige los intereses de un pueblo que, en uni&#243;n con otros, forma un municipio</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ctic/infraestructuras/localizacion"/>
+        <dcterms:issued>2010-10-01</dcterms:issued>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ctic/infraestructuras/localizacion#TramoCalle -->
+
+    <owl:Class rdf:about="&localizacion;TramoCalle">
+        <rdfs:label xml:lang="es">Tramo de calle</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geonames;Feature"/>
+        <rdfs:comment xml:lang="es">Tramo parcial o total de una v&#237;a p&#250;blica</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ctic/infraestructuras/localizacion"/>
+        <dcterms:issued>2010-10-01</dcterms:issued>
+    </owl:Class>
+    
+
+    <!-- http://purl.org/ctic/infraestructuras/localizacion#Pais -->
+    
+    <owl:Class rdf:about="&localizacion;Pais">
+        <rdfs:label xml:lang="es">País</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geonames;Feature"/>
+        <rdfs:comment xml:lang="es">País o nación</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ctic/infraestructuras/localizacion"/>
+        <dcterms:issued>2011-11-05</dcterms:issued>
+    </owl:Class>
+    
+
+    <!-- http://purl.org/ctic/infraestructuras/localizacion#Autonomia -->
+    
+    <owl:Class rdf:about="&localizacion;Autonomia">
+        <rdfs:label xml:lang="es">Autonomía</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geonames;Feature"/>
+        <rdfs:comment xml:lang="es">Comunidad Autónoma o Ciudad Autónoma, que disponen de mediante normas y órganos de gobierno propios</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ctic/infraestructuras/localizacion"/>
+        <dcterms:issued>2011-11-05</dcterms:issued>
+    </owl:Class>
+
+
+    <!-- http://purl.org/ctic/infraestructuras/localizacion#Provincia -->
+    
+    <owl:Class rdf:about="&localizacion;Provincia">
+        <rdfs:label xml:lang="es">Provincia</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geonames;Feature"/>
+        <rdfs:comment xml:lang="es">Cada una de las grandes divisiones de una Autonomía</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ctic/infraestructuras/localizacion"/>
+        <dcterms:issued>2011-11-05</dcterms:issued>
+    </owl:Class>
+
+
+    <!-- http://purl.org/ctic/infraestructuras/localizacion#Municipio -->
+    
+    <owl:Class rdf:about="&localizacion;Municipio">
+        <rdfs:label xml:lang="es">Municipio</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&geonames;Feature"/>
+        <rdfs:comment xml:lang="es">Término jurisdiccional, regido por un ayuntamiento</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/ctic/infraestructuras/localizacion"/>
+        <dcterms:issued>2011-11-05</dcterms:issued>
+    </owl:Class>
+
+
+    <!-- http://www.geonames.org/ontology#Feature -->
+
+    <owl:Class rdf:about="&geonames;Feature"/>
+    
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Address -->
+
+    <owl:Class rdf:about="&vcard;Address"/>
+
+
+</rdf:RDF>

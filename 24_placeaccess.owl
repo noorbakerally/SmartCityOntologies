@@ -1,0 +1,1664 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY schema "http://schema.org/" >
+    <!ENTITY foaf "xmlns.com/foaf/0.1/‎" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY geo "http://www.w3.org/2003/01/geo/wgs84_pos#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY placeaccess "http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#"
+     xml:base="http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl"
+     xmlns:schema="http://schema.org/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:foaf="xmlns.com/foaf/0.1/‎"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:placeaccess="http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl">
+        <rdfs:label>email: cd8e10@ecs.soton.ac.uk</rdfs:label>
+        <rdfs:isDefinedBy>ChaohaiDing</rdfs:isDefinedBy>
+        <owl:versionInfo>V0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasATM -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasATM">
+        <rdfs:domain rdf:resource="&schema;SubwayStation"/>
+        <rdfs:domain rdf:resource="&schema;TrainStation"/>
+        <rdfs:range rdf:resource="&placeaccess;ATM"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasAccessibleChangingRoom -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasAccessibleChangingRoom">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;AccessibleChaningRoom"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasChangingRoom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasAccessibleLift -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasAccessibleLift">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;AccessibleLift"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasLift"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasAccessibleParking -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasAccessibleParking">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;AccessibleParking"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasParking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasAccessiblePayPhone -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasAccessiblePayPhone">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;AccessiblePayPhone"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasPayPhone"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasAccessibleTaxi -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasAccessibleTaxi">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;AccessibleTaxi"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasTaxi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasAccessibleTicketGates -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasAccessibleTicketGates">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;AccessibleTicketGates"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasTicketGates"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasAccessibleTicketHalls -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasAccessibleTicketHalls">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;AccessibleTicketHalls"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasTicketHalls"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasAccessibleTicketMachine -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasAccessibleTicketMachine">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;AccessibleTicketMachine"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasTicketMachine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasAccessibleToliet -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasAccessibleToliet">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;AccessibleToliet"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasToilet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasBabyChangingRoom -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasBabyChangingRoom">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;BabyChangingRoom"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasChangingRoom"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasBraille -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasBraille">
+        <rdfs:comment>Braille information is available on the premises. </rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;Braille"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasChangingRoom -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasChangingRoom">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;ChangingRoom"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasDisabilityAwareness -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasDisabilityAwareness">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;DisabilityAwareness"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasDoor -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasDoor">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;Door"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasDrinkingVendingMachine -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasDrinkingVendingMachine">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;DrinkingVendingMachine"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasVendingMachine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasEscalator -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasEscalator">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;Escalator"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasFacilities -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasFacilities">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;Facilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasFemalToliet -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasFemalToliet">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;FemaleToliet"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasToilet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasHearingSystem -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasHearingSystem">
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasHelpPointInTicketPoint -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasHelpPointInTicketPoint">
+        <rdfs:domain rdf:resource="&schema;SubwayStation"/>
+        <rdfs:domain rdf:resource="&schema;TrainStation"/>
+        <rdfs:range rdf:resource="&placeaccess;HelpPointOnPlatform"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasHelpPoints"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasHelpPointOnPlatform -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasHelpPointOnPlatform">
+        <rdfs:domain rdf:resource="&schema;SubwayStation"/>
+        <rdfs:domain rdf:resource="&schema;TrainStation"/>
+        <rdfs:range rdf:resource="&placeaccess;HelpPointOnPlatform"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasHelpPoints"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasHelpPoints -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasHelpPoints">
+        <rdfs:domain rdf:resource="&schema;SubwayStation"/>
+        <rdfs:domain rdf:resource="&schema;TrainStation"/>
+        <rdfs:range rdf:resource="&placeaccess;HelpPoints"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasHelpline -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasHelpline">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;Helpline"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasHomeService -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasHomeService">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;HomeService"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasInductionLoop -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasInductionLoop">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;InductionLoop"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasHearingSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasInsideDoor -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasInsideDoor">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;InsideDoor"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasDoor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasLargePrint -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasLargePrint">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;LargePrint"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasLift -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasLift">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;Lift"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasMainEntranceDoor -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasMainEntranceDoor">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;MainEntranceDoor"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasDoor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasMaleToliet -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasMaleToliet">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;MaleToliet"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasToilet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasParking -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasParking">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;Parking"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasPayPhone -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasPayPhone">
+        <rdfs:domain rdf:resource="&schema;SubwayStation"/>
+        <rdfs:domain rdf:resource="&schema;TrainStation"/>
+        <rdfs:range rdf:resource="&placeaccess;PayPhone"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasPrivateParking -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasPrivateParking">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;PrivateParking"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasParking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasPublicParking -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasPublicParking">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;PublicParking"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasParking"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasSeats -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasSeats">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;Seats"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasService -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasService">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasShops -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasShops">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;Shops"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasSignLanguage -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasSignLanguage">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;SignLanguage"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasSnackVendingMachine -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasSnackVendingMachine">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;SnackVendingMachine"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasVendingMachine"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasStaffHelp -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasStaffHelp">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;StaffHelp"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasTaxi -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasTaxi">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;Taxi"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasTicketGates -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasTicketGates">
+        <rdfs:domain rdf:resource="&schema;SubwayStation"/>
+        <rdfs:domain rdf:resource="&schema;TrainStation"/>
+        <rdfs:range rdf:resource="&placeaccess;TicketGates"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasTicketHalls -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasTicketHalls">
+        <rdfs:domain rdf:resource="&schema;SubwayStation"/>
+        <rdfs:domain rdf:resource="&schema;TrainStation"/>
+        <rdfs:range rdf:resource="&placeaccess;TicketHalls"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasTicketMachine -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasTicketMachine">
+        <rdfs:domain rdf:resource="&schema;SubwayStation"/>
+        <rdfs:domain rdf:resource="&schema;TrainStation"/>
+        <rdfs:range rdf:resource="&placeaccess;TicketMachine"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasToilet -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasToilet">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;Toliet"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasVendingMachine -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasVendingMachine">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;VendingMachine"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasWaitingRoom -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasWaitingRoom">
+        <rdfs:domain rdf:resource="&schema;SubwayStation"/>
+        <rdfs:domain rdf:resource="&schema;TrainStation"/>
+        <rdfs:range rdf:resource="&placeaccess;WaitingRoom"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasWheelchair -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasWheelchair">
+        <rdfs:domain rdf:resource="&schema;SubwayStation"/>
+        <rdfs:domain rdf:resource="&schema;TrainStation"/>
+        <rdfs:range rdf:resource="&placeaccess;Wheelchair"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasWiFi -->
+
+    <owl:ObjectProperty rdf:about="&placeaccess;hasWiFi">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&placeaccess;WiFi"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;hasFacilities"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/addressCountry -->
+
+    <owl:DatatypeProperty rdf:about="&schema;addressCountry">
+        <rdfs:comment>Country</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/addressLocality -->
+
+    <owl:DatatypeProperty rdf:about="&schema;addressLocality">
+        <rdfs:comment>City</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/addressRegion -->
+
+    <owl:DatatypeProperty rdf:about="&schema;addressRegion">
+        <rdfs:comment>County</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/description -->
+
+    <owl:DatatypeProperty rdf:about="&schema;description">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/email -->
+
+    <owl:DatatypeProperty rdf:about="&schema;email">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/faxNumber -->
+
+    <owl:DatatypeProperty rdf:about="&schema;faxNumber">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/name -->
+
+    <owl:DatatypeProperty rdf:about="&schema;name">
+        <rdfs:comment>scheam:name for Place</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/postOfficeBoxNumber -->
+
+    <owl:DatatypeProperty rdf:about="&schema;postOfficeBoxNumber">
+        <rdfs:comment>House Number</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/postalCode -->
+
+    <owl:DatatypeProperty rdf:about="&schema;postalCode">
+        <rdfs:comment>PostCode</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/streetAddress -->
+
+    <owl:DatatypeProperty rdf:about="&schema;streetAddress">
+        <rdfs:comment>Street</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/telephone -->
+
+    <owl:DatatypeProperty rdf:about="&schema;telephone">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#AtcoCode -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;AtcoCode">
+        <rdfs:comment>AtcoCode for UK TrainStation</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;TrainStation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#CrsCode -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;CrsCode">
+        <rdfs:comment>CrsCode for Train Station</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;TrainStation"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#OpenAccessibilityID -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;OpenAccessibilityID"/>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#OpenStreetMapID -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;OpenStreetMapID">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#StepFreeAccessCoverage -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;StepFreeAccessCoverage">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#StepFreeAccessNote -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;StepFreeAccessNote">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#accessibilityDescription -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;accessibilityDescription">
+        <rdfs:domain rdf:resource="&placeaccess;Facilities"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;facilitiesDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#availabilityOfTheFacilities -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;availabilityOfTheFacilities">
+        <rdfs:domain rdf:resource="&placeaccess;Facilities"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#dataProvider -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;dataProvider">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#facilitiesDescription -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;facilitiesDescription">
+        <rdfs:domain rdf:resource="&placeaccess;Facilities"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hasDoorType -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;hasDoorType">
+        <rdfs:comment>Expected Value for DoorType: &quot;SensorDoor&quot;,&quot;PoweredDoor&quot;,&quot;ManualDoor&quot;</rdfs:comment>
+        <rdfs:domain rdf:resource="&placeaccess;Door"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#hearingAccessDescription -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;hearingAccessDescription">
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;accessibilityDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#helpLineAvailable -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;helpLineAvailable">
+        <rdfs:domain rdf:resource="&placeaccess;Helpline"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;availabilityOfTheFacilities"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#helpLineContact -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;helpLineContact">
+        <rdfs:domain rdf:resource="&placeaccess;Helpline"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;helpLineAvailable"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#helpLineOpeningHours -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;helpLineOpeningHours">
+        <rdfs:domain rdf:resource="&placeaccess;Helpline"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;helpLineAvailable"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#isAccessible -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;isAccessible">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#isHearingImpairmentAccessible -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;isHearingImpairmentAccessible">
+        <rdfs:comment>Expected Value: Yes, No, Limited, Unknown.</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;isAccessible"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#isMobilityImpairmentAccessible -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;isMobilityImpairmentAccessible">
+        <rdfs:comment>Expected Value: Yes, No, Limited, Unknown.</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;isAccessible"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#isOtherImpairmentAccessible -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;isOtherImpairmentAccessible">
+        <rdfs:comment>Expected Value: Yes, No, Limited, Unknown.</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;isAccessible"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#isStepFree -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;isStepFree">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;isMobilityImpairmentAccessible"/>
+        <owl:equivalentProperty rdf:resource="&placeaccess;isWheelchairAccessible"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#isVisualImpairmentAccessible -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;isVisualImpairmentAccessible">
+        <rdfs:comment>Expected Value: Yes, No, Limited, Unknown.</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;isAccessible"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#isWheelchairAccessible -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;isWheelchairAccessible">
+        <rdfs:comment>Expected Value: Yes, No, Limited, Unknown.</rdfs:comment>
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;isMobilityImpairmentAccessible"/>
+        <owl:equivalentProperty rdf:resource="&placeaccess;liftAccessToAllLevel"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#liftAccessToAllLevel -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;liftAccessToAllLevel">
+        <rdfs:domain rdf:resource="&placeaccess;Lift"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#mobilityAccessDescription -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;mobilityAccessDescription">
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;accessibilityDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#otherAccessDescription -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;otherAccessDescription">
+        <rdfs:domain rdf:resource="&placeaccess;Facilities"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;accessibilityDescription"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#restaurantType -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;restaurantType">
+        <rdfs:domain rdf:resource="&schema;Restaurant"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#staffHelpAvailable -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;staffHelpAvailable">
+        <rdfs:domain rdf:resource="&placeaccess;StaffHelp"/>
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;availabilityOfTheFacilities"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#visualAccessDescription -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;visualAccessDescription">
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;accessibilityDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#website -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;website">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#wheelchairAccessDescription -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;wheelchairAccessDescription">
+        <rdfs:subPropertyOf rdf:resource="&placeaccess;mobilityAccessDescription"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#wheelmapCategory -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;wheelmapCategory">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#wheelmapType -->
+
+    <owl:DatatypeProperty rdf:about="&placeaccess;wheelmapType">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <owl:DatatypeProperty rdf:about="&geo;lat">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+    <owl:DatatypeProperty rdf:about="&geo;long">
+        <rdfs:domain rdf:resource="&schema;Place"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/Bakery -->
+
+    <owl:Class rdf:about="&schema;Bakery">
+        <rdfs:subClassOf rdf:resource="&schema;FoodEstablishment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/BarOrPub -->
+
+    <owl:Class rdf:about="&schema;BarOrPub">
+        <rdfs:subClassOf rdf:resource="&schema;FoodEstablishment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Brewery -->
+
+    <owl:Class rdf:about="&schema;Brewery">
+        <rdfs:subClassOf rdf:resource="&schema;FoodEstablishment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/CafeOrCoffeeShop -->
+
+    <owl:Class rdf:about="&schema;CafeOrCoffeeShop">
+        <rdfs:subClassOf rdf:resource="&schema;FoodEstablishment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/CivicStructure -->
+
+    <owl:Class rdf:about="&schema;CivicStructure">
+        <rdfs:subClassOf rdf:resource="&schema;Place"/>
+        <owl:disjointWith rdf:resource="&schema;LocalBusiness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/FastFoodRestaurant -->
+
+    <owl:Class rdf:about="&schema;FastFoodRestaurant">
+        <rdfs:subClassOf rdf:resource="&schema;FoodEstablishment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/FoodEstablishment -->
+
+    <owl:Class rdf:about="&schema;FoodEstablishment">
+        <rdfs:subClassOf rdf:resource="&schema;LocalBusiness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/GovernmentOffice -->
+
+    <owl:Class rdf:about="&schema;GovernmentOffice">
+        <rdfs:subClassOf rdf:resource="&schema;LocalBusiness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/IceCreamShop -->
+
+    <owl:Class rdf:about="&schema;IceCreamShop">
+        <rdfs:subClassOf rdf:resource="&schema;FoodEstablishment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/LocalBusiness -->
+
+    <owl:Class rdf:about="&schema;LocalBusiness">
+        <rdfs:subClassOf rdf:resource="&schema;Place"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/LodgingBusiness -->
+
+    <owl:Class rdf:about="&schema;LodgingBusiness">
+        <rdfs:subClassOf rdf:resource="&schema;LocalBusiness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/ParkingFacility -->
+
+    <owl:Class rdf:about="&schema;ParkingFacility">
+        <rdfs:subClassOf rdf:resource="&schema;CivicStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Place -->
+
+    <owl:Class rdf:about="&schema;Place">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/PostOffice -->
+
+    <owl:Class rdf:about="&schema;PostOffice">
+        <rdfs:subClassOf rdf:resource="&schema;GovernmentOffice"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Restaurant -->
+
+    <owl:Class rdf:about="&schema;Restaurant">
+        <rdfs:subClassOf rdf:resource="&schema;FoodEstablishment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/SubwayStation -->
+
+    <owl:Class rdf:about="&schema;SubwayStation">
+        <rdfs:subClassOf rdf:resource="&schema;CivicStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/TrainStation -->
+
+    <owl:Class rdf:about="&schema;TrainStation">
+        <rdfs:subClassOf rdf:resource="&schema;CivicStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Winery -->
+
+    <owl:Class rdf:about="&schema;Winery">
+        <rdfs:subClassOf rdf:resource="&schema;FoodEstablishment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#ATM -->
+
+    <owl:Class rdf:about="&placeaccess;ATM">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#AccessibleChaningRoom -->
+
+    <owl:Class rdf:about="&placeaccess;AccessibleChaningRoom">
+        <rdfs:subClassOf rdf:resource="&placeaccess;ChangingRoom"/>
+        <rdfs:comment>A clear door width of at least 75cm 
+Step free access
+Sufficient space for a wheelchair user to manoeuvre
+Grab rails and drop down rails available</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#AccessibleInterchanges -->
+
+    <owl:Class rdf:about="&placeaccess;AccessibleInterchanges">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Interchanges"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#AccessibleLift -->
+
+    <owl:Class rdf:about="&placeaccess;AccessibleLift">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Lift"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#AccessibleParking -->
+
+    <owl:Class rdf:about="&placeaccess;AccessibleParking">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Parking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#AccessiblePayPhone -->
+
+    <owl:Class rdf:about="&placeaccess;AccessiblePayPhone">
+        <rdfs:subClassOf rdf:resource="&placeaccess;PayPhone"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#AccessibleTaxi -->
+
+    <owl:Class rdf:about="&placeaccess;AccessibleTaxi">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Taxi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#AccessibleTicketGates -->
+
+    <owl:Class rdf:about="&placeaccess;AccessibleTicketGates">
+        <rdfs:subClassOf rdf:resource="&placeaccess;TicketGates"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#AccessibleTicketHalls -->
+
+    <owl:Class rdf:about="&placeaccess;AccessibleTicketHalls">
+        <rdfs:subClassOf rdf:resource="&placeaccess;TicketHalls"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#AccessibleTicketMachine -->
+
+    <owl:Class rdf:about="&placeaccess;AccessibleTicketMachine">
+        <rdfs:subClassOf rdf:resource="&placeaccess;TicketMachine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#AccessibleToliet -->
+
+    <owl:Class rdf:about="&placeaccess;AccessibleToliet">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Toliet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#AirportInterchange -->
+
+    <owl:Class rdf:about="&placeaccess;AirportInterchange">
+        <rdfs:subClassOf rdf:resource="&placeaccess;AccessibleInterchanges"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#BabyChangingRoom -->
+
+    <owl:Class rdf:about="&placeaccess;BabyChangingRoom">
+        <rdfs:subClassOf rdf:resource="&placeaccess;ChangingRoom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#Braille -->
+
+    <owl:Class rdf:about="&placeaccess;Braille">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+        <rdfs:comment>Braille information is available on the premises. Braille information which is available &#39;on request&#39; will be noted in the Additional Information section on the Detailed Access Guides but will not qualify for the Braille symbol.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#ChangingRoom -->
+
+    <owl:Class rdf:about="&placeaccess;ChangingRoom">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#DisabilityAwareness -->
+
+    <owl:Class rdf:about="&placeaccess;DisabilityAwareness">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+        <rdfs:comment>Disability Awareness / Equality Training for their staff. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#Door -->
+
+    <owl:Class rdf:about="&placeaccess;Door">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#DrinkingVendingMachine -->
+
+    <owl:Class rdf:about="&placeaccess;DrinkingVendingMachine">
+        <rdfs:subClassOf rdf:resource="&placeaccess;VendingMachine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#EmiratesAirLineInterchange -->
+
+    <owl:Class rdf:about="&placeaccess;EmiratesAirLineInterchange">
+        <rdfs:subClassOf rdf:resource="&placeaccess;AccessibleInterchanges"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#Escalator -->
+
+    <owl:Class rdf:about="&placeaccess;Escalator">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#Facilities -->
+
+    <owl:Class rdf:about="&placeaccess;Facilities">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#FemaleToliet -->
+
+    <owl:Class rdf:about="&placeaccess;FemaleToliet">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Toliet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#HearingSystem -->
+
+    <owl:Class rdf:about="&placeaccess;HearingSystem">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#HelpPointInTicketPoint -->
+
+    <owl:Class rdf:about="&placeaccess;HelpPointInTicketPoint">
+        <rdfs:subClassOf rdf:resource="&placeaccess;HelpPoints"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#HelpPointOnPlatform -->
+
+    <owl:Class rdf:about="&placeaccess;HelpPointOnPlatform">
+        <rdfs:subClassOf rdf:resource="&placeaccess;HelpPoints"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#HelpPoints -->
+
+    <owl:Class rdf:about="&placeaccess;HelpPoints">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#Helpline -->
+
+    <owl:Class rdf:about="&placeaccess;Helpline">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+        <rdfs:comment>Help Line</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#HomeService -->
+
+    <owl:Class rdf:about="&placeaccess;HomeService">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+        <rdfs:comment>The service provider has a policy of providing a home delivery or home visiting service. A website delivery service does not constitute a home service.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#InductionLoop -->
+
+    <owl:Class rdf:about="&placeaccess;InductionLoop">
+        <rdfs:subClassOf rdf:resource="&placeaccess;HearingSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#InsideDoor -->
+
+    <owl:Class rdf:about="&placeaccess;InsideDoor">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Door"/>
+        <owl:disjointWith rdf:resource="&placeaccess;MainEntranceDoor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#Interchanges -->
+
+    <owl:Class rdf:about="&placeaccess;Interchanges">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#LargePrint -->
+
+    <owl:Class rdf:about="&placeaccess;LargePrint">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#Lift -->
+
+    <owl:Class rdf:about="&placeaccess;Lift">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#MainBusInterchange -->
+
+    <owl:Class rdf:about="&placeaccess;MainBusInterchange">
+        <rdfs:subClassOf rdf:resource="&placeaccess;AccessibleInterchanges"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#MainEntranceDoor -->
+
+    <owl:Class rdf:about="&placeaccess;MainEntranceDoor">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Door"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#MaleToliet -->
+
+    <owl:Class rdf:about="&placeaccess;MaleToliet">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Toliet"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#NationalRailInterchange -->
+
+    <owl:Class rdf:about="&placeaccess;NationalRailInterchange">
+        <rdfs:subClassOf rdf:resource="&placeaccess;AccessibleInterchanges"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#Parking -->
+
+    <owl:Class rdf:about="&placeaccess;Parking">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#PayPhone -->
+
+    <owl:Class rdf:about="&placeaccess;PayPhone">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#PierInterchange -->
+
+    <owl:Class rdf:about="&placeaccess;PierInterchange">
+        <rdfs:subClassOf rdf:resource="&placeaccess;AccessibleInterchanges"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#PrivateParking -->
+
+    <owl:Class rdf:about="&placeaccess;PrivateParking">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Parking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#PublicParking -->
+
+    <owl:Class rdf:about="&placeaccess;PublicParking">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Parking"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#Seats -->
+
+    <owl:Class rdf:about="&placeaccess;Seats">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#Shops -->
+
+    <owl:Class rdf:about="&placeaccess;Shops">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#SignLanguage -->
+
+    <owl:Class rdf:about="&placeaccess;SignLanguage">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#SnackVendingMachine -->
+
+    <owl:Class rdf:about="&placeaccess;SnackVendingMachine">
+        <rdfs:subClassOf rdf:resource="&placeaccess;VendingMachine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#StaffHelp -->
+
+    <owl:Class rdf:about="&placeaccess;StaffHelp">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#Taxi -->
+
+    <owl:Class rdf:about="&placeaccess;Taxi">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#TicketGates -->
+
+    <owl:Class rdf:about="&placeaccess;TicketGates">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#TicketHalls -->
+
+    <owl:Class rdf:about="&placeaccess;TicketHalls">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#TicketMachine -->
+
+    <owl:Class rdf:about="&placeaccess;TicketMachine">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#Toliet -->
+
+    <owl:Class rdf:about="&placeaccess;Toliet">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#TramlinkInterchange -->
+
+    <owl:Class rdf:about="&placeaccess;TramlinkInterchange">
+        <rdfs:subClassOf rdf:resource="&placeaccess;AccessibleInterchanges"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#VendingMachine -->
+
+    <owl:Class rdf:about="&placeaccess;VendingMachine">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#WaitingRoom -->
+
+    <owl:Class rdf:about="&placeaccess;WaitingRoom">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#Wheelchair -->
+
+    <owl:Class rdf:about="&placeaccess;Wheelchair">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- http://waisvm-cd8e10.ecs.soton.ac.uk/2014/2/ontology/placeaccess.owl#WiFi -->
+
+    <owl:Class rdf:about="&placeaccess;WiFi">
+        <rdfs:subClassOf rdf:resource="&placeaccess;Facilities"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&schema;FoodEstablishment"/>
+            <rdf:Description rdf:about="&schema;GovernmentOffice"/>
+            <rdf:Description rdf:about="&schema;LodgingBusiness"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&schema;ParkingFacility"/>
+            <rdf:Description rdf:about="&schema;SubwayStation"/>
+            <rdf:Description rdf:about="&schema;TrainStation"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

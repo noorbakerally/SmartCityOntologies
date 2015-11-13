@@ -1,0 +1,399 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY dc "http://purl.org/dc/terms/" >
+    <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+    <!ENTITY om "http://purl.oclc.org/NET/om/" >
+    <!ENTITY qoi "http:/example.com/QoSQoI.owl#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY sao "http://purl.oclc.org/NET/sao/sao#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ssn "http://purl.oclc.org/NET/ssnx/ssn/" >
+    <!ENTITY prov "http://purl.org/NET/provenance.owl#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY sao2 "http://purl.oclc.org/NET/UNIS/sao/sao#" >
+    <!ENTITY tl "http://purl.org/NET/c4dm/timeline.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY DUL "http://www.loa.istc.cnr.it/ontologies/DUL.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/owl/owlapi/turtle#"
+     xml:base="http://www.semanticweb.org/owl/owlapi/turtle"
+     xmlns:sao="http://purl.oclc.org/NET/sao/sao#"
+     xmlns:sao2="http://purl.oclc.org/NET/UNIS/sao/sao#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:qoi="http:/example.com/QoSQoI.owl#"
+     xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:tl="http://purl.org/NET/c4dm/timeline.owl#"
+     xmlns:DUL="http://www.loa.istc.cnr.it/ontologies/DUL.owl#"
+     xmlns:prov="http://purl.org/NET/provenance.owl#"
+     xmlns:om="http://purl.oclc.org/NET/om/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://purl.oclc.org/NET/UNIS/sao/sao#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#time -->
+
+    <owl:AnnotationProperty rdf:about="&sao2;time">
+        <rdfs:comment>Relates a segment to the time interval concept in Timeline Ontology</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/NET/provenance.owl#wasDerivedFrom -->
+
+    <owl:AnnotationProperty rdf:about="&prov;wasDerivedFrom">
+        <rdfs:comment>Relates a stream data to an obervation</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#computeby -->
+
+    <owl:ObjectProperty rdf:about="&sao2;computeby">
+        <rdfs:comment>relates a stream data to a computed result</rdfs:comment>
+        <rdfs:range rdf:resource="&sao2;StreamAnalysis"/>
+        <rdfs:domain rdf:resource="&sao2;StreamData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#computedfrom -->
+
+    <owl:ObjectProperty rdf:about="&sao2;computedfrom">
+        <rdfs:comment>relates a computed result to a stream data</rdfs:comment>
+        <rdfs:domain rdf:resource="&sao2;StreamAnalysis"/>
+        <rdfs:range rdf:resource="&sao2;StreamData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#quality -->
+
+    <owl:ObjectProperty rdf:about="&sao2;quality">
+        <rdfs:comment>Relates a stream data to an information entity regarding the quality</rdfs:comment>
+        <rdfs:domain rdf:resource="&sao2;StreamData"/>
+        <rdfs:range rdf:resource="&DUL;InformationEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#time -->
+
+    <owl:ObjectProperty rdf:about="&sao2;time">
+        <rdfs:comment>Relates a segment to the time interval concept in Timeline Ontology</rdfs:comment>
+        <rdfs:domain rdf:resource="&sao2;Segment"/>
+        <rdfs:range rdf:resource="&tl;Interval"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/NET/provenance.owl#wasAssociatedWith -->
+
+    <owl:ObjectProperty rdf:about="&prov;wasAssociatedWith">
+        <rdfs:comment>Relates a stream analysis to associated entity</rdfs:comment>
+        <rdfs:domain rdf:resource="&sao2;StreamAnalysis"/>
+        <rdfs:range rdf:resource="&DUL;InformationEntity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/NET/provenance.owl#wasDerivedFrom -->
+
+    <owl:ObjectProperty rdf:about="&prov;wasDerivedFrom">
+        <rdfs:comment>Relates a stream data to an obervation</rdfs:comment>
+        <rdfs:range rdf:resource="&sao2;StreamData"/>
+        <rdfs:domain rdf:resource="&ssn;Observation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#Timestamp -->
+
+    <owl:DatatypeProperty rdf:about="&sao2;Timestamp">
+        <rdfs:range rdf:resource="&xsd;dateTimeStamp"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#alphabetsize -->
+
+    <owl:DatatypeProperty rdf:about="&sao2;alphabetsize">
+        <rdfs:comment>describes the alphabet size that have been used for a stream analysis technique (e.g. SymbolicAggregateApproximation)</rdfs:comment>
+        <rdfs:domain rdf:resource="&sao2;SymbolicAggregateApproximation"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#hasDatatype -->
+
+    <owl:DatatypeProperty rdf:about="&sao2;hasDatatype">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#hasID -->
+
+    <owl:DatatypeProperty rdf:about="&sao2;hasID">
+        <rdfs:comment>describes the identification of the stream data</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#hasLocation -->
+
+    <owl:DatatypeProperty rdf:about="&sao2;hasLocation">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#hasURI -->
+
+    <owl:DatatypeProperty rdf:about="&sao2;hasURI">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#samplesize -->
+
+    <owl:DatatypeProperty rdf:about="&sao2;samplesize">
+        <rdfs:comment>describes the number of samples that a stream data involve; or used for a stream analysis technique</rdfs:comment>
+        <rdfs:domain rdf:resource="&sao2;StreamData"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#samplingrate -->
+
+    <owl:DatatypeProperty rdf:about="&sao2;samplingrate">
+        <rdfs:domain rdf:resource="&sao2;StreamData"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#segmentsize -->
+
+    <owl:DatatypeProperty rdf:about="&sao2;segmentsize">
+        <rdfs:comment>Describes the number of segments that have been used for a stream data/analysis</rdfs:comment>
+        <rdfs:domain rdf:resource="&sao2;StreamAnalysis"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#stepsize -->
+
+    <owl:DatatypeProperty rdf:about="&sao2;stepsize">
+        <rdfs:comment>Describes the step size in other words the size of overlapping frames that have been used for a stream data/analysis</rdfs:comment>
+        <rdfs:domain rdf:resource="&sao2;StreamAnalysis"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#value -->
+
+    <owl:DatatypeProperty rdf:about="&sao2;value">
+        <rdfs:comment>describes the value of the stream data or stream analysis output; it can be an array of values</rdfs:comment>
+        <rdfs:domain rdf:resource="&sao2;StreamData"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#DiscreteCosineTransform -->
+
+    <owl:Class rdf:about="&sao2;DiscreteCosineTransform">
+        <rdfs:subClassOf rdf:resource="&sao2;StreamAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#DiscreteFourierTransform -->
+
+    <owl:Class rdf:about="&sao2;DiscreteFourierTransform">
+        <rdfs:subClassOf rdf:resource="&sao2;StreamAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#Mean -->
+
+    <owl:Class rdf:about="&sao2;Mean">
+        <rdfs:subClassOf rdf:resource="&sao2;StreamAnalysis"/>
+        <dc:description>Mean calculate the mean of each row of observations</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#Median -->
+
+    <owl:Class rdf:about="&sao2;Median">
+        <rdfs:subClassOf rdf:resource="&sao2;StreamAnalysis"/>
+        <dc:description>Median calculate the median of each row of observations</dc:description>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#PiecewiseAggregateApproximation -->
+
+    <owl:Class rdf:about="&sao2;PiecewiseAggregateApproximation">
+        <rdfs:subClassOf rdf:resource="&sao2;StreamAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#Point -->
+
+    <owl:Class rdf:about="&sao2;Point">
+        <rdfs:subClassOf rdf:resource="&sao2;StreamData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#Segment -->
+
+    <owl:Class rdf:about="&sao2;Segment">
+        <rdfs:subClassOf rdf:resource="&sao2;StreamData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#StreamAnalysis -->
+
+    <owl:Class rdf:about="&sao2;StreamAnalysis">
+        <rdfs:subClassOf rdf:resource="&sao2;StreamData"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#StreamData -->
+
+    <owl:Class rdf:about="&sao2;StreamData">
+        <rdfs:subClassOf rdf:resource="&sao2;StreamAnalysis"/>
+        <rdfs:subClassOf rdf:resource="&prov;Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&sao2;quality"/>
+                <owl:allValuesFrom rdf:resource="&DUL;InformationEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#StreamEvent -->
+
+    <owl:Class rdf:about="&sao2;StreamEvent">
+        <rdfs:subClassOf rdf:resource="&prov;Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/UNIS/sao/sao#SymbolicAggregateApproximation -->
+
+    <owl:Class rdf:about="&sao2;SymbolicAggregateApproximation">
+        <rdfs:subClassOf rdf:resource="&sao2;StreamAnalysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.oclc.org/NET/ssnx/ssn/Observation -->
+
+    <owl:Class rdf:about="&ssn;Observation"/>
+    
+
+
+    <!-- http://purl.org/NET/c4dm/timeline.owl#Interval -->
+
+    <owl:Class rdf:about="&tl;Interval"/>
+    
+
+
+    <!-- http://purl.org/NET/provenance.owl#Activity -->
+
+    <owl:Class rdf:about="&prov;Activity"/>
+    
+
+
+    <!-- http://purl.org/NET/provenance.owl#Entity -->
+
+    <owl:Class rdf:about="&prov;Entity"/>
+    
+
+
+    <!-- http://www.loa.istc.cnr.it/ontologies/DUL.owl#InformationEntity -->
+
+    <owl:Class rdf:about="&DUL;InformationEntity"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+

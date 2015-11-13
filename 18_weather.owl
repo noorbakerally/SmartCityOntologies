@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://knoesis.wright.edu/ssw/ont/weather.owl#"
+  xml:base="http://knoesis.wright.edu/ssw/ont/weather.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Wet">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Road_Condition"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Blizzard">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Storm"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Hot">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Temperature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Freezing">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Temperature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Weather">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Phenomena"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Fair">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Temperature"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="High_Wind">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Wind"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Ice_Storm">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Storm"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Sleet">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Precipitation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Rain">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Precipitation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Icy">
+    <rdfs:subClassOf rdf:resource="#Road_Condition"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Wind">
+    <rdfs:subClassOf rdf:resource="#Weather"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Temperature">
+    <rdfs:subClassOf rdf:resource="#Weather"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Potentially_Icy">
+    <rdfs:subClassOf rdf:resource="#Road_Condition"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Rain_Storm">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Storm"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Breeze">
+    <rdfs:subClassOf rdf:resource="#Wind"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Clear">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Precipitation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Hazardous">
+    <rdfs:subClassOf rdf:resource="#Road_Condition"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Calm">
+    <rdfs:subClassOf rdf:resource="#Wind"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Cold">
+    <rdfs:subClassOf rdf:resource="#Temperature"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Precipitation">
+    <rdfs:subClassOf rdf:resource="#Weather"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Storm">
+    <rdfs:subClassOf rdf:resource="#Weather"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Snow">
+    <rdfs:subClassOf rdf:resource="#Precipitation"/>
+  </owl:Class>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.3, Build 395)  http://protege.stanford.edu -->

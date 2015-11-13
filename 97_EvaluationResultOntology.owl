@@ -1,0 +1,365 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
+    <!ENTITY vann "http://purl.org/vocab/vann/" >
+    <!ENTITY time "http://www.w3.org/2006/time#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY qmo "http://purl.org/net/QualityModel#" >
+    <!ENTITY eval "http://purl.org/net/EvaluationResult#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY om "http://www.wurvoc.org/vocabularies/om-1.8/" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.org/net/EvaluationResult#"
+     xml:base="http://purl.org/net/EvaluationResult"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:eval="http://purl.org/net/EvaluationResult#"
+     xmlns:om="http://www.wurvoc.org/vocabularies/om-1.8/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:qmo="http://purl.org/net/QualityModel#">
+    <owl:Ontology rdf:about="http://purl.org/net/EvaluationResult#">
+        <rdfs:label>EvaluationResultOntology</rdfs:label>
+        <dc:creator>http://www.garcia-castro.com/foaf#me</dc:creator>
+        <terms:license>http://creativecommons.org/licenses/by-nc-sa/2.0/</terms:license>
+        <dc:creator>http://purl.org/net/filiprd</dc:creator>
+        <vann:preferredNamespacePrefix>eval</vann:preferredNamespacePrefix>
+        <terms:created>2015-07-29</terms:created>
+        <vann:preferredNamespaceUri>http://purl.org/net/EvaluationResult#</vann:preferredNamespaceUri>
+        <owl:versionInfo>1.0</owl:versionInfo>
+        <dc:description>The Evaluation Result ontology is an ontology for describing evaluation results and related resources in a quality evaluation process.</dc:description>
+        <rdfs:comment>Evaluation Result ontology is an ontology for representing information about results of a quality evaluation. </rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="&dc;description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="&dc;title">
+        <rdfs:domain rdf:resource="http://purl.org/net/EvaluationResult#EvaluationSubject"/>
+        <rdfs:domain rdf:resource="http://purl.org/net/EvaluationResult#SubjectCategory"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="&terms;created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="&terms;license"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="&vann;preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="&vann;preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/EvaluationResult#belongsToCategory -->
+
+    <owl:ObjectProperty rdf:about="&eval;belongsToCategory">
+        <rdfs:label>belongsToCategory</rdfs:label>
+        <rdfs:comment>Denotes a category of an evaluation subject.</rdfs:comment>
+        <rdfs:domain rdf:resource="&eval;EvaluationSubject"/>
+        <rdfs:range rdf:resource="&eval;SubjectCategory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/EvaluationResult#evaluatedSubject -->
+
+    <owl:ObjectProperty rdf:about="&eval;evaluatedSubject">
+        <rdfs:label>evaluatedSubject</rdfs:label>
+        <rdfs:comment>Denotes an evaluation subject that is evaluated.</rdfs:comment>
+        <rdfs:domain rdf:resource="&eval;Evaluation"/>
+        <rdfs:range rdf:resource="&eval;EvaluationSubject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/EvaluationResult#forMeasure -->
+
+    <owl:ObjectProperty rdf:about="&eval;forMeasure">
+        <rdfs:label>forMeasure</rdfs:label>
+        <rdfs:comment>Denotes a quality measure for which a quality value is produced.</rdfs:comment>
+        <rdfs:domain rdf:resource="&eval;QualityValue"/>
+        <rdfs:range rdf:resource="&qmo;QualityMeasure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/EvaluationResult#hasSubCategory -->
+
+    <owl:ObjectProperty rdf:about="&eval;hasSubCategory">
+        <rdfs:label>hasSubCategory</rdfs:label>
+        <rdfs:comment>Denotes a subcategory of a category.</rdfs:comment>
+        <rdfs:range rdf:resource="&eval;SubjectCategory"/>
+        <rdfs:domain rdf:resource="&eval;SubjectCategory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/EvaluationResult#inputData -->
+
+    <owl:ObjectProperty rdf:about="&eval;inputData">
+        <rdfs:label>inputData</rdfs:label>
+        <rdfs:comment>Denotes inout data that is used in an evaluation.</rdfs:comment>
+        <rdfs:domain rdf:resource="&eval;Evaluation"/>
+        <rdfs:range rdf:resource="&eval;EvaluationData"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/EvaluationResult#isMeasuredInUnit -->
+
+    <owl:ObjectProperty rdf:about="&eval;isMeasuredInUnit">
+        <rdfs:label>isMeasuredInUnit</rdfs:label>
+        <rdfs:comment>Denotes a unit of measure in which a quality value is measured.</rdfs:comment>
+        <rdfs:domain rdf:resource="&eval;QualityValue"/>
+        <rdfs:range rdf:resource="&om;Unit_of_measure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/EvaluationResult#isMeasuredOnScale -->
+
+    <owl:ObjectProperty rdf:about="&eval;isMeasuredOnScale">
+        <rdfs:label>isMeasuredOnScale</rdfs:label>
+        <rdfs:comment>Denotes a scale on which a quality value is measured on.</rdfs:comment>
+        <rdfs:domain rdf:resource="&eval;QualityValue"/>
+        <rdfs:range rdf:resource="&om;Measurement_scale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/EvaluationResult#obtainedFrom -->
+
+    <owl:ObjectProperty rdf:about="&eval;obtainedFrom">
+        <rdfs:label>obtainedFrom</rdfs:label>
+        <rdfs:comment>Denotes a quality evaluation from which a quality value is obtained.</rdfs:comment>
+        <rdfs:range rdf:resource="&eval;Evaluation"/>
+        <rdfs:domain rdf:resource="&eval;QualityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/EvaluationResult#performedOn -->
+
+    <owl:ObjectProperty rdf:about="&eval;performedOn">
+        <rdfs:label>performedOn</rdfs:label>
+        <rdfs:comment>Denotes a time of a quality evaluation.</rdfs:comment>
+        <rdfs:domain rdf:resource="&eval;Evaluation"/>
+        <rdfs:range rdf:resource="&time;Instant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/net/EvaluationResult#producedQualityValue -->
+
+    <owl:ObjectProperty rdf:about="&eval;producedQualityValue">
+        <rdfs:label>producedQualityValue</rdfs:label>
+        <rdfs:comment>Denotes a quality value produced in a quality evaluation.</rdfs:comment>
+        <rdfs:domain rdf:resource="&eval;Evaluation"/>
+        <rdfs:range rdf:resource="&eval;QualityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:DatatypeProperty rdf:about="&dc;title"/>
+    
+
+
+    <!-- http://purl.org/net/EvaluationResult#hasLiteralValue -->
+
+    <owl:DatatypeProperty rdf:about="&eval;hasLiteralValue">
+        <rdfs:label>hasLiteralValue</rdfs:label>
+        <rdfs:comment>Denotes a literal value of a quality value.</rdfs:comment>
+        <rdfs:domain rdf:resource="&eval;QualityValue"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/EvaluationResult#Evaluation -->
+
+    <owl:Class rdf:about="&eval;Evaluation">
+        <rdfs:label>Evaluation</rdfs:label>
+        <rdfs:comment>Evaluation. A process of quality measurement.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/EvaluationResult#EvaluationData -->
+
+    <owl:Class rdf:about="&eval;EvaluationData">
+        <rdfs:label>EvaluationData</rdfs:label>
+        <rdfs:comment>Evaluation data is any data that is used as an input in an evaluation process.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/EvaluationResult#EvaluationSubject -->
+
+    <owl:Class rdf:about="&eval;EvaluationSubject">
+        <rdfs:label>EvaluationSubject</rdfs:label>
+        <rdfs:comment>Evaluation subject is any product, service or action (e.g., Seat Ibiza, Chrome, corn crops) that is evaluated in an evaluation process.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/EvaluationResult#QualityValue -->
+
+    <owl:Class rdf:about="&eval;QualityValue">
+        <rdfs:label>QualityValue</rdfs:label>
+        <rdfs:comment>Quality value is a value obtained in a quality evaluation.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/EvaluationResult#SubjectCategory -->
+
+    <owl:Class rdf:about="&eval;SubjectCategory">
+        <rdfs:label>SubjectCategory</rdfs:label>
+        <rdfs:comment>Subject category is a category or type of an evaluation subject (eg., a car, web browser, investment).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/net/QualityModel#QualityMeasure -->
+
+    <owl:Class rdf:about="&qmo;QualityMeasure"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="&time;Instant"/>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/Measurement_scale -->
+
+    <owl:Class rdf:about="&om;Measurement_scale"/>
+    
+
+
+    <!-- http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure -->
+
+    <owl:Class rdf:about="&om;Unit_of_measure"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&eval;Evaluation"/>
+            <rdf:Description rdf:about="&eval;EvaluationData"/>
+            <rdf:Description rdf:about="&eval;EvaluationSubject"/>
+            <rdf:Description rdf:about="&eval;QualityValue"/>
+            <rdf:Description rdf:about="&eval;SubjectCategory"/>
+            <rdf:Description rdf:about="&qmo;QualityMeasure"/>
+            <rdf:Description rdf:about="&time;Instant"/>
+            <rdf:Description rdf:about="&om;Measurement_scale"/>
+            <rdf:Description rdf:about="&om;Unit_of_measure"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

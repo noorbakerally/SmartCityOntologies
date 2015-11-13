@@ -1,0 +1,1162 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#"
+     xml:base="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasCarrier -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasCarrier">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Station"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Transport"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasTicketType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasTicketType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasVehicle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasVehicle">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Vehicle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isCarrierOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isCarrierOf">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasCarrier"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Route"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Transport"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Route"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasVehicle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#B1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#B1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Bus"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasCarrier"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#ZKM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Autobus kursujący po Gdyni
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#B2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#B2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Bus"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasCarrier"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#ZKM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Autobus kursujący po Sopocie</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#B3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#B3">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Bus"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasCarrier"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#MZK"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Autubus kursujący po Gdańsku</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#B4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#B4">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Bus"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasCarrier"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#MZK"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Autobus kursujący po Gdańsku</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Bus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Bus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Vehicle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasCarrier"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#MZK"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#ZKM"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Carrier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Carrier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Transport"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskGlowny -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskGlowny">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Station"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R5"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R4"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R5"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskOliwa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskOliwa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Station"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R5"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R4"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R5"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskWrzeszcz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskWrzeszcz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Station"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R4"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R5"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R5"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdyniaChylonia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdyniaChylonia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Station"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R1"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdyniaGlowna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdyniaGlowna">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Station"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R1"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdyniaOrlowo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdyniaOrlowo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Station"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R1"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#MZK -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#MZK">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Carrier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Price -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Price">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Ticket"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Route"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdyniaOrlowo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdyniaChylonia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdyniaChylonia"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdyniaGlowna"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdyniaOrlowo"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasVehicle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#B1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdyniaGlowna"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasVehicle"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#B1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Trasa autobusu po Gdyni
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Route"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Sopot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Rumia"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasVehicle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#T1"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasVehicle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#T2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasVehicle"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Train"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Wejherowo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdyniaOrlowo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskGlowny"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdyniaOrlowo"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Reda"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Rumia"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Sopot"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Wejherowo"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Reda"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskGlowny"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Trasa pociągu między miastowa
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R3">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Route"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasVehicle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#B2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasVehicle"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Bus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#SopotWyscigi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Sopot"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#SopotWyscigi"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Sopot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Trasa autobusu po Sopocie</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R4">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Route"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasVehicle"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Bus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasVehicle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#B3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskOliwa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasVehicle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#B4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskGlowny"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskGlowny"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskOliwa"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskWrzeszcz"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskWrzeszcz"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Trasa Autobusu po Gdańsku</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R5 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R5">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Route"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskGlowny"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskOliwa"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskWrzeszcz"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasVehicle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Tramway"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskWrzeszcz"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskGlowny"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#GdanskOliwa"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasVehicle"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Tramway"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Trasa Tramwajów po Gdańsku</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Reda -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Reda">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Station"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Route -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Route">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Transport"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasStation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Station"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasVehicle"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Vehicle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Rumia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Rumia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Station"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#SKM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#SKM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Carrier"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Sopot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Sopot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Station"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R3"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#SopotWyscigi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#SopotWyscigi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Station"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R3"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R3"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Station -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Station">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Transport"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Route"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#T1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#T1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Train"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#T2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#T2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Train"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#TM1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#TM1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Tramway"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R5"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R5"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#TM2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#TM2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Tramway"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R5"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R5"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#TM3 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#TM3">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Tramway"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R5"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R5"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Ticket -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Ticket">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Transport"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Train -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Train">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Vehicle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasCarrier"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#SKM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasCarrier"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#SKM"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Pociągi na trasie Międzymiastowej</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Tramway -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Tramway">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Vehicle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasCarrier"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#MZK"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasCarrier"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#MZK"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Tramwaje kursujące po Gdańsku</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Transport -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Transport"/>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Type">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Ticket"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Vehicle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Transport"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isVehicleOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Route"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#hasCarrier"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Carrier"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Wejherowo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Wejherowo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Station"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#isStationOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#R2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#ZKM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#ZKM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Carrier"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Concessionary -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Concessionary">
+        <rdf:type rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Normal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Normal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/damian/ontologies/2013/5/untitled-ontology-7#Type"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,1159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xml:lang="en">
+	<skos:ConceptScheme rdf:about="http://www.cadastralvocabulary.org/CaLAThe">
+		<skos:prefLabel>CaLAThe - Cadastre and Land Administration Thesaurus, version 2.0</skos:prefLabel>
+		<dc:title>CaLAThe - Cadastre and Land Administration Thesaurus, version 2.0</dc:title>
+		<skos:description>The first version of this thesaurus (Sept. 2011) was prepared based on terms and term relationships derived from ISO/DIS Land Administration Domain Model (dated 2010-03-01) which was initiated by Peter van Oosterom and Christiaan Lemmen, as well as terms adopted from other thesauri including the AGROVOC multilingual agricultural vocabulary, the GEMET Thesaurus, INSPIRE Spatial Data Themes, and the STW Thesaurus for Economics. In version 2 (Oct. 2012), the about 110 terms of the version 1.0 was supplemented with terms, which address the dynamic or process aspect of the domain. These about 35 terms are derived from reports of the project 'Property Formation in the Nordic countries', performed by staff of the cadastral agencies and university departments of the Nordic countries.</skos:description>
+		<dc:description>The first version of this thesaurus (Sept. 2011) was prepared based on terms and term relationships derived from ISO/DIS Land Administration Domain Model (dated 2010-03-01) which was initiated by Peter van Oosterom and Christiaan Lemmen, as well as terms adopted from other thesauri including the AGROVOC multilingual agricultural vocabulary, the GEMET Thesaurus, INSPIRE Spatial Data Themes, and the STW Thesaurus for Economics. In version 2 (Oct. 2012), the about 110 terms of the version 1.0 was supplemented with terms, which address the dynamic or process aspect of the domain. These about 35 terms are derived from reports of the project 'Property Formation in the Nordic countries', performed by staff of the cadastral agencies and university departments of the Nordic countries.</dc:description>
+		<dc:creator>Erik Stubkj&#230;r</dc:creator>
+		<dc:creator> Volkan Cagdas</dc:creator>
+		<dc:date>2012-10-10</dc:date>
+		<dct:issued>2012-10-10</dct:issued>
+		<skos:hasTopConcept rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Party"/>
+		<skos:hasTopConcept rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Law"/>
+		<skos:hasTopConcept rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Documentation"/>
+		<skos:hasTopConcept rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Land"/>
+		<skos:hasTopConcept rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Activity"/>
+	</skos:ConceptScheme>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Activity/">
+		<skos:prefLabel>Activity</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:altLabel>Transaction</skos:altLabel>
+		<skos:altLabel>Registration</skos:altLabel>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/CaLAThe"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Exchange"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyFormation"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Transfer"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PostAddress/">
+		<skos:prefLabel>Post address</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:altLabel>Adress</skos:altLabel>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PlaceName"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Plate"/>		
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/AdministrativeFeature">
+		<skos:prefLabel>Administrative feature</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SpatialFeatureType"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/AdministrativeUnit"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyUnit"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Marker"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PlaceName"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Boundary"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/ProtectedSite"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/AdministrativeUnit">
+		<skos:prefLabel>Administrative unit</skos:prefLabel>
+		<skos:scopeNote>GEMET theme</skos:scopeNote>
+		<skos:definition>Units of administration, dividing areas where Member States have and/or exercise jurisdictional rights, for local, regional and national governance, separated by administrative boundaries (Source: GEMET).</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:altLabel>Jurisdiction</skos:altLabel>
+		<skos:altLabel>Spatial unit group</skos:altLabel>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/AdministrativeFeature"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Boundary"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/NUTSRegion"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/AdversePossession">
+		<skos:prefLabel>Adverse possession</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:altLabel>Prescriptive acquisition</skos:altLabel>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Ownership"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/AerialPhotograph">
+		<skos:prefLabel>Aerial photograph</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/DigitalImagery"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Amalgamation">
+		<skos:prefLabel>Amalgamation</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyFormation"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Association">
+		<skos:prefLabel>Association</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Organisation"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/ProfessionalSociety"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Bank">
+		<skos:prefLabel>Bank</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Corporation"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Boundary">
+		<skos:prefLabel>Boundary</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/AdministrativeFeature"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyUnit"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/AdministrativeUnit"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/BoundaryMark"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/BoundaryMark">
+		<skos:prefLabel>Boundary mark</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Marker"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Boundary"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/BoundaryRe-measuremen">
+		<skos:prefLabel>Boundary re-measurement</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/BoundarySurveyAndMarking"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/BoundaryRectification">
+		<skos:prefLabel>Boundary rectification</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/BoundarySurveyAndMarking"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/BoundarySurveyAndMarking">
+		<skos:prefLabel>Boundary survey and marking</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Subdivision"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/BoundaryRectification"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/LegalBoundaryDetermination"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/BoundaryRe-measuremen"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/BuildingUnit(Technical)">
+		<skos:prefLabel>Building unit (technical)</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/TopographicalFeature"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/BuildingUsePart">
+		<skos:prefLabel>Building use part</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyUnit"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/CadastralMap">
+		<skos:prefLabel>Cadastral map</skos:prefLabel>
+		<skos:definition>A map showing land (cadastral) parcel boundaries (Source: UNECE, 1996. Land administration guidelines)</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Map"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Cadastre"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/CadastralParcel">
+		<skos:prefLabel>Cadastral parcel</skos:prefLabel>
+		<skos:scopeNote>INSPIRE Feature Concept Dictionary term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyUnit"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/CadastralSurveyDocument">
+		<skos:prefLabel>Cadastral survey document</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Document"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/CadastralSystem">
+		<skos:prefLabel>Cadastral system</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/GeographicalInformationSystem"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Cadastre"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/LandRegister"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Cadastre">
+		<skos:prefLabel>Cadastre</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/CadastralSystem"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/CadastralMap"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/CaLAThe">
+		<skos:prefLabel>CaLAThe</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Activity"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Land"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Documentation"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Party"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Law"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Certificate">
+		<skos:prefLabel>Certificate</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Document"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyEnquiryCertificate"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/ChangeOfPropertyUnitType">
+		<skos:prefLabel>Change of property unit type</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyFormation"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Chief">
+		<skos:prefLabel>Chief</skos:prefLabel>
+		<skos:scopeNote>ISO/DIS 19152 LADM term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SocietalRole"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/CondominiumRight">
+		<skos:prefLabel>Condominium right</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SharedOwnership"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/CondominiumSubdivision">
+		<skos:prefLabel>Condominium subdivision</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Subdivision"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/ControlPointMonument">
+		<skos:prefLabel>Control point monument</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Marker"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Conveyance">
+		<skos:prefLabel>Conveyance</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:altLabel>Sale</skos:altLabel>
+		<skos:altLabel>Purchase</skos:altLabel>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Exchange"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/CoordinateReferenceSystem">
+		<skos:prefLabel>Coordinate reference system</skos:prefLabel>
+		<skos:scopeNote>GEMET theme</skos:scopeNote>
+		<skos:definition>Systems for uniquely referencing spatial information in space as a set of coordinates (x, y, z) and/or latitude and longitude and height, based on a geodetic horizontal and vertical datum (Source: GEMET).</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SpatialReferenceFrame"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Corporation">
+		<skos:prefLabel>Corporation</skos:prefLabel>
+		<skos:scopeNote>STW term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://zbw.eu/stw/descriptor/12186-0"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Organisation"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Bank"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/CustomaryLaw">
+		<skos:prefLabel>Customary law</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:altLabel>Informal right</skos:altLabel>
+		<skos:altLabel>Indigenous right</skos:altLabel>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Law"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Deed">
+		<skos:prefLabel>Deed</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Document"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/MortgageDeed"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/TitleDeed"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/RestrictionDeed"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/DigitalImagery">
+		<skos:prefLabel>Digital imagery</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SpatialDataInfrastructure"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SatelliteImage"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/AerialPhotograph"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Orthoimagery"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/ScannedMap"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Document">
+		<skos:prefLabel>Document</skos:prefLabel>
+		<skos:scopeNote>GEMET term</skos:scopeNote>
+		<skos:definition>Material of any kind, regardless of physical form, which furnishes information, evidence or ideas, including items such as contracts, bills of sale, letters, audio and video recordings, and machine readable data files (Source: CCL).</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://www.eionet.europa.eu/gemet/concept/2282"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Documentation"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Deed"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/CadastralSurveyDocument"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Certificate"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Documentation">
+		<skos:prefLabel>Documentation</skos:prefLabel>
+		<skos:scopeNote>STW term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://zbw.eu/stw/descriptor/16782-6"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/CaLAThe"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Document"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SpatialDataInfrastructure"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Map"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/LegalBasis"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/DominantPropertyUnit">
+		<skos:prefLabel>Dominant property unit</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Easement"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Easement">
+		<skos:prefLabel>Easement</skos:prefLabel>
+		<skos:scopeNote>GEMET term</skos:scopeNote>
+		<skos:definition>The rights of use over the property of another; a burden on a piece of land causing the owner to suffer access by another (Source: DUHA).</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://www.eionet.europa.eu/gemet/concept/11536"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/RealPropertyRight"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PrivateLawRestriction"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/ServientPropertyUnit"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PublicLawRestriction"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/RightOfWay"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/DominantPropertyUnit"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/EasementCreation">
+		<skos:prefLabel>Easement creation</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Exchange"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/EdgeBasedSpatialUnit">
+		<skos:prefLabel>Edge based spatial unit</skos:prefLabel>
+		<skos:scopeNote>ISO/DIS 19152 LADM term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/TopologicalPrimitive"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Elevation">
+		<skos:prefLabel>Elevation</skos:prefLabel>
+		<skos:scopeNote>GEMET theme</skos:scopeNote>
+		<skos:definition>Digital elevation models for land, ice and ocean surface. Includes terrestrial elevation, bathymetry and shoreline.</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/TopographicalFeature"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Exchange">
+		<skos:prefLabel>Exchange</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Activity"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Conveyance"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Lease"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Rent"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Mortgaging"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/ForcedSale"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/EasementCreation"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Expropriation">
+		<skos:prefLabel>Expropriation</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyRestructuring"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/FaceBasedSpatialUnit">
+		<skos:prefLabel>Face based spatial unit</skos:prefLabel>
+		<skos:scopeNote>ISO/DIS 19152 LADM term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/TopologicalPrimitive"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Family">
+		<skos:prefLabel>Family</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SocialGroup"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/ForcedSale">
+		<skos:prefLabel>Forced sale</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:altLabel>Foreclosure</skos:altLabel>
+		<skos:altLabel>Compulsory purchase</skos:altLabel>
+		<skos:altLabel>Repossesion</skos:altLabel>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Exchange"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Gazetteer">
+		<skos:prefLabel>Gazetteer</skos:prefLabel>
+		<skos:scopeNote>AGROVOC term</skos:scopeNote>
+		<skos:definition>A vocabulary consisting of identifiers, location descriptions, and attributes for a set of geospatial features. (Source: Breitman, K.K., Casanova, M.A. and Truszkowski, W., 2007. Semantic web: Concepts, technologies and applications. London: Springer)</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://aims.fao.org/aos/agrovoc/c_49853"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SpatialDataInfrastructure"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PlaceName"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/GeographicalGridSystem">
+		<skos:prefLabel>Geographical grid system</skos:prefLabel>
+		<skos:scopeNote>GEMET theme</skos:scopeNote>
+		<skos:definition>Harmonised multi-resolution grid with a common point of origin and standardised location and size of grid cells.</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SpatialReferenceFrame"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/GeographicalInformationSystem">
+		<skos:prefLabel>Geographical information system</skos:prefLabel>
+		<skos:scopeNote>AGROVOC term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://aims.fao.org/aos/agrovoc/c_35131"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SpatialDataInfrastructure"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/CadastralSystem"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/GeometricPrimitive">
+		<skos:prefLabel>Geometric primitive</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SpatialRepresentationType"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PointBasedSpatialUnit"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/LineBasedSpatialUnit"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PolygonBasedSpatialUnit"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Gift">
+		<skos:prefLabel>Gift</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Transfer"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/GovernmentalOrganisation">
+		<skos:prefLabel>Governmental organisation</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Organisation"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/NationalSurveyAndCadastre"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/GroupParty">
+		<skos:prefLabel>Group party</skos:prefLabel>
+		<skos:scopeNote>ISO/DIS 19152 LADM term</skos:scopeNote>
+		<skos:definition>Any number of parties, forming together a distinct entity, with each party registered. (Source: ISO/DIS 19152 LADM)</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PartyType"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SocialGroup"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PlaceBoundParty"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Hydrography">
+		<skos:prefLabel>Hydrography</skos:prefLabel>
+		<skos:scopeNote>GEMET term</skos:scopeNote>
+		<skos:definition>Science which deals with the measurement and description of the physical features of the oceans, lakes, rivers, and their adjoining coastal areas, with particular reference to their control and utilization (Source: MGH).</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://www.eionet.europa.eu/gemet/concept/4109"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/TopographicalFeature"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/IndividualOwnership">
+		<skos:prefLabel>Individual ownership</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Ownership"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Inheritance">
+		<skos:prefLabel>Inheritance</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Transfer"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Judiciary">
+		<skos:prefLabel>Judiciary</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Organisation"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/LandRegistry"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Land">
+		<skos:prefLabel>Land</skos:prefLabel>
+		<skos:scopeNote>STW term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://zbw.eu/stw/descriptor/12015-6"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/CaLAThe"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SpatialReferenceFrame"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SpatialFeatureType"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SpatialRepresentationType"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/LandReadjustment">
+		<skos:prefLabel>Land readjustment</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyRestructuring"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/LandRegister">
+		<skos:prefLabel>Land register</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/CadastralSystem"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/LandRegistry">
+		<skos:prefLabel>Land registry</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Judiciary"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Law">
+		<skos:prefLabel>Law</skos:prefLabel>
+		<skos:scopeNote>STW term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://zbw.eu/stw/descriptor/15966-1"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/CaLAThe"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PartyRoleType"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/CustomaryLaw"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/LegalBasis"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Lease">
+		<skos:prefLabel>Lease</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Exchange"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/LegalAdvisor">
+		<skos:prefLabel>Legal advisor</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/ProfessionalRole"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/LegalBasis">
+		<skos:prefLabel>Legal basis</skos:prefLabel>
+		<skos:scopeNote>GEMET term</skos:scopeNote>
+		<skos:definition>The fundamental law or judicial precedent that warrants or supports a subsequent decision or action by any governmental, corporate or private entity (Source: BLD).</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://www.eionet.europa.eu/gemet/concept/4739"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:altLabel>Formal right</skos:altLabel>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Law"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Documentation"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/RealEstateLaw"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PersonalRight"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/LegalBoundaryDetermination">
+		<skos:prefLabel>Legal boundary determination</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/BoundarySurveyAndMarking"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/LegalPerson">
+		<skos:prefLabel>Legal person</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Rightholder"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/LicensedSurveyor">
+		<skos:prefLabel>Licensed surveyor</skos:prefLabel>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Surveyor"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/LineBasedSpatialUnit">
+		<skos:prefLabel>Line based spatial unit</skos:prefLabel>
+		<skos:scopeNote>ISO/DIS 19152 LADM term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/GeometricPrimitive"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Map">
+		<skos:prefLabel>Map</skos:prefLabel>
+		<skos:scopeNote>GEMET term</skos:scopeNote>
+		<skos:definition>A representation, normally on a flat medium, that displays the physical and political features of a surface area of the earth, showing them in their respective forms, sizes and relationships according to some convention of representation (Source: RHW).</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://www.eionet.europa.eu/gemet/concept/5011"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Documentation"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/CadastralMap"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/ScannedMap"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/TopographicMap"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Marker">
+		<skos:prefLabel>Marker</skos:prefLabel>
+		<skos:scopeNote>OpenCYC term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/AdministrativeFeature"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/ControlPointMonument"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/BoundaryMark"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Plate"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Mortgage">
+		<skos:prefLabel>Mortgage</skos:prefLabel>
+		<skos:scopeNote>STW term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://zbw.eu/stw/descriptor/13775-4"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/RealPropertyRight"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/MortgageDeed">
+		<skos:prefLabel>Mortgage deed</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Deed"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Mortgagee">
+		<skos:prefLabel>Mortgagee</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Rightholder"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Mortgaging">
+		<skos:prefLabel>Mortgaging</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Exchange"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Mortgagor">
+		<skos:prefLabel>Mortgagor</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Rightholder"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/NationalSurveyAndCadastre">
+		<skos:prefLabel>National survey and cadastre</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/GovernmentalOrganisation"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/NaturalPerson">
+		<skos:prefLabel>Natural person</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PartyType"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/NaturalPersonRole">
+		<skos:prefLabel>Natural person role</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PartyRoleType"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/ProfessionalRole"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/OfficialRole"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SocietalRole"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/NodeBasedSpatialUnit">
+		<skos:prefLabel>Node based spatial unit</skos:prefLabel>
+		<skos:scopeNote>ISO/DIS 19152 LADM term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/TopologicalPrimitive"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Notary">
+		<skos:prefLabel>Notary</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/ProfessionalRole"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/NUTSRegion">
+		<skos:prefLabel>NUTS Region</skos:prefLabel>
+		<skos:scopeNote>Established with version 2.0 to reflect INSPIRE Data Specifications</skos:scopeNote>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/AdministrativeUnit"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/OfficialRole">
+		<skos:prefLabel>Official role</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/NaturalPersonRole"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Registrar"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/OrdinalReferenceFrame">
+		<skos:prefLabel>Ordinal reference frame</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SpatialReferenceFrame"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Organisation">
+		<skos:prefLabel>Organisation</skos:prefLabel>
+		<skos:scopeNote>GEMET term</skos:scopeNote>
+		<skos:definition>Term used in commercial law, including a corporation, government or governmental subdivision or agency, business trust, estate, trust, partnership or association, two or more persons having a joint or common interest, or any other legal or commercial entity (Source: BLACK).</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://www.eionet.europa.eu/gemet/concept/13286"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PartyType"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/GovernmentalOrganisation"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Judiciary"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Corporation"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Association"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Orthoimagery">
+		<skos:prefLabel>Orthoimagery</skos:prefLabel>
+		<skos:scopeNote>GEMET theme</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/DigitalImagery"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Owner">
+		<skos:prefLabel>Owner</skos:prefLabel>
+		<skos:scopeNote>STW term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://zbw.eu/stw/descriptor/19161-2"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Rightholder"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Ownership">
+		<skos:prefLabel>Ownership</skos:prefLabel>
+		<skos:scopeNote>GEMET term</skos:scopeNote>
+		<skos:definition>Collection of rights to use and enjoy property, including right to transmit it to others. The complete dominion, title, or proprietary right in a thing or claim (Source: BLACK).</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://www.eionet.europa.eu/gemet/concept/5971"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/RealPropertyRight"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SharedOwnership"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/IndividualOwnership"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PublicOwnership"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/AdversePossession"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Party">
+		<skos:prefLabel>Party</skos:prefLabel>
+		<skos:scopeNote>ISO/DIS 19152 LADM term</skos:scopeNote>
+		<skos:definition>Persons, or group of persons, or juridical persons that compose an identifiable single (legal) entity, or a basic administrative unit. (Source: ISO/DIS 19152 LADM)</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/CaLAThe"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PartyRoleType"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PartyType"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PartyMember">
+		<skos:prefLabel>Party member</skos:prefLabel>
+		<skos:scopeNote>ISO/DIS 19152 LADM term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Rightholder"/>
+		<skos:related rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PlaceBoundParty"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PartyRoleType">
+		<skos:prefLabel>Party role type</skos:prefLabel>
+		<skos:scopeNote>ISO/DIS 19152 LADM term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Party"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Law"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Rightholder"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/NaturalPersonRole"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PartyShare">
+		<skos:prefLabel>Party share</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SharedOwnership"/>
+		<skos:related rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PartyMember"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PartyType">
+		<skos:prefLabel>Party type</skos:prefLabel>
+		<skos:scopeNote>ISO/DIS 19152 LADM term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Party"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/NaturalPerson"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/GroupParty"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Organisation"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PersonalRight">
+		<skos:prefLabel>Personal right</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/LegalBasis"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PlaceBoundParty">
+		<skos:prefLabel>Place bound party</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/GroupParty"/>
+		<skos:related rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PartyMember"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PlaceName">
+		<skos:prefLabel>Place name</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:altLabel>Geographical name</skos:altLabel>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Gazetteer"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/AdministrativeFeature"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PostAddress"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PlanningLaw">
+		<skos:prefLabel>Planning law</skos:prefLabel>
+		<skos:scopeNote>GEMET term</skos:scopeNote>
+		<skos:definition>A binding rule or body of rules prescribed by a government to organize, designate and regulate land use within its domain through zoning laws, subdivision regulations, rent and sign controls, growth management and other measures designed to protect human health and ecological integrity (Source: PLA)</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://www.eionet.europa.eu/gemet/concept/6290"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/RealEstateLaw"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PublicLawRestriction"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Plate">
+		<skos:prefLabel>Plate</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Marker"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PostAddress"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PointBasedSpatialUnit">
+		<skos:prefLabel>Point based spatial unit</skos:prefLabel>
+		<skos:scopeNote>ISO/DIS 19152 LADM term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/GeometricPrimitive"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PolygonBasedSpatialUnit">
+		<skos:prefLabel>Polygon based spatial unit</skos:prefLabel>
+		<skos:scopeNote>ISO/DIS 19152 LADM term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/GeometricPrimitive"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PostAddress">
+		<skos:prefLabel>Post address</skos:prefLabel>
+		<skos:scopeNote>GEMET theme</skos:scopeNote>
+		<skos:definition>Location of properties based on address identifiers, usually by road name, house number, postal code (Source: GEMET).</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:altLabel>Address</skos:altLabel>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PlaceName"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Plate"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PrivateLawRestriction">
+		<skos:prefLabel>Private law restriction</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Easement"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/ProfessionalRole">
+		<skos:prefLabel>Professional role</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/NaturalPersonRole"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Surveyor"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/LegalAdvisor"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Notary"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/ProfessionalSociety">
+		<skos:prefLabel>Professional society</skos:prefLabel>
+		<skos:scopeNote>GEMET term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://www.eionet.europa.eu/gemet/concept/14847"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Association"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PropertyEnquiryCertificate">
+		<skos:prefLabel>Property enquiry certificate</skos:prefLabel>
+		<skos:scopeNote>Controlled lists for the public sector and Europe</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://id.esd-toolkit.eu/service/1060"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Certificate"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PropertyFormation">
+		<skos:prefLabel>Property formation</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:altLabel>Cadastral activity</skos:altLabel>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Activity"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/ChangeOfPropertyUnitType"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/TransferOfPartOfProperty"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Amalgamation"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Subdivision"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyRestructuring"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PropertyRestructuring">
+		<skos:prefLabel>Property restructuring</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyFormation"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Reallotment"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/LandReadjustment"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Expropriation"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PropertyUnit">
+		<skos:prefLabel>Property unit</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:altLabel>Basic administrative unit</skos:altLabel>
+		<skos:altLabel>Real estate</skos:altLabel>
+		<skos:altLabel>Basic property unit</skos:altLabel>
+		<skos:altLabel>Immovable property</skos:altLabel>
+		<skos:altLabel>Immobile property</skos:altLabel>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/AdministrativeFeature"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/BuildingUsePart"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/CadastralParcel"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyUnitType"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PropertyUnitType">
+		<skos:prefLabel>Property unit type</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyUnit"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/RequiredRelationship"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/ProtectedSite">
+		<skos:prefLabel>Protected site</skos:prefLabel>
+		<skos:scopeNote>Established with version 2.0 to reflect INSPIRE Data Specifications</skos:scopeNote>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/AdministrativeFeature"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PublicLawRestriction">
+		<skos:prefLabel>Public law restriction</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Easement"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PlanningLaw"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/PublicOwnership">
+		<skos:prefLabel>Public ownership</skos:prefLabel>
+		<skos:scopeNote>AGROVOC term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://aims.fao.org/aos/agrovoc/c_6350"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Ownership"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/RealEstateLaw">
+		<skos:prefLabel>Real estate law</skos:prefLabel>
+		<skos:scopeNote>STW term</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://zbw.eu/stw/descriptor/12028-4"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/LegalBasis"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/RealPropertyRight"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PlanningLaw"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/RealPropertyRight">
+		<skos:prefLabel>Real property right</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/RealEstateLaw"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Mortgage"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Ownership"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Easement"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Reallotment">
+		<skos:prefLabel>Reallotment</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:altLabel>Land consolidation</skos:altLabel>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyRestructuring"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Registrar">
+		<skos:prefLabel>Registrar</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/OfficialRole"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Rent">
+		<skos:prefLabel>Rent</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Exchange"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Representation">
+		<skos:prefLabel>Representation</skos:prefLabel>
+		<skos:scopeNote>GEMET term</skos:scopeNote>
+		<skos:definition>Any conduct or action undertaken on behalf of a person, group, business or government, often as an elected or appointed voice (Source: RHW).</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://www.eionet.europa.eu/gemet/concept/7118"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Rightholder"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/RequiredRelationship">
+		<skos:prefLabel>Required relationship</skos:prefLabel>
+		<skos:scopeNote>ISO/DIS 19152 LADM term</skos:scopeNote>
+		<skos:definition>An explicit association between spatial units (Source: ISO/DIS 19152 LADM)</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyUnitType"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/RestrictionDeed">
+		<skos:prefLabel>Restriction deed</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Deed"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/RightOfWay">
+		<skos:prefLabel>Right of way</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Easement"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Rightholder">
+		<skos:prefLabel>Rightholder</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PartyRoleType"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Owner"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Mortgagee"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Representation"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PartyMember"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/LegalPerson"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Mortgagor"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/SatelliteImage">
+		<skos:prefLabel>Satellite image</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/DigitalImagery"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/ScannedMap">
+		<skos:prefLabel>Scanned map</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Map"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/DigitalImagery"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/ServientPropertyUnit">
+		<skos:prefLabel>Servient property unit</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Easement"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/SharedOwnership">
+		<skos:prefLabel>Shared ownership</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Ownership"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/TimeshareOwnership"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/CondominiumRight"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/SocialGroup">
+		<skos:prefLabel>Social group</skos:prefLabel>
+		<skos:scopeNote>GEMET term</skos:scopeNote>
+		<skos:definition>A collection of people who interact with one another and share a certain feeling of unity (GEMET)</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:exactMatch rdf:resource="http://www.eionet.europa.eu/gemet/concept/7796"/>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/GroupParty"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Family"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Tribe"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/SocietalRole">
+		<skos:prefLabel>Societal role</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/NaturalPersonRole"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Chief"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/SpatialDataInfrastructure">
+		<skos:prefLabel>Spatial data infrastructure</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Documentation"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/GeographicalInformationSystem"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/DigitalImagery"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Gazetteer"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/SpatialFeatureType">
+		<skos:prefLabel>Spatial feature type</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Land"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/AdministrativeFeature"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/TopographicalFeature"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/SpatialReferenceFrame">
+		<skos:prefLabel>Spatial reference frame</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Land"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/OrdinalReferenceFrame"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/GeographicalGridSystem"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/CoordinateReferenceSystem"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/SpatialRepresentationType">
+		<skos:prefLabel>Spatial representation type</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Land"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/TextLabelType"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/GeometricPrimitive"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/TopologicalPrimitive"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Subdivision">
+		<skos:prefLabel>Subdivision</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyFormation"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/CondominiumSubdivision"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/BoundarySurveyAndMarking"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Surveyor">
+		<skos:prefLabel>Surveyor</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/ProfessionalRole"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/LicensedSurveyor"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/TextLabelType">
+		<skos:prefLabel>Textlabel type</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SpatialRepresentationType"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/TimeshareOwnership">
+		<skos:prefLabel>Timeshare ownership</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SharedOwnership"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/TitleDeed">
+		<skos:prefLabel>Title deed</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Deed"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/TopographicMap">
+		<skos:prefLabel>Topographic map</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Map"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/TopographicalFeature">
+		<skos:prefLabel>Topographical feature</skos:prefLabel>
+		<skos:scopeNote>INSPIRE theme</skos:scopeNote>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SpatialFeatureType"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Hydrography"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Elevation"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/BuildingUnit(Technical)"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/TransportNetwork"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/TopologicalPrimitive">
+		<skos:prefLabel>Topological primitive</skos:prefLabel>
+		<skos:scopeNote>ISO/PDTS 19104 term</skos:scopeNote>
+		<skos:definition>A topological object that represents a single, non-decomposable element. (Source: ISO/PDTS 19104 Geographic information  Terminology)</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SpatialRepresentationType"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/EdgeBasedSpatialUnit"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/NodeBasedSpatialUnit"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/FaceBasedSpatialUnit"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Transfer">
+		<skos:prefLabel>Transfer</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Activity"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Gift"/>
+		<skos:narrower rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/Inheritance"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/TransferOfPartOfProperty">
+		<skos:prefLabel>Transfer of part of property</skos:prefLabel>
+		<skos:changeNote>Established with version 2.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/PropertyFormation"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/TransportNetwork">
+		<skos:prefLabel>Transport network</skos:prefLabel>
+		<skos:scopeNote>GEMET theme</skos:scopeNote>
+		<skos:definition>Road, rail, air and water transport networks and related infrastructure. Includes links between different networks. Also includes the trans-European transport network as defined in Decision No 1692/96/EC of the European Parliament and of the Council of 23 July 1996 on Community Guidelines for the development of the trans-European transport network (1) and future revisions of that Decision.</skos:definition>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/TopographicalFeature"/>
+	</skos:Concept>
+	<skos:Concept rdf:about="http://www.cadastralvocabulary.org/CaLAThe/Tribe">
+		<skos:prefLabel>Tribe</skos:prefLabel>
+		<skos:changeNote>Established with version 1.0</skos:changeNote>
+		<skos:inScheme rdf:resource="http://www.cadastralvocabulary.org/CaLAThe"/>
+		<skos:broader rdf:resource="http://www.cadastralvocabulary.org/CaLAThe/SocialGroup"/>
+	</skos:Concept>
+</rdf:RDF>

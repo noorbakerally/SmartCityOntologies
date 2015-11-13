@@ -1,0 +1,1240 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://www.coinsweb.nl/c-bim.owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://www.coinsweb.nl/c-bim.owl" > 
+  <rdf:Description rdf:about="#verificationResult">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verification result</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The result of the verification.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="#Verification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <owl:allValuesFrom rdf:resource="#Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:rest rdf:nodeID="A2"/>
+    <rdf:first rdf:resource="#Amount"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#supertype"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#femaleTerminal">
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Layering"/>
+    <rdfs:domain rdf:resource="#Connection"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female terminal</rdfs:label>
+    <rdfs:range rdf:resource="#Terminal"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain connection attaches the range female terminal.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Topological_relations"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Amount">
+    <owl:equivalentClass rdf:nodeID="A4"/>
+    <owl:equivalentClass rdf:nodeID="A5"/>
+    <owl:equivalentClass rdf:nodeID="A6"/>
+    <rdfs:subClassOf rdf:resource="#PropertyValue"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amount</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specifies the amount of identical catalogue parts.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#nextParameter">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain parameter points to the range parameter as next parameter.</rdfs:comment>
+    <rdfs:range rdf:resource="#Parameter"/>
+    <rdfs:domain rdf:resource="#Parameter"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">next parameter</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#baselineStatus">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The status (open or closed) of the baseline.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">baseline status</rdfs:label>
+    <rdfs:domain rdf:resource="#Baseline"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Baselines"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <owl:onProperty rdf:resource="#verificationRequirement"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <owl:onProperty rdf:resource="#taskType"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#verificationPerformer">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verification performer</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range person or organisation that performs the domain verification.</rdfs:comment>
+    <rdfs:range rdf:resource="#PersonOrOrganisation"/>
+    <rdfs:domain rdf:resource="#Verification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#documentAliasFilePath">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">document alias file path</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The locally stored copy of the document.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#affects">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain task transforms the range function fulfiller or state.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">affects</rdfs:label>
+    <owl:inverseOf rdf:resource="#isAffectedBy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Task"/>
+    <rdfs:range rdf:nodeID="A9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#layerIndex">
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Layering"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The layer index number of the C-BIM object.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">layer index</rdfs:label>
+    <rdfs:domain rdf:resource="#CbimObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#performance">
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Layering"/>
+    <owl:inverseOf rdf:resource="#performanceOf"/>
+    <rdfs:range rdf:resource="#Performance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">performance</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range performance that characterizes the domain function fulfiller.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="A10"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:rest rdf:nodeID="A11"/>
+    <rdf:first rdf:resource="#FunctionFulfiller"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#shape">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range explicit 3D representation that specifies the 3D shape of the domain function fulfiller or terminal or catalog part or state.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shape</rdfs:label>
+    <rdfs:range rdf:resource="#Explicit3DRepresentation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:nodeID="A12"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <rdf:first rdf:resource="#FunctionFulfiller"/>
+    <rdf:rest rdf:nodeID="A14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#nextVersion">
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Identification_of_CBIM_information_objects"/>
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Version_management"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain CbimObject points to the range CbimObject as its next version.</rdfs:comment>
+    <rdfs:domain rdf:resource="#CbimObject"/>
+    <rdfs:range rdf:resource="#CbimObject"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">next version</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#fulfills">
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Layering"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain function fulfiller fulfills the range function.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fulfills</rdfs:label>
+    <rdfs:range rdf:resource="#Function"/>
+    <rdfs:domain rdf:resource="#FunctionFulfiller"/>
+    <owl:inverseOf rdf:resource="#isFulfilledBy"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <owl:allValuesFrom rdf:resource="#PhysicalObject"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#modificationDate">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modification date</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The last modification date of the C-BIM object.</rdfs:comment>
+    <rdfs:domain rdf:resource="#CbimObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Function">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specifies functional behavior through a bundle of functional requirements.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Function</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#CbimObject"/>
+    <owl:equivalentClass rdf:nodeID="A16"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A17">
+    <owl:allValuesFrom rdf:resource="#Task"/>
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A18">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="A19"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A20">
+    <owl:allValuesFrom rdf:resource="#PropertyValue"/>
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#verificationRequirement">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range requirement that identifies the domain verification.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Layering"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verification requirement</rdfs:label>
+    <rdfs:range rdf:resource="#Requirement"/>
+    <rdfs:domain rdf:resource="#Verification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#documentType">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">document type</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The type of the document.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Locator">
+    <owl:equivalentClass rdf:nodeID="A21"/>
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Topological_relations"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specifier for position, orientation and bounding box in 3D Euclidean space.</rdfs:comment>
+    <owl:equivalentClass rdf:nodeID="A22"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locator</rdfs:label>
+    <owl:equivalentClass rdf:nodeID="A23"/>
+    <owl:equivalentClass rdf:nodeID="A24"/>
+    <owl:equivalentClass rdf:nodeID="A25"/>
+    <owl:equivalentClass rdf:nodeID="A26"/>
+    <rdfs:subClassOf rdf:resource="#CbimObject"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A27">
+    <owl:onProperty rdf:resource="#verificationFunctionFulfiller"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#baseline">
+    <owl:inverseOf rdf:resource="#baselineObject"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">baseline</rdfs:label>
+    <rdfs:domain rdf:resource="#CbimObject"/>
+    <rdfs:range rdf:resource="#Baseline"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range baseline that owns the domain object.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Baselines"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#description">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">description</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The description of the C-BIM object.</rdfs:comment>
+    <rdfs:domain rdf:resource="#CbimObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#FunctionFulfiller">
+    <owl:equivalentClass rdf:nodeID="A28"/>
+    <owl:equivalentClass rdf:nodeID="A29"/>
+    <rdfs:subClassOf rdf:resource="#CbimObject"/>
+    <owl:equivalentClass rdf:nodeID="A30"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Function Fulfiller</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abstract supertype of the object tree node classes.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Topological_relations"/>
+    <owl:equivalentClass rdf:nodeID="A31"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A32">
+    <rdf:first rdf:resource="#CataloguePart"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#situates">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">situates</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain space situates the range physical object.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#endDate">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The abstract typed property end date.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">end date</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A33">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Parameter"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#parent">
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Layering"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parent</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range parent function fulfiller of the domain child function fulfiller.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A34">
+    <owl:onProperty rdf:resource="#isSituatedIn"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#isAffectedBy">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain function fulfiller or state is transformed by the range task.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is affected by</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#requirement">
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Layering"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range requirement that characterizes the domain function.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">requirement</rdfs:label>
+    <owl:inverseOf rdf:resource="#requirementOf"/>
+    <rdfs:range rdf:resource="#Requirement"/>
+    <rdfs:domain rdf:resource="#Function"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A35">
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <owl:allValuesFrom rdf:resource="#Vector"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#requirementOf">
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Layering"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">requirement of</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range function that is characterized by the domain requirement.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Performance">
+    <owl:equivalentClass rdf:nodeID="A36"/>
+    <rdfs:subClassOf rdf:resource="#CbimObject"/>
+    <owl:equivalentClass rdf:nodeID="A37"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Performance</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Explicit performance of a function fulfiller.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A38">
+    <rdf:first rdf:resource="#State"/>
+    <rdf:rest rdf:nodeID="A32"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A39">
+    <rdf:rest rdf:nodeID="A40"/>
+    <rdf:first rdf:resource="#Unchanged"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#startDatePlanned">
+    <rdfs:domain rdf:resource="#Task"/>
+    <rdfs:subPropertyOf rdf:resource="#startDate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#spatialChild">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Range child space of domain parent space.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spatial child</rdfs:label>
+    <owl:inverseOf rdf:resource="#spatialParent"/>
+    <rdfs:subPropertyOf rdf:resource="#child"/>
+    <rdfs:domain rdf:resource="#Space"/>
+    <rdfs:range rdf:resource="#Space"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A41">
+    <owl:unionOf rdf:nodeID="A1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#performanceOf">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range function fulfiller or state that is characterized by the domain performance.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">performance of</rdfs:label>
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Layering"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A42">
+    <owl:allValuesFrom rdf:resource="#Parameter"/>
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#secondaryOrientation">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">secondary orientation</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range vector that specifies the secondary orientation of the domain locator.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Locator"/>
+    <rdfs:range rdf:resource="#Vector"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Document">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General Document link object.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Document</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#CbimObject"/>
+    <owl:equivalentClass rdf:nodeID="A0"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Terminal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#terminal">
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Layering"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range terminal that is attached to the domain function fulfiller.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">terminal</rdfs:label>
+    <owl:inverseOf rdf:resource="#terminalOf"/>
+    <rdfs:range rdf:resource="#Terminal"/>
+    <rdfs:domain rdf:resource="#FunctionFulfiller"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Topological_relations"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#defaultValue">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The default value of the parameter.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">default value</rdfs:label>
+    <rdfs:domain rdf:resource="#Parameter"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A43">
+    <rdf:first rdf:resource="#State"/>
+    <rdf:rest rdf:nodeID="A44"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#name">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The name of the C-BIM object.</rdfs:comment>
+    <rdfs:domain rdf:resource="#CbimObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A45">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="#amountPropertyType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Parameter">
+    <owl:equivalentClass rdf:nodeID="A46"/>
+    <owl:equivalentClass rdf:nodeID="A42"/>
+    <rdfs:subClassOf rdf:resource="#CbimObject"/>
+    <owl:equivalentClass rdf:nodeID="A47"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parameter</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parameter of an explicit 3D reference object.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A48">
+    <owl:onProperty rdf:resource="#creator"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A49">
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A50">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="#femaleTerminal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#userID">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user ID</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The user defined ID of the C-BIM object.</rdfs:comment>
+    <rdfs:domain rdf:resource="#CbimObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Vector">
+    <rdfs:subClassOf rdf:resource="#CbimObject"/>
+    <owl:equivalentClass rdf:nodeID="A35"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vector</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3D Vector specifier.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#taskType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range task type is the type of the domain task.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">task type</rdfs:label>
+    <rdfs:domain rdf:resource="#Task"/>
+    <rdfs:range rdf:resource="#TaskType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#firstParameter">
+    <rdfs:domain rdf:resource="#Explicit3DRepresentation"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first parameter</rdfs:label>
+    <rdfs:range rdf:resource="#Parameter"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain explicit 3D representation points to the range parameter as first parameter.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A46">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#nextParameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A21">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#secondaryOrientation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PersonOrOrganisation">
+    <rdfs:subClassOf rdf:resource="#CbimObject"/>
+    <owl:equivalentClass rdf:nodeID="A51"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Person or Organisation</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reference to the responsible person or organisation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A26">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#primaryOrientation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#child">
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Layering"/>
+    <rdfs:domain rdf:resource="#FunctionFulfiller"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">child</rdfs:label>
+    <owl:inverseOf rdf:resource="#parent"/>
+    <rdfs:range rdf:resource="#FunctionFulfiller"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range child function fulfiller of the domain parent function fulfiller.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A16">
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <owl:allValuesFrom rdf:resource="#Function"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A52">
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <owl:allValuesFrom rdf:resource="#VisiMessage"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Constructing">
+    <rdf:type rdf:resource="#TaskType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A53">
+    <rdf:first rdf:resource="#FunctionFulfiller"/>
+    <rdf:rest rdf:nodeID="A54"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A55">
+    <owl:allValuesFrom rdf:resource="#CataloguePart"/>
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:first rdf:resource="#State"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="#cataloguePart"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A23">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#minBoundingBox"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A56">
+    <owl:unionOf rdf:nodeID="A57"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Building">
+    <rdfs:subClassOf rdf:resource="#PhysicalObject"/>
+    <owl:equivalentClass rdf:nodeID="A58"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#locator"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A59">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#locator"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#VisiMessage">
+    <rdfs:subClassOf rdf:resource="#Document"/>
+    <owl:equivalentClass rdf:nodeID="A52"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VISI Message</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.coinsweb.nl/wiki/index.php/Identification_of_CBIM_information_objects">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#LibraryReference">
+    <owl:equivalentClass rdf:nodeID="A60"/>
+    <rdfs:subClassOf rdf:resource="#Document"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Library Reference</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Document link to external library object.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A61">
+    <owl:allValuesFrom rdf:resource="#Verification"/>
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#spatialParent">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range parent space of the domain child space.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spatial parent</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#parent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#propertyValue">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range property value owned by the domain amount or catalogue part or parameter.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">property value</rdfs:label>
+    <rdfs:domain rdf:nodeID="A56"/>
+    <rdfs:range rdf:resource="#PropertyValue"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#verificationMethod">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The test method of the verification.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verification method</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Verification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Baseline">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aggregates all objects of the same baseline</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baseline</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#CbimObject"/>
+    <owl:equivalentClass rdf:nodeID="A62"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Baselines"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Task">
+    <owl:equivalentClass rdf:nodeID="A17"/>
+    <rdfs:subClassOf rdf:resource="#CbimObject"/>
+    <owl:equivalentClass rdf:nodeID="A8"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Planning specifier.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <owl:allValuesFrom rdf:resource="#Amount"/>
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A22">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#translation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A62">
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <owl:allValuesFrom rdf:resource="#Baseline"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#releaseStatus">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">release status</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The release status of the C-BIM object.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#CbimObject"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#expired">
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Version_management"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The expiration status of the C-BIM object.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">expired</rdfs:label>
+    <rdfs:domain rdf:resource="#CbimObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#cataloguePart">
+    <rdfs:subPropertyOf rdf:resource="#propertyType"/>
+    <rdfs:range rdf:resource="#CataloguePart"/>
+    <rdfs:domain rdf:resource="#Amount"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">catalogue part</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain amount quantity that is typed by the range catalogue part.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A63">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#spatialParent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#TaskType">
+    <owl:oneOf rdf:nodeID="A39"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task Type</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Task Type specifier.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#contains">
+    <rdfs:subPropertyOf rdf:resource="#propertyValue"/>
+    <rdfs:range rdf:resource="#Amount"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contains</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range amount quantity owned by the domain physical object or catalogue part.</rdfs:comment>
+    <rdfs:domain rdf:nodeID="A18"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A51">
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <owl:allValuesFrom rdf:resource="#PersonOrOrganisation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A64">
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <owl:allValuesFrom rdf:resource="#Connection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A65">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#previousState"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A47">
+    <owl:onProperty rdf:resource="#propertyValue"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A25">
+    <owl:allValuesFrom rdf:resource="#Locator"/>
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#maleTerminal">
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Layering"/>
+    <rdfs:range rdf:resource="#Terminal"/>
+    <rdfs:domain rdf:resource="#Connection"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male terminal</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain connection attaches the range male terminal.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Topological_relations"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A54">
+    <rdf:first rdf:resource="#State"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#minBoundingBox">
+    <rdfs:domain rdf:resource="#Locator"/>
+    <rdfs:range rdf:resource="#Vector"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">minimum bounding box</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain locator specifies the range vector as minimum corner location.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A24">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#maxBoundingBox"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A66">
+    <rdf:first rdf:resource="#CataloguePart"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Baselines">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#previousState">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">previous state</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range state is the previous state of the domain state.</rdfs:comment>
+    <rdfs:range rdf:resource="#State"/>
+    <rdfs:domain rdf:resource="#State"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#isSituatedIn">
+    <rdfs:domain rdf:resource="#PhysicalObject"/>
+    <rdfs:range rdf:resource="#Space"/>
+    <owl:inverseOf rdf:resource="#situates"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is situated in</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain physical object is situated in the range space.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A67">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#verificationPerformer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A68">
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <owl:allValuesFrom rdf:resource="#State"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#amountPropertyType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Range property type that is used to specify the quantity of the domain catalogue part.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amount property type</rdfs:label>
+    <rdfs:range rdf:resource="#PropertyType"/>
+    <rdfs:domain rdf:resource="#CataloguePart"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A69">
+    <owl:allValuesFrom rdf:resource="#PropertyType"/>
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#verificationDate">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verification date</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The date of the verification.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="#Verification"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="A13"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#stateOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range function fulfiller is the container of the domain state.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">state of</rdfs:label>
+    <rdfs:domain rdf:resource="#State"/>
+    <rdfs:range rdf:resource="#FunctionFulfiller"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#physicalChild">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Range child physical object of domain parent physical object.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">physical child</rdfs:label>
+    <owl:inverseOf rdf:resource="#physicalParent"/>
+    <rdfs:domain rdf:resource="#PhysicalObject"/>
+    <rdfs:range rdf:resource="#PhysicalObject"/>
+    <rdfs:subPropertyOf rdf:resource="#child"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A70">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="#propertyType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#isFulfilledBy">
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Layering"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain function is fulfilled by the range function fulfiller.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is fulfilled by</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Created with TopBraid Composer</owl:versionInfo>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A44">
+    <rdf:first rdf:resource="#Terminal"/>
+    <rdf:rest rdf:nodeID="A66"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#terminalOf">
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Layering"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">terminal of</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range function fulfiller that is attached by the domain terminal.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Topological_relations"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PhysicalObject">
+    <owl:equivalentClass rdf:nodeID="A71"/>
+    <rdfs:subClassOf rdf:resource="#FunctionFulfiller"/>
+    <owl:disjointWith rdf:resource="#Space"/>
+    <owl:equivalentClass rdf:nodeID="A15"/>
+    <owl:equivalentClass rdf:nodeID="A34"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physical Object</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tangible function fulfiller.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A29">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#parent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#startDateActual">
+    <rdfs:domain rdf:resource="#Task"/>
+    <rdfs:subPropertyOf rdf:resource="#startDate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A72">
+    <owl:onProperty rdf:resource="#modifier"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#startDate">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">start date</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The abstract typed property start date.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#currentState">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range state is the current state of the domain function fulfiller.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current state</rdfs:label>
+    <rdfs:domain rdf:resource="#FunctionFulfiller"/>
+    <rdfs:range rdf:resource="#State"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="A53"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A73">
+    <rdf:first rdf:resource="#FunctionFulfiller"/>
+    <rdf:rest rdf:nodeID="A43"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#primaryOrientation">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">primary orientation</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range vector that specifies the primary orientation of the domain locator.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Locator"/>
+    <rdfs:range rdf:resource="#Vector"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#creationDate">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">creation date</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The creation date of the C-BIM object.</rdfs:comment>
+    <rdfs:domain rdf:resource="#CbimObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#modifier">
+    <rdfs:range rdf:resource="#PersonOrOrganisation"/>
+    <rdfs:domain rdf:resource="#CbimObject"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modifier</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range person or organisation is modifier of the domain object.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Space">
+    <owl:equivalentClass rdf:nodeID="A63"/>
+    <rdfs:subClassOf rdf:resource="#FunctionFulfiller"/>
+    <owl:disjointWith rdf:resource="#PhysicalObject"/>
+    <owl:equivalentClass rdf:nodeID="A74"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Space</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intangible function fulfiller.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Destructing">
+    <rdf:type rdf:resource="#TaskType"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A28">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#locator"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A75">
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <owl:allValuesFrom rdf:resource="#Requirement"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#creator">
+    <rdfs:range rdf:resource="#PersonOrOrganisation"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">creator</rdfs:label>
+    <rdfs:domain rdf:resource="#CbimObject"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range person or organisation is creator of the domain object.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Requirement">
+    <owl:equivalentClass rdf:nodeID="A76"/>
+    <rdfs:subClassOf rdf:resource="#CbimObject"/>
+    <owl:equivalentClass rdf:nodeID="A75"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Requirement</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functional requirement specifier.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#locator">
+    <rdfs:range rdf:resource="#Locator"/>
+    <rdfs:domain rdf:nodeID="A41"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">locator</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain amount, function fulfiller or terminal specify a range locator as subreference frame.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A74">
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <owl:allValuesFrom rdf:resource="#Space"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#yCoordinate">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The y coordinate of the vector.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y coordinate</rdfs:label>
+    <rdfs:domain rdf:resource="#Vector"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PropertyValue">
+    <owl:equivalentClass rdf:nodeID="A70"/>
+    <owl:equivalentClass rdf:nodeID="A20"/>
+    <rdfs:subClassOf rdf:resource="#CbimObject"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property Value</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property value specifier.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="A73"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A77">
+    <owl:allValuesFrom rdf:resource="#Explicit3DRepresentation"/>
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A78">
+    <owl:onProperty rdf:resource="#baseline"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#verificationFunctionFulfiller">
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Layering"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range function fulfiller that identifies the domain verification.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">verificationFunctionFulfiller</rdfs:label>
+    <rdfs:domain rdf:resource="#Verification"/>
+    <rdfs:range rdf:resource="#FunctionFulfiller"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A79">
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <owl:allValuesFrom rdf:resource="#Terminal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#translation">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">translation</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range vector that specifies the translation of the domain locator.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Locator"/>
+    <rdfs:range rdf:resource="#Vector"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Terminal">
+    <owl:equivalentClass rdf:nodeID="A59"/>
+    <owl:equivalentClass rdf:nodeID="A80"/>
+    <rdfs:subClassOf rdf:resource="#CbimObject"/>
+    <owl:equivalentClass rdf:nodeID="A79"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terminal specifier of a function fulfiller.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terminal</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Topological_relations"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A76">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#requirementOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A81">
+    <rdf:rest rdf:nodeID="A33"/>
+    <rdf:first rdf:resource="#CataloguePart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#propertyType">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range type of the domain property value.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">property type</rdfs:label>
+    <rdfs:domain rdf:resource="#PropertyValue"/>
+    <rdfs:range rdf:resource="#PropertyType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#endDateActual">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The actual end date of the task.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">actual end date</rdfs:label>
+    <rdfs:domain rdf:resource="#Task"/>
+    <rdfs:subPropertyOf rdf:resource="#endDate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#CbimObject">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C-BIM Object</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:nodeID="A48"/>
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Identification_of_CBIM_information_objects"/>
+    <owl:equivalentClass rdf:nodeID="A72"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="A49"/>
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Version_management"/>
+    <owl:equivalentClass rdf:nodeID="A78"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abstract supertype of all C-BIM classes.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A82">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="#stateOf"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A31">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="#currentState"/>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="#changelog">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The changelog of the C-BIM object.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">changelog</rdfs:label>
+    <rdfs:domain rdf:resource="#CbimObject"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#CataloguePart">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Library object for storing a parametric component.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catalogue Part</rdfs:label>
+    <owl:equivalentClass rdf:nodeID="A3"/>
+    <owl:equivalentClass rdf:nodeID="A45"/>
+    <owl:equivalentClass rdf:nodeID="A55"/>
+    <rdfs:subClassOf rdf:resource="#PropertyType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#supertype">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range catalogue part is the supertype of the domain catalogue part.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supertype</rdfs:label>
+    <rdfs:range rdf:resource="#CataloguePart"/>
+    <rdfs:domain rdf:resource="#CataloguePart"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#State">
+    <owl:equivalentClass rdf:nodeID="A65"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bundles function fulfiller information in an explicit state context.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">State</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#CbimObject"/>
+    <owl:equivalentClass rdf:nodeID="A68"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="A82"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A58">
+    <owl:onProperty rdf:resource="#physicalParent"/>
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</owl:cardinality>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#value">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anySimpleType"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">value</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The actual value of the property value.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="#PropertyValue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#PropertyType">
+    <owl:equivalentClass rdf:nodeID="A69"/>
+    <rdfs:subClassOf rdf:resource="#CbimObject"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property Type</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Specifier of quantity type, value type and unit type of a property.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#unit">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unit</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The unit of the property type.</rdfs:comment>
+    <rdfs:domain rdf:resource="#PropertyType"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#xCoordinate">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The x coordinate of the vector.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x coordinate</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:domain rdf:resource="#Vector"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A57">
+    <rdf:rest rdf:nodeID="A81"/>
+    <rdf:first rdf:resource="#Amount"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Connection">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Establishes a connection between two terminal objects.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connection</rdfs:label>
+    <owl:equivalentClass rdf:nodeID="A50"/>
+    <owl:equivalentClass rdf:nodeID="A83"/>
+    <rdfs:subClassOf rdf:resource="#CbimObject"/>
+    <owl:equivalentClass rdf:nodeID="A64"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Topological_relations"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A84">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Destructing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.coinsweb.nl/wiki/index.php/Version_management">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Layering">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A30">
+    <owl:unionOf rdf:nodeID="A85"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#physicalParent">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The range parent physical object of the domain child physical object.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">physical parent</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="#parent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Unchanged">
+    <rdf:type rdf:resource="#TaskType"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#releaseDate">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">release date</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The release date of the C-BIM object.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="#CbimObject"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#maxBoundingBox">
+    <rdfs:domain rdf:resource="#Locator"/>
+    <rdfs:range rdf:resource="#Vector"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maximum bounding box</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain locator specifies the range vector as maximum corner location.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#documentUri">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">document URI</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The URI of the document or identifiable object inside the document.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A83">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="#maleTerminal"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.coinsweb.nl/wiki/index.php/Topological_relations">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A19">
+    <rdf:first rdf:resource="#PhysicalObject"/>
+    <rdf:rest rdf:nodeID="A38"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A86">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="#Space"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Verification">
+    <owl:equivalentClass rdf:nodeID="A67"/>
+    <owl:equivalentClass rdf:nodeID="A7"/>
+    <owl:equivalentClass rdf:nodeID="A27"/>
+    <owl:equivalentClass rdf:nodeID="A61"/>
+    <rdfs:subClassOf rdf:resource="#CbimObject"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verification</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functionfulfiller/requirement combination verification specifier.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A87">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#firstParameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Explicit3DRepresentation">
+    <owl:equivalentClass rdf:nodeID="A87"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shape document link object.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Explicit 3D Representation</rdfs:label>
+    <owl:equivalentClass rdf:nodeID="A77"/>
+    <rdfs:subClassOf rdf:resource="#Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A36">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#performanceOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#baselineObject">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">baseline object</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain baseline that owns the range object.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:seeAlso rdf:resource="http://www.coinsweb.nl/wiki/index.php/Systems_Engineering#Baselines"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A71">
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="#physicalParent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#zCoordinate">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The z coordinate of the vector.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">z coordinate</rdfs:label>
+    <rdfs:domain rdf:resource="#Vector"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A85">
+    <rdf:rest rdf:nodeID="A86"/>
+    <rdf:first rdf:resource="#PhysicalObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A80">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</owl:cardinality>
+    <owl:onProperty rdf:resource="#terminalOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A40">
+    <rdf:rest rdf:nodeID="A84"/>
+    <rdf:first rdf:resource="#Constructing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#document">
+    <rdfs:domain rdf:resource="#CbimObject"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">document</rdfs:label>
+    <rdfs:range rdf:resource="#Document"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The domain object references the range document.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#endDatePlanned">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">planned end date</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The planned end date of the task.</rdfs:comment>
+    <rdfs:domain rdf:resource="#Task"/>
+    <rdfs:subPropertyOf rdf:resource="#endDate"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A37">
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <owl:allValuesFrom rdf:resource="#Performance"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#valueDomain">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">value domain</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The value domain of the property type.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#PropertyType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A60">
+    <owl:allValuesFrom rdf:resource="#LibraryReference"/>
+    <owl:onProperty rdf:resource="#nextVersion"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+</rdf:RDF>
+
+<!-- Created with TopBraid Composer -->

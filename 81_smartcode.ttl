@@ -1,0 +1,629 @@
+# baseURI: http://sites.google.com/site/smartappliancesproject/ontologies/smartcode
+
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix smartcode: <http://sites.google.com/site/smartappliancesproject/ontologies/smartcode#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://sites.google.com/site/smartappliancesproject/ontologies/smartcode>
+  rdf:type owl:Ontology ;
+  dcterms:created "14-11-204"^^xsd:string ;
+  dcterms:creator "Laura Daniele (laura.daniele@tno.nl)"^^xsd:string ;
+  dcterms:description "The Smartcode ontology presents a classification of Energy using Products (EuPs) into seven classes, namely Variable Services (VARSVC class), Thermal Services (THMSVC class), Schedulable Services (SCDSVC class), Event-Timeout Services (ETOSVC class), Charge Control (CHACON class), Complete Control (COMCON), and Custom Control (CUSCON). These products have some parameters, such as Configuration, Online Input and Sensor Input. They are also characterized by an Energy Management Strategy and their cost profile can be of interest of not for energy management purposes.  "^^xsd:string ;
+  dcterms:issued "01-04-2015"^^xsd:string ;
+  dcterms:publisher "TNO"^^xsd:string ;
+  dcterms:source "'Deliverable D1.1.2 -Model of local energy resource cluster', 31 December 2012, available at https://www.fp7-smartcode.eu/system/files/page/d-1.1.2.pdf "^^xsd:string ;
+  dcterms:title "Smartcode: Smart Control of Demand for Consumption and Supply to enable balanced, energy-positive buildings and neighbourhoods (SmartCoDE) ontology"^^xsd:string ;
+  owl:versionInfo "1.0"^^xsd:string ;
+.
+smartcode:BakingMachine
+  rdf:type owl:Class ;
+  rdfs:label "Baking machine"^^xsd:string ;
+  rdfs:subClassOf smartcode:SCDSVC ;
+.
+smartcode:BatteryCharger
+  rdf:type owl:Class ;
+  rdfs:label "Battery charger"^^xsd:string ;
+  rdfs:subClassOf smartcode:CHACON ;
+.
+smartcode:Blind
+  rdf:type owl:Class ;
+  rdfs:label "Blind"^^xsd:string ;
+  rdfs:subClassOf smartcode:VARSVC ;
+.
+smartcode:CHACON
+  rdf:type owl:Class ;
+  rdfs:label "CHACON"^^xsd:string ;
+  rdfs:subClassOf smartcode:EnergyUsingProduct ;
+  rdfs:subClassOf [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue smartcode:CurrentChargeStatus ;
+            owl:onProperty smartcode:hasSensorInputParameter ;
+          ]
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue smartcode:DevicePresence ;
+            owl:onProperty smartcode:hasSensorInputParameter ;
+          ]
+        ) ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:ChargingPolicy ;
+      owl:onProperty smartcode:hasConfigurationParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:DeviceRemovalReinsertion ;
+      owl:onProperty smartcode:hasOnlineInputParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "Charge Control"^^xsd:string ;
+      owl:onProperty smartcode:hasName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "Charge device such that costs are minimised, while obeying charging policy."^^xsd:string ;
+      owl:onProperty smartcode:hasEnergyManagementStrategy ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "The appliance charges a possibly removable device."^^xsd:string ;
+      owl:onProperty smartcode:hasDescription ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "true"^^xsd:boolean ;
+      owl:onProperty smartcode:isCostProfileInteresting ;
+    ] ;
+.
+smartcode:COMCON
+  rdf:type owl:Class ;
+  rdfs:label "COMCON"^^xsd:string ;
+  rdfs:subClassOf smartcode:EnergyUsingProduct ;
+  rdfs:subClassOf [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue smartcode:ChargingPolicy ;
+            owl:onProperty smartcode:hasConfigurationParameter ;
+          ]
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue smartcode:DutyCycle ;
+            owl:onProperty smartcode:hasConfigurationParameter ;
+          ]
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue smartcode:Timeslot ;
+            owl:onProperty smartcode:hasConfigurationParameter ;
+          ]
+        ) ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:CurrentChargeStatus ;
+      owl:onProperty smartcode:hasSensorInputParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:None ;
+      owl:onProperty smartcode:hasOnlineInputParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "Complete Control"^^xsd:string ;
+      owl:onProperty smartcode:hasName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "Like CHACON, but also control the usage of the appliance costeffectively while obeying to the given time-slots"^^xsd:string ;
+      owl:onProperty smartcode:hasEnergyManagementStrategy ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "Like CHACON, but the usage of the charged power can also be controlled."^^xsd:string ;
+      owl:onProperty smartcode:hasDescription ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "true"^^xsd:boolean ;
+      owl:onProperty smartcode:isCostProfileInteresting ;
+    ] ;
+.
+smartcode:CUSCON
+  rdf:type owl:Class ;
+  rdfs:label "CUSCON"^^xsd:string ;
+  rdfs:subClassOf smartcode:EnergyUsingProduct ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:None ;
+      owl:onProperty smartcode:hasConfigurationParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:None ;
+      owl:onProperty smartcode:hasSensorInputParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:UserDemand ;
+      owl:onProperty smartcode:hasOnlineInputParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "Automatic Energy Management probably not tolerable by user; custom schemes can be defined"^^xsd:string ;
+      owl:onProperty smartcode:hasEnergyManagementStrategy ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "Custom Control"^^xsd:string ;
+      owl:onProperty smartcode:hasName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "The device does not fit into other classes or has too high user interaction to be controllable."^^xsd:string ;
+      owl:onProperty smartcode:hasDescription ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "false"^^xsd:boolean ;
+      owl:onProperty smartcode:isCostProfileInteresting ;
+    ] ;
+.
+smartcode:ChargingPolicy
+  rdf:type smartcode:Configuration ;
+  rdfs:label "Charging policy"^^xsd:string ;
+.
+smartcode:Configuration
+  rdf:type owl:Class ;
+  rdfs:label "Configuration"^^xsd:string ;
+  rdfs:subClassOf smartcode:Parameter ;
+  owl:oneOf (
+      smartcode:ToleranceBound
+      smartcode:TemperatureBound_hysteresis
+      smartcode:RuntimeProfile
+      smartcode:RuntimePower
+      smartcode:Timespan
+      smartcode:ChargingPolicy
+      smartcode:DutyCycle
+      smartcode:Timeslot
+      smartcode:None
+    ) ;
+.
+smartcode:CurrentChargeStatus
+  rdf:type smartcode:SensorInput ;
+  rdfs:label "Current charge status"^^xsd:string ;
+.
+smartcode:CurrentState
+  rdf:type smartcode:SensorInput ;
+  rdfs:label "Current state"^^xsd:string ;
+.
+smartcode:Deadline
+  rdf:type smartcode:OnlineInput ;
+  rdfs:label "Deadline"^^xsd:string ;
+.
+smartcode:DevicePresence
+  rdf:type smartcode:SensorInput ;
+  rdfs:label "Device presence"^^xsd:string ;
+.
+smartcode:DeviceRemovalReinsertion
+  rdf:type smartcode:OnlineInput ;
+  rdfs:label "Device removal reinsertion"^^xsd:string ;
+.
+smartcode:DimmableLighting
+  rdf:type owl:Class ;
+  rdfs:label "Dimmable lighting"^^xsd:string ;
+  rdfs:subClassOf smartcode:VARSVC ;
+.
+smartcode:Dishwasher
+  rdf:type owl:Class ;
+  rdfs:label "Dishwasher"^^xsd:string ;
+  rdfs:subClassOf smartcode:SCDSVC ;
+.
+smartcode:Dryer
+  rdf:type owl:Class ;
+  rdfs:label "Dryer"^^xsd:string ;
+  rdfs:subClassOf smartcode:SCDSVC ;
+.
+smartcode:DutyCycle
+  rdf:type smartcode:Configuration ;
+  rdfs:label "Duty cycle"^^xsd:string ;
+.
+smartcode:ETOSVC
+  rdf:type owl:Class ;
+  rdfs:label "ETOSVC"^^xsd:string ;
+  rdfs:subClassOf smartcode:EnergyUsingProduct ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:Indirectly ;
+      owl:onProperty smartcode:hasOnlineInputParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:SensorEvent ;
+      owl:onProperty smartcode:hasSensorInputParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:Timespan ;
+      owl:onProperty smartcode:hasConfigurationParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "Control appliance according to sensor events and time-outs."^^xsd:string ;
+      owl:onProperty smartcode:hasEnergyManagementStrategy ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "Event-Timeout Service"^^xsd:string ;
+      owl:onProperty smartcode:hasName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "The appliance is controlled by sensor events and time-outs"^^xsd:string ;
+      owl:onProperty smartcode:hasDescription ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "false"^^xsd:boolean ;
+      owl:onProperty smartcode:isCostProfileInteresting ;
+    ] ;
+.
+smartcode:Emergency
+  rdf:type owl:Class ;
+  rdfs:label "Emergency"^^xsd:string ;
+  rdfs:subClassOf smartcode:CHACON ;
+.
+smartcode:EnergyUsingProduct
+  rdf:type owl:Class ;
+  rdfs:label "Energy using product"^^xsd:string ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty smartcode:hasDescription ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty smartcode:hasName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty smartcode:hasEnergyManagementStrategy ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty smartcode:hasConfigurationParameter ;
+      owl:someValuesFrom smartcode:Configuration ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty smartcode:hasOnlineInputParameter ;
+      owl:someValuesFrom smartcode:OnlineInput ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty smartcode:hasSensorInputParameter ;
+      owl:someValuesFrom smartcode:SensorInput ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:onProperty smartcode:isCostProfileInteresting ;
+      owl:someValuesFrom xsd:boolean ;
+    ] ;
+.
+smartcode:Freezer
+  rdf:type owl:Class ;
+  rdfs:label "Freezer"^^xsd:string ;
+  rdfs:subClassOf smartcode:THMSVC ;
+.
+smartcode:Fridge
+  rdf:type owl:Class ;
+  rdfs:label "Fridge"^^xsd:string ;
+  rdfs:subClassOf smartcode:THMSVC ;
+.
+smartcode:HandHeldVacuum
+  rdf:type owl:Class ;
+  rdfs:label "Hand held vacuum"^^xsd:string ;
+  rdfs:subClassOf smartcode:CHACON ;
+.
+smartcode:Heating
+  rdf:type owl:Class ;
+  rdfs:label "Heating"^^xsd:string ;
+  rdfs:subClassOf smartcode:THMSVC ;
+.
+smartcode:HiFi
+  rdf:type owl:Class ;
+  rdfs:label "Hi fi"^^xsd:string ;
+  rdfs:subClassOf smartcode:CUSCON ;
+.
+smartcode:Indirectly
+  rdf:type smartcode:OnlineInput ;
+  rdfs:label "Indirectly"^^xsd:string ;
+.
+smartcode:LightingIlluminaceControlled
+  rdf:type owl:Class ;
+  rdfs:comment "lighting controlled by illuminance level"^^xsd:string ;
+  rdfs:label "Lighting illuminace controlled"^^xsd:string ;
+  rdfs:subClassOf smartcode:VARSVC ;
+.
+smartcode:LightingPresenceControlled
+  rdf:type owl:Class ;
+  rdfs:label "Lighting presence controlled"^^xsd:string ;
+  rdfs:subClassOf smartcode:ETOSVC ;
+.
+smartcode:None
+  rdf:type smartcode:Configuration ;
+  rdf:type smartcode:OnlineInput ;
+  rdf:type smartcode:SensorInput ;
+  rdfs:label "None"^^xsd:string ;
+.
+smartcode:OnlineInput
+  rdf:type owl:Class ;
+  rdfs:comment "UserDemand: e.g. setpoint for illuminance, setpoint for temperature"^^xsd:string ;
+  rdfs:label "Online input"^^xsd:string ;
+  rdfs:subClassOf smartcode:Parameter ;
+  owl:oneOf (
+      smartcode:UserDemand
+      smartcode:Deadline
+      smartcode:DeviceRemovalReinsertion
+      smartcode:Indirectly
+      smartcode:None
+    ) ;
+.
+smartcode:Oven
+  rdf:type owl:Class ;
+  rdfs:label "Oven"^^xsd:string ;
+  rdfs:subClassOf smartcode:CUSCON ;
+.
+smartcode:PC
+  rdf:type owl:Class ;
+  rdfs:label "PC"^^xsd:string ;
+  rdfs:subClassOf smartcode:CUSCON ;
+.
+smartcode:Parameter
+  rdf:type owl:Class ;
+  rdfs:label "Parameter"^^xsd:string ;
+.
+smartcode:RobotLawnmower
+  rdf:type owl:Class ;
+  rdfs:label "Robot lawnmower"^^xsd:string ;
+  rdfs:subClassOf smartcode:COMCON ;
+.
+smartcode:RobotVacuum
+  rdf:type owl:Class ;
+  rdfs:label "Robot vacuum"^^xsd:string ;
+  rdfs:subClassOf smartcode:COMCON ;
+.
+smartcode:RuntimePower
+  rdf:type smartcode:Configuration ;
+  rdfs:label "Runtime power"^^xsd:string ;
+.
+smartcode:RuntimeProfile
+  rdf:type smartcode:Configuration ;
+  rdfs:label "Runtime profile"^^xsd:string ;
+.
+smartcode:SCDSVC
+  rdf:type owl:Class ;
+  rdfs:label "SCDSVC"^^xsd:string ;
+  rdfs:subClassOf smartcode:EnergyUsingProduct ;
+  rdfs:subClassOf [
+      rdf:type owl:Class ;
+      owl:intersectionOf (
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue smartcode:RuntimePower ;
+            owl:onProperty smartcode:hasConfigurationParameter ;
+          ]
+          [
+            rdf:type owl:Restriction ;
+            owl:hasValue smartcode:RuntimeProfile ;
+            owl:onProperty smartcode:hasConfigurationParameter ;
+          ]
+        ) ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:Deadline ;
+      owl:onProperty smartcode:hasOnlineInputParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:None ;
+      owl:onProperty smartcode:hasSensorInputParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "Schedulable Service"^^xsd:string ;
+      owl:onProperty smartcode:hasName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "Schedule program such that deadline is met and the program's load profile produces minimal costs."^^xsd:string ;
+      owl:onProperty smartcode:hasEnergyManagementStrategy ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "The appliance provides a service which can be scheduled within a certain time-frame."^^xsd:string ;
+      owl:onProperty smartcode:hasDescription ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "true"^^xsd:boolean ;
+      owl:onProperty smartcode:isCostProfileInteresting ;
+    ] ;
+.
+smartcode:SensorEvent
+  rdf:type smartcode:SensorInput ;
+  rdfs:label "Sensor event"^^xsd:string ;
+.
+smartcode:SensorInput
+  rdf:type owl:Class ;
+  rdfs:comment "CurrentState: current state of the service, e.g. illuminance. SensorEvent: sensor event, e.g. presence detection"^^xsd:string ;
+  rdfs:label "Sensor input"^^xsd:string ;
+  rdfs:subClassOf smartcode:Parameter ;
+  owl:oneOf (
+      smartcode:CurrentState
+      smartcode:Temperature
+      smartcode:SensorEvent
+      smartcode:CurrentChargeStatus
+      smartcode:DevicePresence
+      smartcode:None
+    ) ;
+.
+smartcode:THMSVC
+  rdf:type owl:Class ;
+  rdfs:label "THMSVC"^^xsd:string ;
+  rdfs:subClassOf smartcode:EnergyUsingProduct ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:Temperature ;
+      owl:onProperty smartcode:hasSensorInputParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:TemperatureBound_hysteresis ;
+      owl:onProperty smartcode:hasConfigurationParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:UserDemand ;
+      owl:onProperty smartcode:hasOnlineInputParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "Adjust temperature to user demand while exploiting the virtual storage property to minimise costs."^^xsd:string ;
+      owl:onProperty smartcode:hasEnergyManagementStrategy ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "The appliance provides an inert, thermal service which can serve as a virtual storage."^^xsd:string ;
+      owl:onProperty smartcode:hasDescription ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "Thermal Service"^^xsd:string ;
+      owl:onProperty smartcode:hasName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "true"^^xsd:boolean ;
+      owl:onProperty smartcode:isCostProfileInteresting ;
+    ] ;
+.
+smartcode:Temperature
+  rdf:type smartcode:SensorInput ;
+  rdfs:label "Temperature"^^xsd:string ;
+.
+smartcode:TemperatureBound_hysteresis
+  rdf:type smartcode:Configuration ;
+  rdfs:label "Temperature bound hysteresis"^^xsd:string ;
+.
+smartcode:Timeslot
+  rdf:type smartcode:Configuration ;
+  rdfs:label "Timeslot"^^xsd:string ;
+.
+smartcode:Timespan
+  rdf:type smartcode:Configuration ;
+  rdfs:label "Timespan"^^xsd:string ;
+.
+smartcode:ToleranceBound
+  rdf:type smartcode:Configuration ;
+  rdfs:label "Tolerance bound"^^xsd:string ;
+.
+smartcode:UserDemand
+  rdf:type smartcode:OnlineInput ;
+  rdfs:label "User demand"^^xsd:string ;
+.
+smartcode:VARSVC
+  rdf:type owl:Class ;
+  rdfs:label "VARSVC"^^xsd:string ;
+  rdfs:subClassOf smartcode:EnergyUsingProduct ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:CurrentState ;
+      owl:onProperty smartcode:hasSensorInputParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:ToleranceBound ;
+      owl:onProperty smartcode:hasConfigurationParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue smartcode:UserDemand ;
+      owl:onProperty smartcode:hasOnlineInputParameter ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "Minimise consumption by balancing the service with user demand, tolerance bounds and sensor measurement."^^xsd:string ;
+      owl:onProperty smartcode:hasEnergyManagementStrategy ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "The appliance provides a user-variable service which is balanced with sensor input."^^xsd:string ;
+      owl:onProperty smartcode:hasDescription ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "Variable Service"^^xsd:string ;
+      owl:onProperty smartcode:hasName ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:hasValue "false"^^xsd:boolean ;
+      owl:onProperty smartcode:isCostProfileInteresting ;
+    ] ;
+.
+smartcode:WashingMachine
+  rdf:type owl:Class ;
+  rdfs:label "Washing machine"^^xsd:string ;
+  rdfs:subClassOf smartcode:SCDSVC ;
+.
+smartcode:WaterBoiler
+  rdf:type owl:Class ;
+  rdfs:label "Water boiler"^^xsd:string ;
+  rdfs:subClassOf smartcode:THMSVC ;
+.
+smartcode:hasConfigurationParameter
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "has configuration parameter"^^xsd:string ;
+.
+smartcode:hasDescription
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "has description"^^xsd:string ;
+  rdfs:range xsd:string ;
+.
+smartcode:hasEnergyManagementStrategy
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "has energy management strategy"^^xsd:string ;
+  rdfs:range xsd:string ;
+.
+smartcode:hasName
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "has name"^^xsd:string ;
+  rdfs:range xsd:string ;
+.
+smartcode:hasOnlineInputParameter
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "has online input parameter"^^xsd:string ;
+.
+smartcode:hasSensorInputParameter
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "has sensor input parameter"^^xsd:string ;
+.
+smartcode:isCostProfileInteresting
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "It indicates if the cost profile is of interest for energy management of the specific class. For example, this is the case for the VARSVC class which covers lighting applications, since automated switching of lights due to energy availability will probably not be accepted by the  general user in the home/office sector."^^xsd:string ;
+  rdfs:label "is cost profile interesting"^^xsd:string ;
+  rdfs:range xsd:boolean ;
+.

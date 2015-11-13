@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+    xmlns:gr="http://purl.org/goodrelations/v1#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns="http://semantic.eurobau.com/eurobau-utility.owl#"
+    xml:base="http://semantic.eurobau.com/eurobau-utility.owl">
+
+<!-- Definition of annotation properties as required per 
+http://www.w3.org/TR/2004/REC-owl-ref-20040210/#AnnotationProperty-def -->
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+<owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+  
+<!-- Ontology Header -->
+<owl:Ontology rdf:about="">
+  <rdfs:label xml:lang="en">The Eurobau Utility Ontology</rdfs:label>
+  <rdfs:comment xml:lang="en">This ontology provides utility elements for describing building materials and respective offerings from the Eurobau semantic dataspace.</rdfs:comment>
+  <dc:rights xml:lang="en">This ontology is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. In a nutshell, you are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), as long as you attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).</dc:rights>
+  <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+  <owl:imports rdf:resource="http://purl.org/goodrelations/v1"/>
+</owl:Ontology>
+
+<gr:DeliveryMethod rdf:ID="DeliveryModeOwnFleetWithCrane">
+  <rdfs:label xml:lang="de">Kranabladung</rdfs:label>
+  <rdfs:label xml:lang="en">DeliveryModeOwnFleetWithCrane (DeliveryMethod)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource=""/>
+</gr:DeliveryMethod>
+
+<gr:DeliveryMethod rdf:ID="DeliveryModeRentalTruck">
+  <rdfs:label xml:lang="de">Leihauto</rdfs:label>
+  <rdfs:label xml:lang="en">DeliveryModeRentalTruck (DeliveryMethod)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource=""/>
+</gr:DeliveryMethod>
+
+<gr:DeliveryMethod rdf:ID="DeliveryModeOwnFleetWithLiftgate">
+  <rdfs:label xml:lang="de">Ladebordwand</rdfs:label>
+  <rdfs:label xml:lang="en">DeliveryModeOwnFleetWithLiftgate (DeliveryMethod)</rdfs:label>
+  <rdfs:isDefinedBy rdf:resource=""/>
+</gr:DeliveryMethod>
+
+<owl:ObjectProperty rdf:ID="eligibleDeliveryDistance">
+  <rdfs:label xml:lang="de">Lieferradius in Luftlinienkilometern</rdfs:label>
+  <rdfs:label xml:lang="en">eligibleDeliveryDistance (UnitOfMEasurement: KMT)</rdfs:label>
+  <rdfs:domain rdf:resource="http://purl.org/goodrelations/v1#Offering"/>
+  <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#QuantitativeValueFloat"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:ID="eligibleDeliveryDistanceRoad">
+  <rdfs:label xml:lang="de">Lieferradius in Straßenkilometern</rdfs:label>
+  <rdfs:label xml:lang="en">eligibleDeliveryDistanceRoad (UnitOfMEasurement: KMT)</rdfs:label>
+  <rdfs:domain rdf:resource="http://purl.org/goodrelations/v1#Offering"/>
+  <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#QuantitativeValueFloat"/>
+  <rdfs:isDefinedBy rdf:resource=""/>
+</owl:ObjectProperty>
+
+</rdf:RDF>

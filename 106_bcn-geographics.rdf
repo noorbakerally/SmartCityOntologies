@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:bcngeo="http://datos.bcn.cl/ontologies/bcn-geographics#" xmlns:bcnnorms="http://datos.bcn.cl/ontologies/bcn-norms#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" xmlns:gn="http://www.geonames.org/ontology#" xmlns:org="http://www.w3.org/ns/org#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:time="http://www.w3.org/2006/time#">
+	<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#Region">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:label>Región</rdfs:label>
+		<rdfs:label xml:lang="en">Region</rdfs:label>
+		<rdfs:comment>Es el territorio jurídicamente determinado para fines de 
+Gobierno y Administración Interior y Descentralizada del 
+Estado, que constituye el primer nivel de estructuración del 
+país, para dicho efecto. Se divide en Provincias y debe contar 
+con una ciudad capital, que constituye la sede de su autoridad 
+(Intendente y Gobierno Regional) y de la demás institucionalidad propia de esta unidad territorial.</rdfs:comment>
+		<owl:sameAs>
+			<rdf:Description rdf:about="http://www.geonames.org/ontology#A.ADM1"/>
+		</owl:sameAs>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#DivisionCountry"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#Province">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:label xml:lang="es">Provincia</rdfs:label>
+		<rdfs:label xml:lang="en">Province</rdfs:label>
+		<rdfs:comment> Es el territorio legalmente definido para fines de Gobierno y 
+Administración Interior, en que se divide la Región, constituyendo 
+el segundo nivel de estructuración del país para este efecto.
+Se conforma por Comunas y debe contar con una capital que 
+constituye la sede de su autoridad, el Gobernador, y de la demás institucionalidad propia de esta unidad territorial</rdfs:comment>
+		<owl:sameAs>
+			<rdf:Description rdf:about="http://www.geonames.org/ontology#A.ADM2"/>
+		</owl:sameAs>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#DivisionCountry"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#Commune">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:label xml:lang="es">Comuna</rdfs:label>
+		<rdfs:label xml:lang="en">Commune</rdfs:label>
+		<rdfs:comment>Es el territorio legalmente definido para fines deAdministración Local en que se divide la provincia. Constituye el nivel básico de la estructuración del Estado. Su autoridadjurisdiccional es la Municipalidad, cuya sede es determinada por la Ley.</rdfs:comment>
+		<owl:sameAs>
+			<rdf:Description rdf:about="http://www.geonames.org/ontology#A.ADM3"/>
+		</owl:sameAs>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#DivisionCountry"/>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#GeographicalPlace">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:label>Lugar geográfico</rdfs:label>
+		<rdfs:label xml:lang="en">Geographical place</rdfs:label>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#Place"/>
+		</rdfs:subClassOf>
+		<rdfs:comment xml:lang="es">Define la estructura basica de un lugar geografico.</rdfs:comment>
+		<owl:sameAs>
+			<rdf:Description rdf:about="http://www.geonames.org/ontology#A.ADMD"/>
+		</owl:sameAs>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#Circumscription">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:label xml:lang="es">Circunscripcion</rdfs:label>
+		<rdfs:label xml:lang="en">Circumscription</rdfs:label>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#ElectoralPlace"/>
+		</rdfs:subClassOf>
+		<rdfs:comment xml:lang="es">Division politica geografica utilizada para la eleccion senatorial.</rdfs:comment>
+		<rdfs:label xml:lang="es">Circunscripción</rdfs:label>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#District">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:label xml:lang="es">Distrito</rdfs:label>
+		<rdfs:label xml:lang="en">District</rdfs:label>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#ElectoralPlace"/>
+		</rdfs:subClassOf>
+		<rdfs:comment xml:lang="es">Una division geografica utilizada para elección de diputados.</rdfs:comment>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.geonames.org/ontology#officialName">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		</rdf:type>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+		</rdfs:range>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#Place"/>
+		</rdfs:domain>
+		<rdfs:label xml:lang="es">nombre oficial</rdfs:label>
+		<rdfs:label xml:lang="es">nombre</rdfs:label>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#hasCUT">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		</rdf:type>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+		</rdfs:range>
+		<rdfs:label>tiene Codigo Unico Territorial</rdfs:label>
+		<rdfs:label xml:lang="en">has code</rdfs:label>
+		<rdfs:comment>Es un número de identificación único para cada unidad territorial de la División PolíticoAdministrativa. Se representa con números arábigos y corresponde a dos dígitos para identificar la región, uno para la provincia y dos para la comuna, quedando esta última con 5 dígitos.Los códigos utilizados a niveles regional, provincial y comunal,han sido establecidos oficialmente mediante el decreto N° 1.439del Ministerio del Interior, en el Diario Oficial N° 36.657 del 8 deMayo de 2000 y posteriormente modificado por los decretos N°1.352 del año 2.004 y N° 910 del 2.007.</rdfs:comment>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#DivisionCountry"/>
+		</rdfs:domain>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#GeographicalPlace"/>
+		</rdfs:domain>
+		<rdfs:label xml:lang="es">latitud</rdfs:label>
+		<rdfs:label xml:lang="en">latitude</rdfs:label>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#double"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		</rdf:type>
+		<rdfs:label xml:lang="es">longitud</rdfs:label>
+		<rdfs:label xml:lang="en">longitude</rdfs:label>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#GeographicalPlace"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#double"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#Country">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:label>País</rdfs:label>
+		<rdfs:label xml:lang="en">Country</rdfs:label>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#GeographicalPlace"/>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://www.geonames.org/ontology#Feature"/>
+		</rdfs:subClassOf>
+		<owl:equivalentClass>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-norms#Country"/>
+		</owl:equivalentClass>
+		<rdfs:comment xml:lang="es">La descripcion de un pais a nivel geografico.</rdfs:comment>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#Place">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:label xml:lang="es">Lugar</rdfs:label>
+		<rdfs:label xml:lang="en">Place</rdfs:label>
+		<rdfs:comment xml:lang="es">Algo que pueda ser definido como un lugar, ya sea desde el punto de vista geografico, politico electoral u otro.</rdfs:comment>
+		<rdfs:comment xml:lang="en">Some that may be defined as a place, either from diferent view points: geographic, politic electoral or other.</rdfs:comment>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://dbpedia.org/ontology/Place"/>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#ElectoralPlace">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#Class"/>
+		</rdf:type>
+		<rdfs:label xml:lang="es">Lugar electoral</rdfs:label>
+		<rdfs:label xml:lang="en">Electoral place</rdfs:label>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#Place"/>
+		</rdfs:subClassOf>
+		<rdfs:comment xml:lang="es">Define un lugar geografico definido para realizar elecciones.</rdfs:comment>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#belongsTo">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		</rdf:type>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		</rdf:type>
+		<rdfs:label>parte de</rdfs:label>
+		<rdfs:label xml:lang="en">divided into</rdfs:label>
+		<rdfs:comment xml:lang="es">Define una relacion entre un lugar geografico y las divisiones que pueden realizarse sobre el</rdfs:comment>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#DivisionCountry"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#Place"/>
+		</rdfs:range>
+		<rdfs:label xml:lang="es">pertenece a</rdfs:label>
+		<rdfs:label xml:lang="es">es de</rdfs:label>
+		<rdfs:label xml:lang="es">esta dentro de</rdfs:label>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#composedBy">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		</rdf:type>
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+		</rdf:type>
+		<rdfs:label xml:lang="es">compuesto por</rdfs:label>
+		<rdfs:label xml:lang="en">composed by</rdfs:label>
+		<rdfs:comment xml:lang="es">Propiedad que define una relacion entre una division geografica y un lugar</rdfs:comment>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#Place"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#DivisionCountry"/>
+		</rdfs:range>
+		<rdfs:label xml:lang="es">se divide en</rdfs:label>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#GeographicOntology">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Ontology"/>
+		</rdf:type>
+		<rdfs:label xml:lang="es">Ontologia geografica</rdfs:label>
+		<rdfs:label xml:lang="en">Geographic ontology</rdfs:label>
+		<owl:versionInfo>1.2 - 2012-12-06</owl:versionInfo>
+		<rdfs:comment xml:lang="es">Esta ontología es unmodelo geografico adaptado a la realidad chilena.</rdfs:comment>
+		<owl:imports>
+			<rdf:Description rdf:about="http://www.geonames.org/ontology/ontology_v3.1.rdf"/>
+		</owl:imports>
+	</rdf:Description>
+	<owl:Class rdf:about="http://www.geonames.org/ontology#Class">
+		<rdfs:comment xml:lang="en">A class of features.</rdfs:comment>
+		<rdfs:label xml:lang="en">Class</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+		<rdfs:label xml:lang="es">Clase</rdfs:label>
+		<rdfs:comment xml:lang="es">Una clase en el modelo geonames</rdfs:comment>
+	</owl:Class>
+	<owl:Class rdf:about="http://www.geonames.org/ontology#Code">
+		<rdfs:comment>A feature code.</rdfs:comment>
+		<rdfs:label xml:lang="en">Code</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+		<rdfs:comment xml:lang="es">Un codigo de caracteristica.</rdfs:comment>
+		<rdfs:label xml:lang="es">Codigo</rdfs:label>
+	</owl:Class>
+	<gn:Code rdf:about="http://www.geonames.org/ontology#A.ADM1">
+		<skos:definition xml:lang="en">a primary administrative division of a country, such as a state in the United States</skos:definition>
+		<skos:inScheme rdf:resource="http://www.geonames.org/ontology#A"/>
+		<skos:prefLabel xml:lang="en">first-order administrative division</skos:prefLabel>
+	</gn:Code>
+	<gn:Class rdf:about="http://www.geonames.org/ontology#A">
+		<rdfs:comment xml:lang="en">country, state, region ...</rdfs:comment>
+		<rdfs:comment xml:lang="es">Corresponde a cualquier area geografica</rdfs:comment>
+		<rdfs:label xml:lang="es">Area</rdfs:label>
+	</gn:Class>
+	<gn:Code rdf:about="http://www.geonames.org/ontology#A.ADM2">
+		<skos:definition xml:lang="en">a subdivision of a first-order administrative division</skos:definition>
+		<skos:inScheme rdf:resource="http://www.geonames.org/ontology#A"/>
+		<skos:prefLabel xml:lang="en">second-order administrative division</skos:prefLabel>
+	</gn:Code>
+	<gn:Code rdf:about="http://www.geonames.org/ontology#A.ADM3">
+		<skos:definition xml:lang="en">a subdivision of a second-order administrative division</skos:definition>
+		<skos:inScheme rdf:resource="http://www.geonames.org/ontology#A"/>
+		<skos:prefLabel xml:lang="en">third-order administrative division</skos:prefLabel>
+	</gn:Code>
+	<gn:Code rdf:about="http://www.geonames.org/ontology#A.ADM4">
+		<skos:definition xml:lang="en">a subdivision of a third-order administrative division</skos:definition>
+		<skos:inScheme rdf:resource="http://www.geonames.org/ontology#A"/>
+		<skos:prefLabel xml:lang="en">fourth-order administrative division</skos:prefLabel>
+	</gn:Code>
+	<gn:Code rdf:about="http://www.geonames.org/ontology#A.ADMD">
+		<skos:definition xml:lang="en">an administrative division of a country, undifferentiated as to administrative level</skos:definition>
+		<skos:inScheme rdf:resource="http://www.geonames.org/ontology#A"/>
+		<skos:prefLabel xml:lang="en">administrative division</skos:prefLabel>
+	</gn:Code>
+	<rdf:Description rdf:about="http://www.w3.org/2006/time#year">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#Place"/>
+		</rdfs:domain>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#DivisionCountry">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+		</rdf:type>
+		<rdfs:subClassOf>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#GeographicalPlace"/>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="es">División territorial</rdfs:label>
+		<rdfs:label xml:lang="es"/>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://www.geonames.org/ontology#countryCode">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#Country"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+		</rdfs:range>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#hasMunicipality">
+		<rdf:type>
+			<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+		</rdf:type>
+		<rdfs:domain>
+			<rdf:Description rdf:about="http://datos.bcn.cl/ontologies/bcn-geographics#Commune"/>
+		</rdfs:domain>
+		<rdfs:range>
+			<rdf:Description rdf:about="http://www.w3.org/ns/org#FormalOrganization">
+				<rdf:type>
+					<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class"/>
+				</rdf:type>
+			</rdf:Description>
+		</rdfs:range>
+	</rdf:Description>
+</rdf:RDF>

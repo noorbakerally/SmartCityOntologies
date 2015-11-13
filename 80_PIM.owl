@@ -1,0 +1,2004 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:pmo="http://www.bimtoolset.org/ontologies/pmo.owl#"
+    xmlns:pim="http://www.bimtoolset.org/ontologies/IntUBE-EnergyPIM.owl#"
+    xml:base="http://www.bimtoolset.org/ontologies/IntUBE-EnergyPIM.owl">
+    <owl:Ontology rdf:about="">
+        <!--owl:imports rdf:resource="http://www.bimtoolset.org/ontologies/pmo.owl"/-->
+    </owl:Ontology>
+    <rdfs:Datatype rdf:ID="ConnectionType">
+    <owl:equivalentClass>
+    <rdfs:Datatype>
+      <owl:onDatatype rdf:resource="xsd:string"/>
+          <owl:oneOf rdf:parseType="Resource">
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:rest rdf:parseType="Resource">
+                      <rdf:rest rdf:parseType="Resource">
+                        <rdf:rest rdf:parseType="Resource">
+                          <rdf:rest rdf:parseType="Resource">
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            <rdf:first rdf:datatype="xsd:string"
+                            >Profibus</rdf:first>
+                          </rdf:rest>
+                          <rdf:first rdf:datatype="xsd:string"
+                          >LON_PLC</rdf:first>
+                        </rdf:rest>
+                        <rdf:first rdf:datatype="xsd:string"
+                        >LON_TP</rdf:first>
+                      </rdf:rest>
+                      <rdf:first rdf:datatype="xsd:string"
+                      >KNX_PLC</rdf:first>
+                    </rdf:rest>
+                    <rdf:first rdf:datatype="xsd:string"
+                    >KNX_RF</rdf:first>
+                  </rdf:rest>
+                  <rdf:first rdf:datatype="xsd:string"
+                  >KNX_TP</rdf:first>
+                </rdf:rest>
+                <rdf:first rdf:datatype="xsd:string"
+                >RS485</rdf:first>
+              </rdf:rest>
+              <rdf:first rdf:datatype="xsd:string"
+              >TCP-IP</rdf:first>
+            </rdf:rest>
+            <rdf:first rdf:datatype="xsd:string"
+            >Wireless</rdf:first>
+          </owl:oneOf>
+    </rdfs:Datatype>
+    </owl:equivalentClass>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="DataFormatType">
+    <owl:equivalentClass>
+    <rdfs:Datatype>
+      <owl:onDatatype rdf:resource="xsd:string"/>
+          <owl:oneOf rdf:parseType="Resource">
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  <rdf:first rdf:datatype="xsd:string"
+                  >Custom</rdf:first>
+                </rdf:rest>
+                <rdf:first rdf:datatype="xsd:string"
+                >Modbus</rdf:first>
+              </rdf:rest>
+              <rdf:first rdf:datatype="xsd:string"
+              >LOM</rdf:first>
+            </rdf:rest>
+            <rdf:first rdf:datatype="xsd:string"
+            >KNX</rdf:first>
+          </owl:oneOf>
+    </rdfs:Datatype>
+    </owl:equivalentClass>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="ProducerType">
+    <owl:equivalentClass>
+    <rdfs:Datatype>
+      <owl:onDatatype rdf:resource="xsd:string"/>
+          <owl:oneOf rdf:parseType="Resource">
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first rdf:datatype="xsd:string"
+                >Ventilation</rdf:first>
+              </rdf:rest>
+              <rdf:first rdf:datatype="xsd:string"
+              >Heat</rdf:first>
+            </rdf:rest>
+            <rdf:first rdf:datatype="xsd:string"
+            >Cold</rdf:first>
+          </owl:oneOf>
+    </rdfs:Datatype>
+    </owl:equivalentClass>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="QualityType">
+    <owl:equivalentClass>
+    <rdfs:Datatype>
+      <owl:onDatatype rdf:resource="xsd:string"/>
+          <owl:oneOf rdf:parseType="Resource">
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <rdf:first rdf:datatype="xsd:string"
+                >Good</rdf:first>
+              </rdf:rest>
+              <rdf:first rdf:datatype="xsd:string"
+              >Average</rdf:first>
+            </rdf:rest>
+            <rdf:first rdf:datatype="xsd:string"
+            >Bad</rdf:first>
+          </owl:oneOf>
+    </rdfs:Datatype>
+    </owl:equivalentClass>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="RoomType">
+    <owl:equivalentClass>
+    <rdfs:Datatype>
+      <owl:onDatatype rdf:resource="xsd:string"/>
+          <owl:oneOf rdf:parseType="Resource">
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:rest rdf:parseType="Resource">
+                      <rdf:rest rdf:parseType="Resource">
+                        <rdf:rest rdf:parseType="Resource">
+                          <rdf:rest rdf:parseType="Resource">
+                            <rdf:rest rdf:parseType="Resource">
+                              <rdf:rest rdf:parseType="Resource">
+                                <rdf:rest rdf:parseType="Resource">
+                                  <rdf:rest rdf:parseType="Resource">
+                                    <rdf:rest rdf:parseType="Resource">
+                                      <rdf:rest rdf:parseType="Resource">
+                                        <rdf:rest rdf:parseType="Resource">
+                                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          <rdf:first rdf:datatype="xsd:string"
+                                          >Other</rdf:first>
+                                        </rdf:rest>
+                                        <rdf:first rdf:datatype="xsd:string"
+                                        >WasteStorage</rdf:first>
+                                      </rdf:rest>
+                                      <rdf:first rdf:datatype="xsd:string"
+                                      >ParkingOrMotorVehicles</rdf:first>
+                                    </rdf:rest>
+                                    <rdf:first rdf:datatype="xsd:string"
+                                    >Sunspace</rdf:first>
+                                  </rdf:rest>
+                                  <rdf:first rdf:datatype="xsd:string"
+                                  >Elevator</rdf:first>
+                                </rdf:rest>
+                                <rdf:first rdf:datatype="xsd:string"
+                                >MeterRoom</rdf:first>
+                              </rdf:rest>
+                              <rdf:first rdf:datatype="xsd:string"
+                              >BathRoom</rdf:first>
+                            </rdf:rest>
+                            <rdf:first rdf:datatype="xsd:string"
+                            >ToiletCompartment</rdf:first>
+                          </rdf:rest>
+                          <rdf:first rdf:datatype="xsd:string"
+                          >eneralRoom</rdf:first>
+                        </rdf:rest>
+                        <rdf:first rdf:datatype="xsd:string"
+                        >BuildingServicesRoom</rdf:first>
+                      </rdf:rest>
+                      <rdf:first rdf:datatype="xsd:string"
+                      >CirculationRoomInIndividualDwelling</rdf:first>
+                    </rdf:rest>
+                    <rdf:first rdf:datatype="xsd:string"
+                    >CirculationRoom</rdf:first>
+                  </rdf:rest>
+                  <rdf:first rdf:datatype="xsd:string"
+                  >HabitableRoomWithCoockingFacility</rdf:first>
+                </rdf:rest>
+                <rdf:first rdf:datatype="xsd:string"
+                >HabitableRoom</rdf:first>
+              </rdf:rest>
+              <rdf:first rdf:datatype="xsd:string"
+              >HabitableSpaceWithCoockingFacility</rdf:first>
+            </rdf:rest>
+            <rdf:first rdf:datatype="xsd:string"
+            >HabitableSpace</rdf:first>
+          </owl:oneOf>
+    </rdfs:Datatype>
+    </owl:equivalentClass>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="UsageFunction">
+    <owl:equivalentClass>
+    <rdfs:Datatype>
+      <owl:onDatatype rdf:resource="xsd:string"/>
+          <owl:oneOf rdf:parseType="Resource">
+            <rdf:rest rdf:parseType="Resource">
+              <rdf:rest rdf:parseType="Resource">
+                <rdf:rest rdf:parseType="Resource">
+                  <rdf:rest rdf:parseType="Resource">
+                    <rdf:rest rdf:parseType="Resource">
+                      <rdf:rest rdf:parseType="Resource">
+                        <rdf:rest rdf:parseType="Resource">
+                          <rdf:rest rdf:parseType="Resource">
+                            <rdf:rest rdf:parseType="Resource">
+                              <rdf:rest rdf:parseType="Resource">
+                                <rdf:rest rdf:parseType="Resource">
+                                  <rdf:rest rdf:parseType="Resource">
+                                    <rdf:rest rdf:parseType="Resource">
+                                      <rdf:rest rdf:parseType="Resource">
+                                        <rdf:rest rdf:parseType="Resource">
+                                          <rdf:rest rdf:parseType="Resource">
+                                            <rdf:rest rdf:parseType="Resource">
+                                              <rdf:rest rdf:parseType="Resource">
+                                                <rdf:rest rdf:parseType="Resource">
+                                                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                  <rdf:first rdf:datatype="xsd:string"
+                                                  >OtherFunction</rdf:first>
+                                                </rdf:rest>
+                                                <rdf:first rdf:datatype="xsd:string"
+                                                >IndustrialFunction</rdf:first>
+                                              </rdf:rest>
+                                              <rdf:first rdf:datatype="xsd:string"
+                                              >DetentionFunction</rdf:first>
+                                            </rdf:rest>
+                                            <rdf:first rdf:datatype="xsd:string"
+                                            >TemporaryAccommodationFunction</rdf:first>
+                                          </rdf:rest>
+                                          <rdf:first rdf:datatype="xsd:string"
+                                          >SportsFunctionModeratelyHeatedWithoutSportsActivity</rdf:first>
+                                        </rdf:rest>
+                                        <rdf:first rdf:datatype="xsd:string"
+                                        >SportsFunctionModeratelyHeatedWithSportsActivity</rdf:first>
+                                      </rdf:rest>
+                                      <rdf:first rdf:datatype="xsd:string"
+                                      >SportsFunctionWithoutSportsActivity</rdf:first>
+                                    </rdf:rest>
+                                    <rdf:first rdf:datatype="xsd:string"
+                                    >SportsFunctionWithSportsActivity</rdf:first>
+                                  </rdf:rest>
+                                  <rdf:first rdf:datatype="xsd:string"
+                                  >AssemblyFunction</rdf:first>
+                                </rdf:rest>
+                                <rdf:first rdf:datatype="xsd:string"
+                                >RetailFunction</rdf:first>
+                              </rdf:rest>
+                              <rdf:first rdf:datatype="xsd:string"
+                              >CateringFunction</rdf:first>
+                            </rdf:rest>
+                            <rdf:first rdf:datatype="xsd:string"
+                            >StationFunction</rdf:first>
+                          </rdf:rest>
+                          <rdf:first rdf:datatype="xsd:string"
+                          >GeneralFunction</rdf:first>
+                        </rdf:rest>
+                        <rdf:first rdf:datatype="xsd:string"
+                        >NonResidentialFunction</rdf:first>
+                      </rdf:rest>
+                      <rdf:first rdf:datatype="xsd:string"
+                      >HealthCareFunctionClinical</rdf:first>
+                    </rdf:rest>
+                    <rdf:first rdf:datatype="xsd:string"
+                    >HealthCareFunctionNonClinical</rdf:first>
+                  </rdf:rest>
+                  <rdf:first rdf:datatype="xsd:string"
+                  >EducationFunction</rdf:first>
+                </rdf:rest>
+                <rdf:first rdf:datatype="xsd:string"
+                >OfficeFunction</rdf:first>
+              </rdf:rest>
+              <rdf:first rdf:datatype="xsd:string"
+              >ResidentialFunctionForElderly</rdf:first>
+            </rdf:rest>
+            <rdf:first rdf:datatype="xsd:string"
+            >ResidentialFunction</rdf:first>
+          </owl:oneOf>
+    </rdfs:Datatype>
+    </owl:equivalentClass>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="AnnualPrimaryEnergyConsumptionPer-m2">
+      <pmo:unit rdf:datatype="xsd:string">kWh/m2</pmo:unit>
+      <owl:equivalentClass rdf:resource="xsd:string"/>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="AnnualEnergyDemandForHeatingPer-m2">
+      <pmo:unit rdf:datatype="xsd:string">kWh/m2</pmo:unit>
+      <owl:equivalentClass rdf:resource="xsd:string"/>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="AnnualEnergyDemandForCoolingPer-m2">
+      <pmo:unit rdf:datatype="xsd:string">kWh/m2</pmo:unit>
+      <owl:equivalentClass rdf:resource="xsd:string"/>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="AnnualGasConsumptionForHeatingPer-m2">
+      <pmo:unit rdf:datatype="xsd:string">m3/m2</pmo:unit>
+      <owl:equivalentClass rdf:resource="xsd:string"/>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="AnnualGasConsumptionForCoolingPer-m2">
+      <pmo:unit rdf:datatype="xsd:string">m3/m2</pmo:unit>
+      <owl:equivalentClass rdf:resource="xsd:string"/>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="AnnualElectricityConsumptionForHeatingPer-m2">
+      <pmo:unit rdf:datatype="xsd:string">kWh/m2</pmo:unit>
+      <owl:equivalentClass rdf:resource="xsd:string"/>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="AnnualElectricityConsumptionForCoolingPer-m2">
+      <pmo:unit rdf:datatype="xsd:string">kWh/m2</pmo:unit>
+      <owl:equivalentClass rdf:resource="xsd:string"/>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="AnnualOilConsumptionForHeatingPer-m2">
+      <pmo:unit rdf:datatype="xsd:string">m3/m2</pmo:unit>
+      <owl:equivalentClass rdf:resource="xsd:string"/>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="AnnualOilConsumptionForCoolingPer-m2">
+      <pmo:unit rdf:datatype="xsd:string">m3/m2</pmo:unit>
+      <owl:equivalentClass rdf:resource="xsd:string"/>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="AnnualBiomassConsumtionForHeatingPer-m2">
+      <pmo:unit rdf:datatype="xsd:string">m3/m2</pmo:unit>
+      <owl:equivalentClass rdf:resource="xsd:string"/>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="AnnualBiomassConsumtionForCoolingPer-m2">
+      <pmo:unit rdf:datatype="xsd:string">m3/m2</pmo:unit>
+      <owl:equivalentClass rdf:resource="xsd:string"/>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="AnnualExternalEnergyConsumptionForHeatingPer-m2">
+      <pmo:unit rdf:datatype="xsd:string">kWh/m2</pmo:unit>
+      <owl:equivalentClass rdf:resource="xsd:string"/>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="AnnualExternalEnergyConsumptionForCoolingPer-m2">
+      <pmo:unit rdf:datatype="xsd:string">kWh/m2</pmo:unit>
+      <owl:equivalentClass rdf:resource="xsd:string"/>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="RenewableEnergyGeneratedInSitu-ThermalPer-m2">
+      <pmo:unit rdf:datatype="xsd:string">kWh/m2</pmo:unit>
+      <owl:equivalentClass rdf:resource="xsd:string"/>
+    </rdfs:Datatype>
+    <rdfs:Datatype rdf:ID="RenewableEnergyGeneratedInSitu-ElectricPer-m2">
+      <pmo:unit rdf:datatype="xsd:string">kWh/m2</pmo:unit>
+      <owl:equivalentClass rdf:resource="xsd:string"/>
+    </rdfs:Datatype>
+    <owl:Class rdf:ID="NamedDomainObject">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#name"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#name"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#description"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#description"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://www.bimtoolset.org/ontologies/pmo.owl#Object"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Building">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.bimtoolset.org/ontologies/pmo.owl#hasPart_directly"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#Room"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#buildingID"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#buildingID"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#NamedDomainObject"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Room">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#roomNumber"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#roomNumber"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#usageFunction"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#usageFunction"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#roomType"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#roomType"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#bimRoomReference"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#NamedDomainObject"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Apartment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#room"/>
+                <owl:onClass rdf:resource="#Room"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#apartmentNumber"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#apartmentNumber"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#NamedDomainObject"/>
+    </owl:Class>
+    <owl:Class rdf:ID="ElectricityTariffSchedule">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#winterPeriodLow"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#winterPeriodHigh"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#summerPeriodLow"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#summerPeriodHigh"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://www.bimtoolset.org/ontologies/pmo.owl#Object"/>
+    </owl:Class>
+    <owl:Class rdf:ID="BuildingPerformanceAspect">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualPrimaryEnergyConsumptionPer-m2"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualPrimaryEnergyConsumptionPer-m2"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualEnergyDemandForHeatingPer-m2"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualEnergyDemandForHeatingPer-m2"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualEnergyDemandForCoolingPer-m2"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualEnergyDemandForCoolingPer-m2"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualGasConsumptionForHeatingPer-m2"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualGasConsumptionForHeatingPer-m2"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualGasConsumptionForCoolingPer-m2"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualGasConsumptionForCoolingPer-m2"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualElectricityConsumptionForHeatingPer-m2"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualElectricityConsumptionForHeatingPer-m2"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualElectricityConsumptionForCoolingPer-m2"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualElectricityConsumptionForCoolingPer-m2"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualOilConsumptionForHeatingPer-m2"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualOilConsumptionForHeatingPer-m2"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualOilConsumptionForCoolingPer-m2"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualOilConsumptionForCoolingPer-m2"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualBiomassConsumtionForHeatingPer-m2"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualBiomassConsumtionForHeatingPer-m2"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualBiomassConsumtionForCoolingPer-m2"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualBiomassConsumtionForCoolingPer-m2"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualExternalEnergyConsumptionForHeatingPer-m2"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualExternalEnergyConsumptionForHeatingPer-m2"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualExternalEnergyConsumptionForCoolingPer-m2"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#annualExternalEnergyConsumptionForCoolingPer-m2"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#renewableEnergyGeneratedInSitu-ThermalPer-m2"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#renewableEnergyGeneratedInSitu-ThermalPer-m2"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#renewableEnergyGeneratedInSitu-ElectricPer-m2"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#renewableEnergyGeneratedInSitu-ElectricPer-m2"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://www.bimtoolset.org/ontologies/pmo.owl#Object"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Sensor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#locatedIn"/>
+                <owl:onClass rdf:resource="#Room"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#locatedIn"/>
+                <owl:onClass rdf:resource="#Room"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#description"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#description"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#manufacturer"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#manufacturer"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#locationInRoom"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#locationInRoom"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#connection"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#connection"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#dataFormat"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#dataFormat"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#xCoordinate"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#xCoordinate"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#yCoordinate"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#yCoordinate"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#zCoordinate"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#zCoordinate"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#size"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#size"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#validRange"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#validRange"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#resolution"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#resolution"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#accuracy"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#accuracy"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#accuracyCondition"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#accuracyCondition"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#units"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#units"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#format"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#format"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#syntax"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#syntax"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://www.bimtoolset.org/ontologies/pmo.owl#Object"/>
+    </owl:Class>
+    <owl:Class rdf:ID="AirTemperatureSensor">
+        <rdfs:subClassOf rdf:resource="#Sensor"/>
+    </owl:Class>
+    <owl:Class rdf:ID="WaterTemperatureSensor">
+        <rdfs:subClassOf rdf:resource="#Sensor"/>
+    </owl:Class>
+    <owl:Class rdf:ID="WaterFlowSensor">
+        <rdfs:subClassOf rdf:resource="#Sensor"/>
+    </owl:Class>
+    <owl:Class rdf:ID="WaterHeaterEnergySensor">
+        <rdfs:subClassOf rdf:resource="#Sensor"/>
+    </owl:Class>
+    <owl:Class rdf:ID="HumiditySensor">
+        <rdfs:subClassOf rdf:resource="#Sensor"/>
+    </owl:Class>
+    <owl:Class rdf:ID="PMVSensor">
+        <rdfs:subClassOf rdf:resource="#Sensor"/>
+    </owl:Class>
+    <owl:Class rdf:ID="PPDSensor">
+        <rdfs:subClassOf rdf:resource="#Sensor"/>
+    </owl:Class>
+    <owl:Class rdf:ID="HoccSensor">
+        <rdfs:subClassOf rdf:resource="#Sensor"/>
+    </owl:Class>
+    <owl:Class rdf:ID="PulseSensor">
+        <rdfs:subClassOf rdf:resource="#Sensor"/>
+    </owl:Class>
+    <owl:Class rdf:ID="CO2Sensor">
+        <rdfs:subClassOf rdf:resource="#Sensor"/>
+    </owl:Class>
+    <owl:Class rdf:ID="StateSensor">
+        <rdfs:subClassOf rdf:resource="#Sensor"/>
+    </owl:Class>
+    <owl:Class rdf:ID="EnergyRateSensor">
+        <rdfs:subClassOf rdf:resource="#Sensor"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Measurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#quality"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#quality"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#timeStamp"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#timeStamp"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://www.bimtoolset.org/ontologies/pmo.owl#Object"/>
+    </owl:Class>
+    <owl:Class rdf:ID="AirTemperatureMeasurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#temperature"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#temperature"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#timeStamp"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#timeStamp"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#Measurement"/>
+    </owl:Class>
+    <owl:Class rdf:ID="WaterTemperatureMeasurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#temperature"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#temperature"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#timeStamp"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#timeStamp"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#Measurement"/>
+    </owl:Class>
+    <owl:Class rdf:ID="WaterFlowMeasurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#flow"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#flow"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#timeStamp"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#timeStamp"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#Measurement"/>
+    </owl:Class>
+    <owl:Class rdf:ID="WaterHeaterEnergyMeasurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#energy"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#energy"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#timeStamp"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#timeStamp"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#Measurement"/>
+    </owl:Class>
+    <owl:Class rdf:ID="HumidityMeasurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#humidity"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#humidity"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#Measurement"/>
+    </owl:Class>
+    <owl:Class rdf:ID="PMVMeasurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#pmv"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#pmv"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#Measurement"/>
+    </owl:Class>
+    <owl:Class rdf:ID="PPDMeasurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#ppd"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#ppd"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#Measurement"/>
+    </owl:Class>
+    <owl:Class rdf:ID="PulseMeasurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#pulse"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#pulse"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#Measurement"/>
+    </owl:Class>
+    <owl:Class rdf:ID="HoccMeasurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hocc"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hocc"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#Measurement"/>
+    </owl:Class>
+    <owl:Class rdf:ID="CO2Measurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#co2"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#co2"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#Measurement"/>
+    </owl:Class>
+    <owl:Class rdf:ID="StateMeasurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#state"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#state"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#Measurement"/>
+    </owl:Class>
+    <owl:Class rdf:ID="EnergyRateMeasurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#energyRate"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#energyRate"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#Measurement"/>
+    </owl:Class>
+    <owl:Class rdf:ID="HvacProducer">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#distributor"/>
+                <owl:onClass rdf:resource="#HvacDistributor"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#control"/>
+                <owl:onClass rdf:resource="#Control"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#description"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#description"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#type"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#type"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >3</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#maxPower"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#maxPower"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#copeep"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#copeep"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://www.bimtoolset.org/ontologies/pmo.owl#Object"/>
+    </owl:Class>
+    <owl:Class rdf:ID="HvacDistributor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#control"/>
+                <owl:onClass rdf:resource="#Control"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#description"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#description"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#copeep"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#copeep"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://www.bimtoolset.org/ontologies/pmo.owl#Object"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Control">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#schedule"/>
+                <owl:onClass rdf:resource="#Schedule"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#description"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#description"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://www.bimtoolset.org/ontologies/pmo.owl#Object"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Control2Points">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#setPoint"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#setPoint"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#positiveOffset"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#positiveOffset"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#negativeOffset"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#negativeOffset"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#timeStamp"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#timeStamp"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#Control"/>
+    </owl:Class>
+    <owl:Class rdf:ID="PimControlPID">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#setPoint"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#setPoint"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#coefficientP"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#coefficientP"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#coefficientI"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#coefficientI"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#coefficientD"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#coefficientD"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#timeStamp"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#timeStamp"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="#Control"/>
+    </owl:Class>
+    <owl:Class rdf:ID="Schedule">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#value"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#value"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#quality"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#quality"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#timeStamp"/>
+                <owl:minCardinality rdf:datatype="xsd:integer"
+                >1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#timeStamp"/>
+                <owl:maxCardinality rdf:datatype="xsd:integer"
+                >1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://www.bimtoolset.org/ontologies/pmo.owl#Object"/>
+    </owl:Class>
+    <owl:DatatypeProperty rdf:ID="name">
+        <rdfs:domain rdf:resource="#NamedDomainObject"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="description">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#NamedDomainObject"/>
+                    <rdf:Description rdf:about="#Sensor"/>
+                    <rdf:Description rdf:about="#HvacProducer"/>
+                    <rdf:Description rdf:about="#HvacDistributor"/>
+                    <rdf:Description rdf:about="#Control"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="buildingID">
+        <rdfs:domain rdf:resource="#Building"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="roomNumber">
+        <rdfs:domain rdf:resource="#Room"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="usageFunction">
+        <rdfs:domain rdf:resource="#Room"/>
+        <rdfs:range rdf:resource="#UsageFunction"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="roomType">
+        <rdfs:domain rdf:resource="#Room"/>
+        <rdfs:range rdf:resource="#RoomType"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="bimRoomReference">
+        <rdfs:domain rdf:resource="#Room"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="apartmentNumber">
+        <rdfs:domain rdf:resource="#Apartment"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="winterPeriodLow">
+        <rdfs:domain rdf:resource="#ElectricityTariffSchedule"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="winterPeriodHigh">
+        <rdfs:domain rdf:resource="#ElectricityTariffSchedule"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="summerPeriodLow">
+        <rdfs:domain rdf:resource="#ElectricityTariffSchedule"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="summerPeriodHigh">
+        <rdfs:domain rdf:resource="#ElectricityTariffSchedule"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="annualPrimaryEnergyConsumptionPer-m2">
+        <rdfs:domain rdf:resource="#BuildingPerformanceAspect"/>
+        <rdfs:range rdf:resource="#AnnualPrimaryEnergyConsumptionPer-m2"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="annualEnergyDemandForHeatingPer-m2">
+        <rdfs:domain rdf:resource="#BuildingPerformanceAspect"/>
+        <rdfs:range rdf:resource="#AnnualEnergyDemandForHeatingPer-m2"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="annualEnergyDemandForCoolingPer-m2">
+        <rdfs:domain rdf:resource="#BuildingPerformanceAspect"/>
+        <rdfs:range rdf:resource="#AnnualEnergyDemandForCoolingPer-m2"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="annualGasConsumptionForHeatingPer-m2">
+        <rdfs:domain rdf:resource="#BuildingPerformanceAspect"/>
+        <rdfs:range rdf:resource="#AnnualGasConsumptionForHeatingPer-m2"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="annualGasConsumptionForCoolingPer-m2">
+        <rdfs:domain rdf:resource="#BuildingPerformanceAspect"/>
+        <rdfs:range rdf:resource="#AnnualGasConsumptionForCoolingPer-m2"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="annualElectricityConsumptionForHeatingPer-m2">
+        <rdfs:domain rdf:resource="#BuildingPerformanceAspect"/>
+        <rdfs:range rdf:resource="#AnnualElectricityConsumptionForHeatingPer-m2"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="annualElectricityConsumptionForCoolingPer-m2">
+        <rdfs:domain rdf:resource="#BuildingPerformanceAspect"/>
+        <rdfs:range rdf:resource="#AnnualElectricityConsumptionForCoolingPer-m2"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="annualOilConsumptionForHeatingPer-m2">
+        <rdfs:domain rdf:resource="#BuildingPerformanceAspect"/>
+        <rdfs:range rdf:resource="#AnnualOilConsumptionForHeatingPer-m2"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="annualOilConsumptionForCoolingPer-m2">
+        <rdfs:domain rdf:resource="#BuildingPerformanceAspect"/>
+        <rdfs:range rdf:resource="#AnnualOilConsumptionForCoolingPer-m2"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="annualBiomassConsumtionForHeatingPer-m2">
+        <rdfs:domain rdf:resource="#BuildingPerformanceAspect"/>
+        <rdfs:range rdf:resource="#AnnualBiomassConsumtionForHeatingPer-m2"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="annualBiomassConsumtionForCoolingPer-m2">
+        <rdfs:domain rdf:resource="#BuildingPerformanceAspect"/>
+        <rdfs:range rdf:resource="#AnnualBiomassConsumtionForCoolingPer-m2"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="annualExternalEnergyConsumptionForHeatingPer-m2">
+        <rdfs:domain rdf:resource="#BuildingPerformanceAspect"/>
+        <rdfs:range rdf:resource="#AnnualExternalEnergyConsumptionForHeatingPer-m2"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="annualExternalEnergyConsumptionForCoolingPer-m2">
+        <rdfs:domain rdf:resource="#BuildingPerformanceAspect"/>
+        <rdfs:range rdf:resource="#AnnualExternalEnergyConsumptionForCoolingPer-m2"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="renewableEnergyGeneratedInSitu-ThermalPer-m2">
+        <rdfs:domain rdf:resource="#BuildingPerformanceAspect"/>
+        <rdfs:range rdf:resource="#RenewableEnergyGeneratedInSitu-ThermalPer-m2"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="renewableEnergyGeneratedInSitu-ElectricPer-m2">
+        <rdfs:domain rdf:resource="#BuildingPerformanceAspect"/>
+        <rdfs:range rdf:resource="#RenewableEnergyGeneratedInSitu-ElectricPer-m2"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="manufacturer">
+        <rdfs:domain rdf:resource="#Sensor"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="locationInRoom">
+        <rdfs:domain rdf:resource="#Sensor"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="connection">
+        <rdfs:domain rdf:resource="#Sensor"/>
+        <rdfs:range rdf:resource="#ConnectionType"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="dataFormat">
+        <rdfs:domain rdf:resource="#Sensor"/>
+        <rdfs:range rdf:resource="#DataFormatType"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="xCoordinate">
+        <rdfs:domain rdf:resource="#Sensor"/>
+        <rdfs:range rdf:resource="xsd:float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="yCoordinate">
+        <rdfs:domain rdf:resource="#Sensor"/>
+        <rdfs:range rdf:resource="xsd:float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="zCoordinate">
+        <rdfs:domain rdf:resource="#Sensor"/>
+        <rdfs:range rdf:resource="xsd:float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="size">
+        <rdfs:domain rdf:resource="#Sensor"/>
+        <rdfs:range rdf:resource="xsd:integer"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="validRange">
+        <rdfs:domain rdf:resource="#Sensor"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="resolution">
+        <rdfs:domain rdf:resource="#Sensor"/>
+        <rdfs:range rdf:resource="xsd:float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="accuracy">
+        <rdfs:domain rdf:resource="#Sensor"/>
+        <rdfs:range rdf:resource="xsd:float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="accuracyCondition">
+        <rdfs:domain rdf:resource="#Sensor"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="units">
+        <rdfs:domain rdf:resource="#Sensor"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="format">
+        <rdfs:domain rdf:resource="#Sensor"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="syntax">
+        <rdfs:domain rdf:resource="#Sensor"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="quality">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Measurement"/>
+                    <rdf:Description rdf:about="#Schedule"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="#QualityType"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="timeStamp">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Measurement"/>
+                    <rdf:Description rdf:about="#Control2Points"/>
+                    <rdf:Description rdf:about="#PimControlPID"/>
+                    <rdf:Description rdf:about="#Schedule"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="xsd:dateTime"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="temperature">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#AirTemperatureMeasurement"/>
+                    <rdf:Description rdf:about="#WaterTemperatureMeasurement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <pmo:unit rdf:datatype="xsd:string"
+        >Celsius</pmo:unit>
+        <rdfs:range rdf:resource="xsd:decimal"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="flow">
+        <rdfs:domain rdf:resource="#WaterFlowMeasurement"/>
+        <pmo:unit rdf:datatype="xsd:string"
+        >l/m</pmo:unit>
+        <rdfs:range rdf:resource="xsd:decimal"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="energy">
+        <rdfs:domain rdf:resource="#WaterHeaterEnergyMeasurement"/>
+        <pmo:unit rdf:datatype="xsd:string"
+        >kWh</pmo:unit>
+        <rdfs:range rdf:resource="xsd:decimal"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="humidity">
+        <rdfs:domain rdf:resource="#HumidityMeasurement"/>
+        <rdfs:range rdf:resource="xsd:decimal"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="pmv">
+        <rdfs:domain rdf:resource="#PMVMeasurement"/>
+        <rdfs:range rdf:resource="xsd:integer"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="ppd">
+        <rdfs:domain rdf:resource="#PPDMeasurement"/>
+        <rdfs:range rdf:resource="xsd:integer"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="pulse">
+        <rdfs:domain rdf:resource="#PulseMeasurement"/>
+        <rdfs:range rdf:resource="xsd:integer"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="hocc">
+        <rdfs:domain rdf:resource="#HoccMeasurement"/>
+        <pmo:unit rdf:datatype="xsd:string"
+        >W</pmo:unit>
+        <rdfs:range rdf:resource="xsd:integer"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="co2">
+        <rdfs:domain rdf:resource="#CO2Measurement"/>
+        <rdfs:range rdf:resource="xsd:decimal"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="state">
+        <rdfs:domain rdf:resource="#StateMeasurement"/>
+        <rdfs:range rdf:resource="xsd:boolean"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="energyRate">
+        <rdfs:domain rdf:resource="#EnergyRateMeasurement"/>
+        <rdfs:range rdf:resource="xsd:decimal"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="type">
+        <rdfs:domain rdf:resource="#HvacProducer"/>
+        <rdfs:range rdf:resource="#ProducerType"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="maxPower">
+        <rdfs:domain rdf:resource="#HvacProducer"/>
+        <rdfs:range rdf:resource="xsd:float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="copeep">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#HvacProducer"/>
+                    <rdf:Description rdf:about="#HvacDistributor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="setPoint">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Control2Points"/>
+                    <rdf:Description rdf:about="#PimControlPID"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="xsd:float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="positiveOffset">
+        <rdfs:domain rdf:resource="#Control2Points"/>
+        <rdfs:range rdf:resource="xsd:float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="negativeOffset">
+        <rdfs:domain rdf:resource="#Control2Points"/>
+        <rdfs:range rdf:resource="xsd:float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="coefficientP">
+        <rdfs:domain rdf:resource="#PimControlPID"/>
+        <rdfs:range rdf:resource="xsd:float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="coefficientI">
+        <rdfs:domain rdf:resource="#PimControlPID"/>
+        <rdfs:range rdf:resource="xsd:float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="coefficientD">
+        <rdfs:domain rdf:resource="#PimControlPID"/>
+        <rdfs:range rdf:resource="xsd:float"/>
+    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:ID="value">
+        <rdfs:domain rdf:resource="#Schedule"/>
+        <rdfs:range rdf:resource="xsd:float"/>
+    </owl:DatatypeProperty>
+    <owl:ObjectProperty rdf:ID="buildingPerformanceAspect">
+        <rdfs:domain rdf:resource="#Building"/>
+        <rdfs:range rdf:resource="#BuildingPerformanceAspect"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="sensor">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Building"/>
+                    <rdf:Description rdf:about="#Room"/>
+                    <rdf:Description rdf:about="#Apartment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="#Sensor"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="apartment">
+        <rdfs:domain rdf:resource="#Building"/>
+        <rdfs:range rdf:resource="#Apartment"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="electricityTariffSchedule">
+        <rdfs:domain rdf:resource="#Building"/>
+        <rdfs:range rdf:resource="#ElectricityTariffSchedule"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="hvacProducer">
+        <rdfs:domain rdf:resource="#Room"/>
+        <rdfs:range rdf:resource="#HvacProducer"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="hvacDistributor">
+        <rdfs:domain rdf:resource="#Room"/>
+        <rdfs:range rdf:resource="#HvacDistributor"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="room">
+        <rdfs:domain rdf:resource="#Apartment"/>
+        <rdfs:range rdf:resource="#Room"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="measurement">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Sensor"/>
+                    <rdf:Description rdf:about="#AirTemperatureSensor"/>
+                    <rdf:Description rdf:about="#WaterTemperatureSensor"/>
+                    <rdf:Description rdf:about="#WaterFlowSensor"/>
+                    <rdf:Description rdf:about="#WaterHeaterEnergySensor"/>
+                    <rdf:Description rdf:about="#HumiditySensor"/>
+                    <rdf:Description rdf:about="#PMVSensor"/>
+                    <rdf:Description rdf:about="#PPDSensor"/>
+                    <rdf:Description rdf:about="#HoccSensor"/>
+                    <rdf:Description rdf:about="#PulseSensor"/>
+                    <rdf:Description rdf:about="#CO2Sensor"/>
+                    <rdf:Description rdf:about="#StateSensor"/>
+                    <rdf:Description rdf:about="#EnergyRateSensor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="#Measurement"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="locatedIn">
+        <rdfs:domain rdf:resource="#Sensor"/>
+        <rdfs:range rdf:resource="#Room"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="distributor">
+        <rdfs:domain rdf:resource="#HvacProducer"/>
+        <rdfs:range rdf:resource="#HvacDistributor"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="control">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#HvacProducer"/>
+                    <rdf:Description rdf:about="#HvacDistributor"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="#Control"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:ID="schedule">
+        <rdfs:domain rdf:resource="#Control"/>
+        <rdfs:range rdf:resource="#Schedule"/>
+    </owl:ObjectProperty>
+</rdf:RDF>

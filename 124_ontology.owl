@@ -1,0 +1,846 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://route-owl.github.io/ontology"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="https://route-owl.github.io/ontology">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1"/>
+    <Prefix name="dct" IRI="http://purl.org/dc/terms/#"/>
+    <Prefix name="otn" IRI="http://www.pms.ifi.lmu.de/rewerse-wga1/otn/OTN.owl"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
+    <Prefix name="schema" IRI="http://schema.org/#"/>
+    <Prefix name="owl2xml" IRI="http://www.w3.org/2006/12/owl2-xml#"/>
+    <Prefix name="wgs84_pos" IRI="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+    <Prefix name="dbpedia-owl" IRI="http://dbpedia.org/ontology#"/>
+    <Import>http://vocab.gtfs.org/terms#</Import>
+    <Import>http://www.w3.org/2006/time</Import>
+    <Annotation>
+        <AnnotationProperty IRI="http://creativecommons.org/ns#license"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://creativecommons.org/licenses/by/4.0/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Matthew Horrigan</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:/identifier"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">https://route-owl.github.io/ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">route</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ROUTE - Route Ontology of Urban Transportation Entities</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Diarmuid Ryan</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral"></Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral"> Oudom Kem</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:subject"/>
+        <Literal xml:lang="gr" datatypeIRI="&rdf;PlainLiteral">Η οντολογία ROUTE περιγράφει τις διαδρομές των αστικών συγκοινωνιών. Παράλληλα, περιγράφει έννοιες σχετικές με τις υπηρεσίες διαδρομών, τους τύπους επιβίβασης και αποβίβασης, τα χρονικά διαστήματα, τη συχνότητα, γεωγραφικές πληροφορίες σχετικές με τις στάσεις, καθώς και παραπλήσιες έννοιες.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/creator"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Achilleas Psyllidis</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dct:subject"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This ROUTE ontology describes public urban transportation routes. It also describes concepts pertinent to trip services, pickup and drop-off types, time intervals, frequency, geographical information about stops, among other related concepts.</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://dbpedia.org/ontology/City"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/AdministrativeArea"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://schema.org/Place"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wgs84_pos:Point"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="wgs84_pos:SpatialThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EndPoint"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OASAFeed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StartPoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongsTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#endsOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDescription"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEndPoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHeadSign"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasID"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOrder"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSchedule"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStartPoint"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasURL"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inDirection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isLocatedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#runBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#startsOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#stopsAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#worksOn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="wgs84_pos:lat"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="wgs84_pos:long"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#ID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#URL"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#code"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#description"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#language"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#longName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#order"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#phone"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#shortName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#timezone"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:/identifier"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dct:subject"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://dbpedia.org/ontology/City"/>
+        <Class IRI="http://schema.org/AdministrativeArea"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://schema.org/AdministrativeArea"/>
+        <Class IRI="http://schema.org/Place"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Agency"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://vocab.gtfs.org/terms#hasService"/>
+            <Class IRI="http://vocab.gtfs.org/terms#Service"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Agency"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#URL"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Agency"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#language"/>
+            <Datatype abbreviatedIRI="xsd:language"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Agency"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Agency"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#phone"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Agency"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#timezone"/>
+            <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Route"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasType"/>
+            <Class IRI="http://vocab.gtfs.org/terms#RouteType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Route"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://vocab.gtfs.org/terms#color"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Route"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#ID"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Route"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Route"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#longName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Route"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#shortName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Service"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#endsOn"/>
+            <Class abbreviatedIRI="time:DateTimeDescription"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Service"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#runBy"/>
+            <Class IRI="http://vocab.gtfs.org/terms#Agency"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Service"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#startsOn"/>
+            <Class abbreviatedIRI="time:DateTimeDescription"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Service"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#worksOn"/>
+            <Class abbreviatedIRI="time:DayOfWeek"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Service"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://vocab.gtfs.org/terms#friday"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Service"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://vocab.gtfs.org/terms#monday"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Service"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://vocab.gtfs.org/terms#saturday"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Service"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://vocab.gtfs.org/terms#sunday"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Service"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://vocab.gtfs.org/terms#thursday"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Service"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://vocab.gtfs.org/terms#tuesday"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Service"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://vocab.gtfs.org/terms#wednesday"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Service"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#ID"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Stop"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="wgs84_pos:lat"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Stop"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="wgs84_pos:long"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Stop"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#ID"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Stop"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#code"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Stop"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#description"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Stop"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#name"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#StopTime"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://vocab.gtfs.org/terms#hasDropOffType"/>
+            <Class IRI="http://vocab.gtfs.org/terms#DropOffType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#StopTime"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://vocab.gtfs.org/terms#hasPickupType"/>
+            <Class IRI="http://vocab.gtfs.org/terms#PickupType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#StopTime"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://vocab.gtfs.org/terms#isStop"/>
+            <Class IRI="http://vocab.gtfs.org/terms#Stop"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#StopTime"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#belongsTo"/>
+            <Class IRI="http://vocab.gtfs.org/terms#Trip"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#StopTime"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#ID"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#StopTime"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#order"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Trip"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://vocab.gtfs.org/terms#hasDropOffType"/>
+            <Class IRI="http://vocab.gtfs.org/terms#DropOffType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Trip"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://vocab.gtfs.org/terms#hasPickupType"/>
+            <Class IRI="http://vocab.gtfs.org/terms#PickupType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Trip"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://vocab.gtfs.org/terms#hasRoute"/>
+            <Class IRI="http://vocab.gtfs.org/terms#Route"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Trip"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://vocab.gtfs.org/terms#hasService"/>
+            <Class IRI="http://vocab.gtfs.org/terms#Service"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Trip"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEndPoint"/>
+            <Class IRI="#EndPoint"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Trip"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasStartPoint"/>
+            <Class IRI="#StartPoint"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Trip"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#stopsAt"/>
+            <Class IRI="http://vocab.gtfs.org/terms#StopTime"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Trip"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://vocab.gtfs.org/terms#direction"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Trip"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://vocab.gtfs.org/terms#headsign"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.gtfs.org/terms#Trip"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#ID"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wgs84_pos:Point"/>
+        <Class abbreviatedIRI="wgs84_pos:SpatialThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wgs84_pos:Point"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="wgs84_pos:lat"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="wgs84_pos:Point"/>
+        <DataSomeValuesFrom>
+            <DataProperty abbreviatedIRI="wgs84_pos:long"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EndPoint"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isLocatedIn"/>
+            <Class IRI="http://schema.org/AdministrativeArea"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OASAFeed"/>
+        <Class IRI="http://www.w3.org/ns/dcat#Dataset"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StartPoint"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isLocatedIn"/>
+            <Class IRI="http://schema.org/AdministrativeArea"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#belongsTo"/>
+        <ObjectProperty IRI="#stopsAt"/>
+    </InverseObjectProperties>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://vocab.gtfs.org/terms#headsign"/>
+        <Class IRI="http://vocab.gtfs.org/terms#Trip"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#ID"/>
+        <Class IRI="http://vocab.gtfs.org/terms#Trip"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="wgs84_pos:lat"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="wgs84_pos:long"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#ID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#URL"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#code"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#language"/>
+        <Datatype abbreviatedIRI="xsd:language"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#longName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#order"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#phone"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#shortName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#timezone"/>
+        <Datatype abbreviatedIRI="xsd:nonNegativeInteger"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://dbpedia.org/ontology/City</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A relatively large and permanent settlement, particularly a large urban settlement</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://dbpedia.org/ontology/City</IRI>
+        <Literal xml:lang="ga" datatypeIRI="&rdf;PlainLiteral">Cathair</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://dbpedia.org/ontology/City</IRI>
+        <Literal xml:lang="fr" datatypeIRI="&rdf;PlainLiteral">Ville</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://dbpedia.org/ontology/City</IRI>
+        <Literal xml:lang="gr" datatypeIRI="&rdf;PlainLiteral">Πόλη</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/AdministrativeArea</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A geographical region under the jurisdiction of a particular government.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/AdministrativeArea</IRI>
+        <Literal xml:lang="ga" datatypeIRI="&rdf;PlainLiteral">Ceantair Riaracháin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/AdministrativeArea</IRI>
+        <Literal xml:lang="fr" datatypeIRI="&rdf;PlainLiteral">Zone administrative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/AdministrativeArea</IRI>
+        <Literal xml:lang="gr" datatypeIRI="&rdf;PlainLiteral">Διοικητική Περιοχή</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/description"/>
+        <IRI>http://schema.org/Place</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A Place might have definite or indefinite boundaries. Geographic spaces can be a position, line, area, or volume.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/Place</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A geographic or virtual part of space.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/Place</IRI>
+        <Literal xml:lang="fr" datatypeIRI="&rdf;PlainLiteral">Lieu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/Place</IRI>
+        <Literal xml:lang="ga" datatypeIRI="&rdf;PlainLiteral">Áit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://schema.org/Place</IRI>
+        <Literal xml:lang="gr" datatypeIRI="&rdf;PlainLiteral">Τόπος</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.gtfs.org/terms#Route</IRI>
+        <Literal xml:lang="ga" datatypeIRI="&rdf;PlainLiteral">Chúrsa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.gtfs.org/terms#Route</IRI>
+        <Literal xml:lang="fr" datatypeIRI="&rdf;PlainLiteral">Route</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.gtfs.org/terms#Route</IRI>
+        <Literal xml:lang="gr" datatypeIRI="&rdf;PlainLiteral">Πορεία</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.gtfs.org/terms#Service</IRI>
+        <Literal xml:lang="ga" datatypeIRI="&rdf;PlainLiteral">Seirbhís</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.gtfs.org/terms#Service</IRI>
+        <Literal xml:lang="fr" datatypeIRI="&rdf;PlainLiteral">Service</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.gtfs.org/terms#Service</IRI>
+        <Literal xml:lang="gr" datatypeIRI="&rdf;PlainLiteral">Υπηρεσία</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.gtfs.org/terms#Stop</IRI>
+        <Literal xml:lang="fr" datatypeIRI="&rdf;PlainLiteral">Arrêt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.gtfs.org/terms#Stop</IRI>
+        <Literal xml:lang="ga" datatypeIRI="&rdf;PlainLiteral">Stop</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.gtfs.org/terms#Stop</IRI>
+        <Literal xml:lang="gr" datatypeIRI="&rdf;PlainLiteral">Στάση</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.gtfs.org/terms#StopTime</IRI>
+        <Literal xml:lang="ga" datatypeIRI="&rdf;PlainLiteral">Am Stad</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.gtfs.org/terms#StopTime</IRI>
+        <Literal xml:lang="fr" datatypeIRI="&rdf;PlainLiteral">Horaire</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.gtfs.org/terms#StopTime</IRI>
+        <Literal xml:lang="gr" datatypeIRI="&rdf;PlainLiteral">Ωράριο Στάσεων</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.gtfs.org/terms#Trip</IRI>
+        <Literal xml:lang="ga" datatypeIRI="&rdf;PlainLiteral">Turas</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.gtfs.org/terms#Trip</IRI>
+        <Literal xml:lang="fr" datatypeIRI="&rdf;PlainLiteral">Voyage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.gtfs.org/terms#Trip</IRI>
+        <Literal xml:lang="gr" datatypeIRI="&rdf;PlainLiteral">Διαδρομή</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>wgs84_pos:Point</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral"> Uniquely identified by lat/long/alt. i.e.
+
+spaciallyIntersects(P1, P2) :- lat(P1, LAT), long(P1, LONG), alt(P1, ALT),
+  lat(P2, LAT), long(P2, LONG), alt(P2, ALT).
+
+sameThing(P1, P2) :- type(P1, Point), type(P2, Point), spaciallyIntersects(P1, P2).
+  </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>wgs84_pos:Point</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A point, typically described using a coordinate system relative to Earth, such as WGS84.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>wgs84_pos:Point</AbbreviatedIRI>
+        <Literal xml:lang="ga" datatypeIRI="&rdf;PlainLiteral">Paointe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>wgs84_pos:Point</AbbreviatedIRI>
+        <Literal xml:lang="fr" datatypeIRI="&rdf;PlainLiteral">Position</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>wgs84_pos:Point</AbbreviatedIRI>
+        <Literal xml:lang="gr" datatypeIRI="&rdf;PlainLiteral">Σημείο / Θέση</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wgs84_pos:Point</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Point</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>wgs84_pos:SpatialThing</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Anything with spatial extent, i.e. size, shape, or position.
+ e.g. people, places, bowling balls, as well as abstract areas like cubes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>wgs84_pos:SpatialThing</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SpatialThing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OASAFeed</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Athens Urban Transport Organisation data. The routes of the public urban transportation system for the city of Athens are contained. The data include the stops and routes for bus, trolley, subway, tram and commuter rail.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OASAFeed</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">OASA Feed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hasLocation</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The relation between something and the point, or other geometrical thing in space, where it is.  For example, the relationship between a radio tower and a Point with a given lat and long.
+Or a relationship between a park and its outline as a closed arc of points, or a road and its location as a arc (a sequence of points).
+Clearly in practice there will be limit to the accuracy of any such statement, but one would expect an accuracy appropriate for the size of the object and uses such as mapping .
+ </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasLocation</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hasLocation</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

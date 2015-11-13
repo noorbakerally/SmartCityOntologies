@@ -1,0 +1,1170 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY acetext "http://attempto.ifi.uzh.ch/acetext#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY ace_lexicon "http://attempto.ifi.uzh.ch/ace_lexicon#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY SoftMob "http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:acetext="http://attempto.ifi.uzh.ch/acetext#"
+     xmlns:ace_lexicon="http://attempto.ifi.uzh.ch/ace_lexicon#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:SoftMob="http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <acetext:acetext
+            >/*[DataPropertyRange(value float)]*/</acetext:acetext>
+        <acetext:acetext
+            >/*[DataPropertyRange(length float)]*/</acetext:acetext>
+        <acetext:acetext
+            >/*[DataPropertyRange(speed positiveInteger)]*/</acetext:acetext>
+        <acetext:acetext
+            >/*[DataPropertyRange(duree positiveInteger)]*/</acetext:acetext>
+        <acetext:acetext
+            >/*[DataPropertyRange(duration_value positiveInteger)]*/</acetext:acetext>
+        <acetext:acetext
+            >/*[DataPropertyRange(length positiveInteger)]*/</acetext:acetext>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&ace_lexicon;pl"/>
+    <owl:AnnotationProperty rdf:about="&ace_lexicon;sg"/>
+    <owl:AnnotationProperty rdf:about="&acetext;acetext"/>
+    <owl:AnnotationProperty rdf:about="&ace_lexicon;vbg"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#for_section -->
+
+    <owl:ObjectProperty rdf:about="#for_section">
+        <ace_lexicon:pl>for_section</ace_lexicon:pl>
+        <ace_lexicon:vbg>for_sectioned</ace_lexicon:vbg>
+        <ace_lexicon:sg>for_sections</ace_lexicon:sg>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#for_type_of_user -->
+
+    <owl:ObjectProperty rdf:about="#for_type_of_user">
+        <ace_lexicon:pl
+            >for_type_of_user</ace_lexicon:pl>
+        <ace_lexicon:sg
+            >for_type_of_users</ace_lexicon:sg>
+        <ace_lexicon:vbg
+            >for_type_of_usered</ace_lexicon:vbg>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#for_user -->
+
+    <owl:ObjectProperty rdf:about="#for_user">
+        <ace_lexicon:vbg>for_usered</ace_lexicon:vbg>
+        <ace_lexicon:pl>for_user</ace_lexicon:pl>
+        <ace_lexicon:sg>for_users</ace_lexicon:sg>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#is_ended_by -->
+
+    <owl:ObjectProperty rdf:about="#is_ended_by">
+        <ace_lexicon:sg>end_ofs</ace_lexicon:sg>
+        <ace_lexicon:pl>end_of</ace_lexicon:pl>
+        <ace_lexicon:vbg>end_ofed</ace_lexicon:vbg>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#is_part_of -->
+
+    <owl:ObjectProperty rdf:about="#is_part_of">
+        <ace_lexicon:pl>part_of</ace_lexicon:pl>
+        <ace_lexicon:sg>part_ofs</ace_lexicon:sg>
+        <ace_lexicon:vbg>part_ofed</ace_lexicon:vbg>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#duration_value -->
+
+    <owl:DatatypeProperty rdf:about="#duration_value">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <ace_lexicon:sg>values</ace_lexicon:sg>
+        <rdfs:comment
+            >Dur&#233;emoyenne exprim&#233;e en minutes</rdfs:comment>
+        <ace_lexicon:pl>value</ace_lexicon:pl>
+        <ace_lexicon:vbg>valued</ace_lexicon:vbg>
+        <rdfs:range rdf:resource="&xsd;positiveInteger"/>
+    </owl:DatatypeProperty>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >/*[FunctionalDataProperty(value)]*/</acetext:acetext>
+        <owl:subject rdf:resource="#duration_value"/>
+        <owl:predicate rdf:resource="&rdf;type"/>
+        <owl:object rdf:resource="&owl;FunctionalProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#length -->
+
+    <owl:DatatypeProperty rdf:about="#length">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <ace_lexicon:sg>lengths</ace_lexicon:sg>
+        <ace_lexicon:vbg>lengthed</ace_lexicon:vbg>
+        <ace_lexicon:pl>length</ace_lexicon:pl>
+        <rdfs:comment
+            >Longueur exprim&#233;e en m&#232;tres</rdfs:comment>
+        <rdfs:range rdf:resource="&xsd;positiveInteger"/>
+    </owl:DatatypeProperty>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >/*[FunctionalDataProperty(length)]*/</acetext:acetext>
+        <owl:subject rdf:resource="#length"/>
+        <owl:predicate rdf:resource="&rdf;type"/>
+        <owl:object rdf:resource="&owl;FunctionalProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#speed -->
+
+    <owl:DatatypeProperty rdf:about="#speed">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <ace_lexicon:sg>sppeds</ace_lexicon:sg>
+        <rdfs:comment
+            >vitesse moyenne exprim&#233;e en km/h</rdfs:comment>
+        <ace_lexicon:pl>spped</ace_lexicon:pl>
+        <ace_lexicon:vbg>sppeded</ace_lexicon:vbg>
+        <rdfs:range rdf:resource="&xsd;positiveInteger"/>
+    </owl:DatatypeProperty>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >/*[FunctionalDataProperty(speed)]*/</acetext:acetext>
+        <owl:subject rdf:resource="#speed"/>
+        <owl:predicate rdf:resource="&rdf;type"/>
+        <owl:object rdf:resource="&owl;FunctionalProperty"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Bus_lane -->
+
+    <owl:Class rdf:about="#Bus_lane">
+        <rdfs:subClassOf rdf:resource="#Cycle_only_route"/>
+        <ace_lexicon:sg>Bus_lane</ace_lexicon:sg>
+        <ace_lexicon:pl>Bus_lanes</ace_lexicon:pl>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Bus_lane is a Cycle_route.</acetext:acetext>
+        <owl:subject rdf:resource="#Bus_lane"/>
+        <owl:object rdf:resource="#Cycle_only_route"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Crossing -->
+
+    <owl:Class rdf:about="#Crossing">
+        <rdfs:subClassOf rdf:resource="#Junction"/>
+        <ace_lexicon:sg>Crossing</ace_lexicon:sg>
+        <ace_lexicon:pl>Crossings</ace_lexicon:pl>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Crossing is a Junction.</acetext:acetext>
+        <owl:subject rdf:resource="#Crossing"/>
+        <owl:object rdf:resource="#Junction"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Cycle_and_pedestrian_route -->
+
+    <owl:Class rdf:about="#Cycle_and_pedestrian_route">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Route"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="#Cycle_only_route"/>
+                                    <rdf:Description rdf:about="#Pedestrian_only_route"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Route"/>
+        <ace_lexicon:pl
+            >Cycle_and_pedestrian_routes</ace_lexicon:pl>
+        <ace_lexicon:sg
+            >Cycle_and_pedestrian_route</ace_lexicon:sg>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Cycle_and_pedestrian_route is a Route that is not a Cycle_route and that is not a Pedestrian_route. Every Route that is not a Cycle_route and that is not a Pedestrian_route is a Cycle_and_pedestrian_route.</acetext:acetext>
+        <owl:subject rdf:resource="#Cycle_and_pedestrian_route"/>
+        <owl:predicate rdf:resource="&owl;equivalentClass"/>
+        <owl:object>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Route"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="#Cycle_only_route"/>
+                                    <rdf:Description rdf:about="#Pedestrian_only_route"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Cycle_and_pedestrian_route is a Route.</acetext:acetext>
+        <owl:subject rdf:resource="#Cycle_and_pedestrian_route"/>
+        <owl:object rdf:resource="#Route"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Cycle_lane -->
+
+    <owl:Class rdf:about="#Cycle_lane">
+        <rdfs:subClassOf rdf:resource="#Cycle_only_route"/>
+        <ace_lexicon:pl>Cycle_lanes</ace_lexicon:pl>
+        <ace_lexicon:sg>Cycle_lane</ace_lexicon:sg>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Cycle_lane is a Cycle_route.</acetext:acetext>
+        <owl:subject rdf:resource="#Cycle_lane"/>
+        <owl:object rdf:resource="#Cycle_only_route"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Cycle_only_route -->
+
+    <owl:Class rdf:about="#Cycle_only_route">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#for_user"/>
+                <owl:allValuesFrom rdf:resource="#Cyclist"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Route"/>
+        <ace_lexicon:pl>Cycle_routes</ace_lexicon:pl>
+        <ace_lexicon:sg>Cycle_route</ace_lexicon:sg>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Cycle_route is a Route.</acetext:acetext>
+        <owl:subject rdf:resource="#Cycle_only_route"/>
+        <owl:object rdf:resource="#Route"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Everything that is for_usered by a Cycle_route is a Cyclist. Everything that for_users nothing but Cyclists is a Cycle_route.</acetext:acetext>
+        <owl:subject rdf:resource="#Cycle_only_route"/>
+        <owl:predicate rdf:resource="&owl;equivalentClass"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#for_user"/>
+                <owl:allValuesFrom rdf:resource="#Cyclist"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Cycle_path -->
+
+    <owl:Class rdf:about="#Cycle_path">
+        <rdfs:subClassOf rdf:resource="#Cycle_only_route"/>
+        <ace_lexicon:sg>Cycle_path</ace_lexicon:sg>
+        <ace_lexicon:pl>Cycle_paths</ace_lexicon:pl>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Cycle_path is a Cycle_route.</acetext:acetext>
+        <owl:object rdf:resource="#Cycle_only_route"/>
+        <owl:subject rdf:resource="#Cycle_path"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Cyclist -->
+
+    <owl:Class rdf:about="#Cyclist">
+        <rdfs:subClassOf rdf:resource="#Type_of_user"/>
+        <owl:disjointWith rdf:resource="#Pedestrian"/>
+        <ace_lexicon:pl>Cyclists</ace_lexicon:pl>
+        <ace_lexicon:sg>Cyclist</ace_lexicon:sg>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >No Cyclist is a Pedestrian.</acetext:acetext>
+        <owl:subject rdf:resource="#Cyclist"/>
+        <owl:object rdf:resource="#Pedestrian"/>
+        <owl:predicate rdf:resource="&owl;disjointWith"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Cyclist is a Type_of_user.</acetext:acetext>
+        <owl:subject rdf:resource="#Cyclist"/>
+        <owl:object rdf:resource="#Type_of_user"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Duration -->
+
+    <owl:Class rdf:about="#Duration">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#for_section"/>
+                        <owl:allValuesFrom rdf:resource="#Section"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#for_type_of_user"/>
+                        <owl:allValuesFrom rdf:resource="#Type_of_user"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#for_section"/>
+                        <owl:onClass rdf:resource="#Section"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#for_type_of_user"/>
+                        <owl:onClass rdf:resource="#Type_of_user"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <ace_lexicon:pl>Durations</ace_lexicon:pl>
+        <ace_lexicon:sg>Duration</ace_lexicon:sg>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Duration is something.</acetext:acetext>
+        <owl:subject rdf:resource="#Duration"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object rdf:resource="&owl;Thing"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Duration is something that for_sections nothing but Sections and that for_sections exactly 1 Section and that for_type_of_users nothing but Type_of_users and that for_type_of_users exactly 1 Type_of_user. Everything that for_sections nothing but Sections and that for_sections exactly 1 Section and that for_type_of_users nothing but Type_of_users and that for_type_of_users exactly 1 Type_of_user is a Duration.</acetext:acetext>
+        <owl:subject rdf:resource="#Duration"/>
+        <owl:predicate rdf:resource="&owl;equivalentClass"/>
+        <owl:object>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#for_section"/>
+                        <owl:allValuesFrom rdf:resource="#Section"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#for_type_of_user"/>
+                        <owl:allValuesFrom rdf:resource="#Type_of_user"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#for_section"/>
+                        <owl:onClass rdf:resource="#Section"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#for_type_of_user"/>
+                        <owl:onClass rdf:resource="#Type_of_user"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Junction -->
+
+    <owl:Class rdf:about="#Junction">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <ace_lexicon:sg>Junction</ace_lexicon:sg>
+        <ace_lexicon:pl>Junctions</ace_lexicon:pl>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Junction is something.</acetext:acetext>
+        <owl:subject rdf:resource="#Junction"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object rdf:resource="&owl;Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Network -->
+
+    <owl:Class rdf:about="#Network">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_part_of"/>
+                        <owl:allValuesFrom rdf:resource="#Soft_mobility"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_part_of"/>
+                        <owl:onClass rdf:resource="#Soft_mobility"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <ace_lexicon:sg>Network</ace_lexicon:sg>
+        <ace_lexicon:pl>Networks</ace_lexicon:pl>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Network is something that part_ofs nothing but Soft_mobilities and that part_ofs exactly 1 Soft_mobility. Everything that part_ofs nothing but Soft_mobilities and that part_ofs exactly 1 Soft_mobility is a Network.</acetext:acetext>
+        <owl:subject rdf:resource="#Network"/>
+        <owl:predicate rdf:resource="&owl;equivalentClass"/>
+        <owl:object>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_part_of"/>
+                        <owl:allValuesFrom rdf:resource="#Soft_mobility"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_part_of"/>
+                        <owl:onClass rdf:resource="#Soft_mobility"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Network is something.</acetext:acetext>
+        <owl:subject rdf:resource="#Network"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object rdf:resource="&owl;Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Pedestrian -->
+
+    <owl:Class rdf:about="#Pedestrian">
+        <rdfs:subClassOf rdf:resource="#Type_of_user"/>
+        <ace_lexicon:pl>Pedestrians</ace_lexicon:pl>
+        <ace_lexicon:sg>Pedestrian</ace_lexicon:sg>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Pedestrian is a Type_of_user.</acetext:acetext>
+        <owl:subject rdf:resource="#Pedestrian"/>
+        <owl:object rdf:resource="#Type_of_user"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >No Cyclist is a Pedestrian.</acetext:acetext>
+        <owl:subject rdf:resource="#Cyclist"/>
+        <owl:object rdf:resource="#Pedestrian"/>
+        <owl:predicate rdf:resource="&owl;disjointWith"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Pedestrian_only_route -->
+
+    <owl:Class rdf:about="#Pedestrian_only_route">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#for_user"/>
+                <owl:allValuesFrom rdf:resource="#Pedestrian"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Route"/>
+        <ace_lexicon:sg
+            >Pedestrian_route</ace_lexicon:sg>
+        <ace_lexicon:pl
+            >Pedestrian_routes</ace_lexicon:pl>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Pedestrian_route is a Route.</acetext:acetext>
+        <owl:subject rdf:resource="#Pedestrian_only_route"/>
+        <owl:object rdf:resource="#Route"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Everything that is for_usered by a Pedestrian_route is a Pedestrian. Everything that for_users nothing but Pedestrians is a Pedestrian_route.</acetext:acetext>
+        <owl:subject rdf:resource="#Pedestrian_only_route"/>
+        <owl:predicate rdf:resource="&owl;equivalentClass"/>
+        <owl:object>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#for_user"/>
+                <owl:allValuesFrom rdf:resource="#Pedestrian"/>
+            </owl:Restriction>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Pedestrian_path -->
+
+    <owl:Class rdf:about="#Pedestrian_path">
+        <rdfs:subClassOf rdf:resource="#Pedestrian_only_route"/>
+        <owl:disjointWith rdf:resource="#Pedestrian_zone"/>
+        <ace_lexicon:pl
+            >Pedestrian_paths</ace_lexicon:pl>
+        <ace_lexicon:sg>Pedestrian_path</ace_lexicon:sg>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Pedestrian_path is a Pedestrian_route.</acetext:acetext>
+        <owl:object rdf:resource="#Pedestrian_only_route"/>
+        <owl:subject rdf:resource="#Pedestrian_path"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >No Pedestrian_path is a Pedestrian_zone.</acetext:acetext>
+        <owl:subject rdf:resource="#Pedestrian_path"/>
+        <owl:object rdf:resource="#Pedestrian_zone"/>
+        <owl:predicate rdf:resource="&owl;disjointWith"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Pedestrian_zone -->
+
+    <owl:Class rdf:about="#Pedestrian_zone">
+        <rdfs:subClassOf rdf:resource="#Pedestrian_only_route"/>
+        <ace_lexicon:pl
+            >Pedestrian_zones</ace_lexicon:pl>
+        <ace_lexicon:sg>Pedestrian_zone</ace_lexicon:sg>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Pedestrian_zone is a Pedestrian_route.</acetext:acetext>
+        <owl:object rdf:resource="#Pedestrian_only_route"/>
+        <owl:subject rdf:resource="#Pedestrian_zone"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >No Pedestrian_path is a Pedestrian_zone.</acetext:acetext>
+        <owl:subject rdf:resource="#Pedestrian_path"/>
+        <owl:object rdf:resource="#Pedestrian_zone"/>
+        <owl:predicate rdf:resource="&owl;disjointWith"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Promenade -->
+
+    <owl:Class rdf:about="#Promenade">
+        <rdfs:subClassOf rdf:resource="#Cycle_and_pedestrian_route"/>
+        <ace_lexicon:sg>Promenade</ace_lexicon:sg>
+        <ace_lexicon:pl>Promenades</ace_lexicon:pl>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Promenade is a Cycle_and_pedestrian_route.</acetext:acetext>
+        <owl:object rdf:resource="#Cycle_and_pedestrian_route"/>
+        <owl:subject rdf:resource="#Promenade"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Promenade_in_a_park -->
+
+    <owl:Class rdf:about="#Promenade_in_a_park">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_part_of"/>
+                        <owl:allValuesFrom rdf:resource="#Urban_park"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_part_of"/>
+                        <owl:onClass rdf:resource="#Urban_park"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="#Promenade"/>
+        <ace_lexicon:sg
+            >Promenade_in_a_park</ace_lexicon:sg>
+        <ace_lexicon:pl
+            >Promenade_in_a_parks</ace_lexicon:pl>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Promenade_in_a_park is something that part_ofs nothing but Urban_parks and that part_ofs exactly 1 Urban_park. Everything that part_ofs nothing but Urban_parks and that part_ofs exactly 1 Urban_park is a Promenade_in_a_park.</acetext:acetext>
+        <owl:subject rdf:resource="#Promenade_in_a_park"/>
+        <owl:predicate rdf:resource="&owl;equivalentClass"/>
+        <owl:object>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_part_of"/>
+                        <owl:allValuesFrom rdf:resource="#Urban_park"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_part_of"/>
+                        <owl:onClass rdf:resource="#Urban_park"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Promenade_in_a_park is a Promenade.</acetext:acetext>
+        <owl:object rdf:resource="#Promenade"/>
+        <owl:subject rdf:resource="#Promenade_in_a_park"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Route -->
+
+    <owl:Class rdf:about="#Route">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_part_of"/>
+                        <owl:allValuesFrom rdf:resource="#Network"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_part_of"/>
+                        <owl:onClass rdf:resource="#Network"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <ace_lexicon:sg>Route</ace_lexicon:sg>
+        <ace_lexicon:pl>Routes</ace_lexicon:pl>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Route is something.</acetext:acetext>
+        <owl:subject rdf:resource="#Route"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object rdf:resource="&owl;Thing"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Route is something that part_ofs nothing but Networks and that part_ofs exactly 1 Network. Everything that part_ofs nothing but Networks and that part_ofs exactly 1 Network is a Route.</acetext:acetext>
+        <owl:subject rdf:resource="#Route"/>
+        <owl:predicate rdf:resource="&owl;equivalentClass"/>
+        <owl:object>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_part_of"/>
+                        <owl:allValuesFrom rdf:resource="#Network"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_part_of"/>
+                        <owl:onClass rdf:resource="#Network"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:object>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Section -->
+
+    <owl:Class rdf:about="#Section">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_part_of"/>
+                        <owl:someValuesFrom rdf:resource="#Route"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_ended_by"/>
+                        <owl:allValuesFrom rdf:resource="#Junction"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_part_of"/>
+                        <owl:allValuesFrom rdf:resource="#Route"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_ended_by"/>
+                        <owl:onClass rdf:resource="#Junction"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <ace_lexicon:pl>Sections</ace_lexicon:pl>
+        <ace_lexicon:sg>Section</ace_lexicon:sg>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Section is something that end_ofs nothing but Junctions and that end_ofs exactly 2 Junctions and that part_ofs nothing but Routes and that part_ofs a Route. Everything that end_ofs nothing but Junctions and that end_ofs exactly 2 Junctions and that part_ofs nothing but Routes and that part_ofs a Route is a Section.</acetext:acetext>
+        <owl:subject rdf:resource="#Section"/>
+        <owl:predicate rdf:resource="&owl;equivalentClass"/>
+        <owl:object>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_part_of"/>
+                        <owl:someValuesFrom rdf:resource="#Route"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_ended_by"/>
+                        <owl:allValuesFrom rdf:resource="#Junction"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_part_of"/>
+                        <owl:allValuesFrom rdf:resource="#Route"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#is_ended_by"/>
+                        <owl:onClass rdf:resource="#Junction"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:object>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Section is something.</acetext:acetext>
+        <owl:subject rdf:resource="#Section"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object rdf:resource="&owl;Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Soft_mobility -->
+
+    <owl:Class rdf:about="#Soft_mobility">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <ace_lexicon:sg>Soft_mobility</ace_lexicon:sg>
+        <ace_lexicon:pl>Soft_mobilities</ace_lexicon:pl>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Soft_mobility is something.</acetext:acetext>
+        <owl:subject rdf:resource="#Soft_mobility"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object rdf:resource="&owl;Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Station -->
+
+    <owl:Class rdf:about="#Station">
+        <rdfs:subClassOf rdf:resource="#Junction"/>
+        <ace_lexicon:pl>Stations</ace_lexicon:pl>
+        <ace_lexicon:sg>Station</ace_lexicon:sg>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Station is a Junction.</acetext:acetext>
+        <owl:object rdf:resource="#Junction"/>
+        <owl:subject rdf:resource="#Station"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Stop -->
+
+    <owl:Class rdf:about="#Stop">
+        <rdfs:subClassOf rdf:resource="#Junction"/>
+        <ace_lexicon:sg>Stop</ace_lexicon:sg>
+        <ace_lexicon:pl>Stops</ace_lexicon:pl>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Stop is a Junction.</acetext:acetext>
+        <owl:object rdf:resource="#Junction"/>
+        <owl:subject rdf:resource="#Stop"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Street_with_moderate_traffic -->
+
+    <owl:Class rdf:about="#Street_with_moderate_traffic">
+        <rdfs:subClassOf rdf:resource="#Cycle_only_route"/>
+        <ace_lexicon:sg
+            >Street_with_moderate_traffic</ace_lexicon:sg>
+        <ace_lexicon:pl
+            >Street_with_moderate_traffics</ace_lexicon:pl>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Street_with_moderate_traffic is a Cycle_route.</acetext:acetext>
+        <owl:object rdf:resource="#Cycle_only_route"/>
+        <owl:subject rdf:resource="#Street_with_moderate_traffic"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Type_of_user -->
+
+    <owl:Class rdf:about="#Type_of_user">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <ace_lexicon:pl>Type_of_users</ace_lexicon:pl>
+        <ace_lexicon:sg>Type_of_user</ace_lexicon:sg>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Type_of_user is something.</acetext:acetext>
+        <owl:subject rdf:resource="#Type_of_user"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object rdf:resource="&owl;Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Urban_park -->
+
+    <owl:Class rdf:about="#Urban_park">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+        <ace_lexicon:sg>Urban_park</ace_lexicon:sg>
+        <ace_lexicon:pl>Urban_parks</ace_lexicon:pl>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Every Urban_park is something.</acetext:acetext>
+        <owl:subject rdf:resource="#Urban_park"/>
+        <owl:predicate rdf:resource="&rdfs;subClassOf"/>
+        <owl:object rdf:resource="&owl;Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Botanical_garden -->
+
+    <owl:Thing rdf:about="#Botanical_garden">
+        <rdf:type rdf:resource="#Urban_park"/>
+        <ace_lexicon:sg
+            >Botanical_garden</ace_lexicon:sg>
+    </owl:Thing>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Botanical_garden is an Urban_park.</acetext:acetext>
+        <owl:subject rdf:resource="#Botanical_garden"/>
+        <owl:object rdf:resource="#Urban_park"/>
+        <owl:predicate rdf:resource="&rdf;type"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Empress_path -->
+
+    <owl:Thing rdf:about="#Empress_path">
+        <rdf:type rdf:resource="#Pedestrian_path"/>
+        <ace_lexicon:sg>Empress_path</ace_lexicon:sg>
+    </owl:Thing>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Empress_path is a Pedestrian_path.</acetext:acetext>
+        <owl:subject rdf:resource="#Empress_path"/>
+        <owl:object rdf:resource="#Pedestrian_path"/>
+        <owl:predicate rdf:resource="&rdf;type"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Passage_under-way_Lausanne_Road -->
+
+    <owl:Thing rdf:about="#Passage_under-way_Lausanne_Road">
+        <rdf:type rdf:resource="#Crossing"/>
+        <ace_lexicon:sg
+            >Passage_under-way_Lausanne_Road</ace_lexicon:sg>
+    </owl:Thing>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Passage_under-way_Lausanne_Road is a Crossing.</acetext:acetext>
+        <owl:object rdf:resource="#Crossing"/>
+        <owl:subject rdf:resource="#Passage_under-way_Lausanne_Road"/>
+        <owl:predicate rdf:resource="&rdf;type"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Promenade_des_parcs -->
+
+    <Route rdf:about="#Promenade_des_parcs">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <ace_lexicon:sg
+            >Promenade_des_parcs</ace_lexicon:sg>
+    </Route>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Promenade_des_parcs is a Route.</acetext:acetext>
+        <owl:subject rdf:resource="#Promenade_des_parcs"/>
+        <owl:object rdf:resource="#Route"/>
+        <owl:predicate rdf:resource="&rdf;type"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Promenade_in_the_botanical_garden -->
+
+    <Promenade_in_a_park rdf:about="#Promenade_in_the_botanical_garden">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <ace_lexicon:sg
+            >Promenade_in_the_botanical_garden</ace_lexicon:sg>
+    </Promenade_in_a_park>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Promenade_in_the_botanical_garden is a Promenade_in_a_park.</acetext:acetext>
+        <owl:object rdf:resource="#Promenade_in_a_park"/>
+        <owl:subject rdf:resource="#Promenade_in_the_botanical_garden"/>
+        <owl:predicate rdf:resource="&rdf;type"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Soft_mobility_graph_in_Geneva -->
+
+    <owl:Thing rdf:about="#Soft_mobility_graph_in_Geneva">
+        <rdf:type rdf:resource="#Network"/>
+        <ace_lexicon:sg
+            >Soft_mobility_graph</ace_lexicon:sg>
+    </owl:Thing>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Soft_mobility_graph is a Network.</acetext:acetext>
+        <owl:object rdf:resource="#Network"/>
+        <owl:subject rdf:resource="#Soft_mobility_graph_in_Geneva"/>
+        <owl:predicate rdf:resource="&rdf;type"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2009/10/SoftMob.owl#Soft_mobility_in_Geneva -->
+
+    <owl:Thing rdf:about="#Soft_mobility_in_Geneva">
+        <rdf:type rdf:resource="#Soft_mobility"/>
+        <ace_lexicon:sg
+            >Soft_mobility_in_Geneva</ace_lexicon:sg>
+    </owl:Thing>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;Axiom"/>
+        <acetext:acetext
+            >Soft_mobility_in_Geneva is a Soft_mobility.</acetext:acetext>
+        <owl:object rdf:resource="#Soft_mobility"/>
+        <owl:subject rdf:resource="#Soft_mobility_in_Geneva"/>
+        <owl:predicate rdf:resource="&rdf;type"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <acetext:acetext
+            >/*[DisjointClasses(Crossing Station Stop)]*/</acetext:acetext>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Crossing"/>
+            <rdf:Description rdf:about="#Station"/>
+            <rdf:Description rdf:about="#Stop"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <acetext:acetext
+            >/*[DisjointClasses(Bus_lane Cycle_lane Cycle_path Street_with_moderate_traffic)]*/</acetext:acetext>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Bus_lane"/>
+            <rdf:Description rdf:about="#Cycle_lane"/>
+            <rdf:Description rdf:about="#Cycle_path"/>
+            <rdf:Description rdf:about="#Street_with_moderate_traffic"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <acetext:acetext
+            >/*[DisjointClasses(Cycle_and_pedestrian_route Cycle_route Pedestrian_route)]*/</acetext:acetext>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Cycle_and_pedestrian_route"/>
+            <rdf:Description rdf:about="#Cycle_only_route"/>
+            <rdf:Description rdf:about="#Pedestrian_only_route"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

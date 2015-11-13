@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:j.0="http://qudt.org/schema/qudt#"
+    xmlns:user="http://www.dotrural.ac.uk/irp/uploads/ontologies/user/"
+    xmlns="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:spatialrelations="http://data.ordnancesurvey.co.uk/ontology/spatialrelations/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:devices="http://www.dotrural.ac.uk/irp/uploads/ontologies/devices/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
+  xml:base="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://purl.oclc.org/NET/ssnx/ssn"/>
+    <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/dcorsar/irp-ontologies/master/devices.owl"/>
+    <owl:imports rdf:resource="http://qudt.org/schema/qudt"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0.1</owl:versionInfo>
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/noorbakerally/irp-ontologies/master/transport.owl"/>
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/noorbakerally/irp-ontologies/master/user.owl"/>
+    <owl:imports rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
+    <owl:imports rdf:resource="http://www.ordnancesurvey.co.uk/oswebsite/ontology/spatialrelations.owl"/>
+    <owl:imports rdf:resource="http://purl.oclc.org/NET/muo/muo"/>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationDeviceSensorOutput">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Location device sensor output</rdfs:label>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Location device sensor output</skos:prefLabel>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationDeviceValue"/>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationSensorOutput"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationDeviceValue">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationValue"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Location device value</rdfs:label>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Location device value</skos:prefLabel>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:maxCardinality>
+        <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:maxCardinality>
+        <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationObservation">
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Observation"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Location observation</rdfs:label>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Location observation</skos:prefLabel>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationSensor"/>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observedBy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationSensorOutput"/>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observationResult"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/AndroidLocationSensingDevice">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationSensingDevice"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Android location sensing device</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationDeviceObservation">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >observationResultTime is the time the GPS was provided to the device</rdfs:comment>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Location device observation</skos:prefLabel>
+    <rdfs:subClassOf rdf:resource="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationObservation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationDeviceSensorOutput"/>
+        <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observationResult"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationSensingDevice"/>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#observedBy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/serverTimestamp"/>
+        </owl:onProperty>
+        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >1</owl:maxCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Location device observation</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >serverTimestamp is the time the observation was generated by the server (i.e. the data receive and processed)</rdfs:comment>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >observationSamplingTime is the timestamp of the GPS</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationSensorOutput">
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensorOutput"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Location sensor output</rdfs:label>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Location sensor output</skos:prefLabel>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationValue"/>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#hasValue"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationSensor">
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Location sensor</rdfs:label>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Location sensor</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationSensingDevice">
+    <rdfs:subClassOf rdf:resource="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationSensor"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Location sensing device</rdfs:label>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Location sensing device</skos:prefLabel>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationValue">
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#ObservationValue"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Location value</rdfs:label>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Location value</skos:prefLabel>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/iPhoneLocationSensingDevice">
+    <rdfs:subClassOf rdf:resource="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationSensingDevice"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >i phone location sensing device</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/LocationSensing">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Location sensing</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Sensing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/UnitOf-speed">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unit of speed</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/muo/muo#UnitOfMeasurement"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/hasJourney">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has journey</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/speed">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >speed</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/accuracy">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >accuracy</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/serverTimestamp">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >device timestamp</skos:prefLabel>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >device timestamp</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Server timestamp is the timestamp generated by the server at the time of receiving an the observation</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/heading">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >heading</rdfs:label>
+  </owl:DatatypeProperty>
+  <j.0:QuantityValue rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/QuantityValue_1">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Quantity value 1</rdfs:label>
+  </j.0:QuantityValue>
+  <ssn:Property rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/location">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >location</rdfs:label>
+  </ssn:Property>
+  <rdf:Description rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/devices/iPhone">
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Platform"/>
+  </rdf:Description>
+  <UnitOf-speed rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/metersPerSecond">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >meters per second</rdfs:label>
+  </UnitOf-speed>
+  <LocationSensing rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/AndroidNetworkLocationSensing">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Android network location sensing</rdfs:label>
+  </LocationSensing>
+  <LocationSensing rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/iOSLocationSensing">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >iOS location sensing</rdfs:label>
+  </LocationSensing>
+  <LocationSensing rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/AndroidPassiveLocationSensing">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Android passive location sensing</rdfs:label>
+  </LocationSensing>
+  <j.0:numericUnion rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/numericUnion_1">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >numeric union 1</rdfs:label>
+  </j.0:numericUnion>
+  <LocationSensing rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/AndroidGPSLocationSensing">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Android GPSLocation sensing</rdfs:label>
+  </LocationSensing>
+  <rdf:Description rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/user/Journey">
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"/>
+  </rdf:Description>
+  <j.0:Quantity rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/sensors/Quantity_1">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Quantity 1</rdfs:label>
+  </j.0:Quantity>
+  <rdf:Description rdf:about="http://www.dotrural.ac.uk/irp/uploads/ontologies/devices/AndroidPhone">
+    <rdfs:subClassOf rdf:resource="http://purl.oclc.org/NET/ssnx/ssn#Platform"/>
+  </rdf:Description>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

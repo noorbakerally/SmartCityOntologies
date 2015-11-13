@@ -1,0 +1,2051 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:country="http://www.wurvoc.org/vocabularies/countries/"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<rdfs:comment xml:lang="en">Vocabulary of basic facts about the countries of the world.</rdfs:comment>
+	<rdfs:label xml:lang="en">Countries</rdfs:label>
+	<dc:creator xml:lang="en">Nicole Koenderink</dc:creator>
+	<owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.1</owl:versionInfo>
+	<owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Denmark">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Denmark</rdfs:label>
+	<country:hasArea>43093</country:hasArea>
+	<country:hasPopulation>5500510</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Class">
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Country">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Country</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/hasArea">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:domain rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+	<rdfs:comment xml:lang="nl">Dit attribuut geeft het landoppervlak in vierkante kilometers.</rdfs:comment>
+	<rdfs:comment xml:lang="en">This property indicates the area of a country in square kilometers.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has area</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/hasPopulation">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:domain rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+	<rdfs:comment xml:lang="nl">Dit attribuut geeft de bevolking van een land weer.</rdfs:comment>
+	<rdfs:comment xml:lang="en">This property indicates the population of a country.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has population</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Hungary">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Hungary</rdfs:label>
+	<country:hasArea>92966</country:hasArea>
+	<country:hasPopulation>9905596</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Mexico">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Mexico</rdfs:label>
+	<country:hasArea>1967138</country:hasArea>
+	<country:hasPopulation>111211789</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Madagascar">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Madagascar</rdfs:label>
+	<country:hasArea>587041</country:hasArea>
+	<country:hasPopulation>20653556</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Ecuador">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Ecuador</rdfs:label>
+	<country:hasArea>272046</country:hasArea>
+	<country:hasPopulation>14573101</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Bulgaria">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Bulgaria</rdfs:label>
+	<country:hasArea>110994</country:hasArea>
+	<country:hasPopulation>7204687</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/CentralAfricanRepublic">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Central African Republic</rdfs:label>
+	<country:hasArea>622436</country:hasArea>
+	<country:hasPopulation>4511488</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Chile">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Chile</rdfs:label>
+	<country:hasArea>755482</country:hasArea>
+	<country:hasPopulation>16601707</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/SaoTomeAndPrincipe">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Sao Tome and Principe</rdfs:label>
+	<country:hasArea>1001</country:hasArea>
+	<country:hasPopulation>212679</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/NorthernMarianaIslands">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Northern Mariana Islands</rdfs:label>
+	<country:hasArea>477</country:hasArea>
+	<country:hasPopulation>51484</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/KoreaDemocraticPeoplesRepublic">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Korea Democratic People's Republic</rdfs:label>
+	<country:hasArea>122762</country:hasArea>
+	<country:hasPopulation>22665345</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/RepublicOfSouthKorea">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Republic of South Korea</rdfs:label>
+	<country:hasArea>99268</country:hasArea>
+	<country:hasPopulation>48508972</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Kiribati">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Kiribati</rdfs:label>
+	<country:hasArea>832</country:hasArea>
+	<country:hasPopulation>112850</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Canada">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Canada</rdfs:label>
+	<country:hasArea>9976137</country:hasArea>
+	<country:hasPopulation>33487208</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Luxembourg">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Luxembourg</rdfs:label>
+	<country:hasArea>2586</country:hasArea>
+	<country:hasPopulation>491775</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/FrenchSouthernTerritory">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">French Southern Territory</rdfs:label>
+	<country:hasArea>7781</country:hasArea>
+	<country:hasPopulation>120</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/SaintKittsAndNevis">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Saint Kitts and Nevis</rdfs:label>
+	<country:hasArea>267</country:hasArea>
+	<country:hasPopulation>40131</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Dominica">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Dominica</rdfs:label>
+	<country:hasArea>751</country:hasArea>
+	<country:hasPopulation>72660</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Bermuda">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Bermuda</rdfs:label>
+	<country:hasArea>53</country:hasArea>
+	<country:hasPopulation>67837</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Eritrea">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Eritrea</rdfs:label>
+	<country:hasArea>121100</country:hasArea>
+	<country:hasPopulation>5647168</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/RepublicOfMoldova">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Republic Of Moldova</rdfs:label>
+	<country:hasArea>33843</country:hasArea>
+	<country:hasPopulation>4320748</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/India">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">India</rdfs:label>
+	<country:hasArea>3166944</country:hasArea>
+	<country:hasPopulation>1156897766</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/SyrianArabRepublic">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Syrian Arab Republic</rdfs:label>
+	<country:hasArea>185180</country:hasArea>
+	<country:hasPopulation>21762978</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Japan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Japan</rdfs:label>
+	<country:hasArea>377812</country:hasArea>
+	<country:hasPopulation>127078679</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/IsleOfMan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Isle of Man</rdfs:label>
+	<country:hasArea>572</country:hasArea>
+	<country:hasPopulation>76512</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Kazakhstan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Kazakhstan</rdfs:label>
+	<country:hasArea>2715900</country:hasArea>
+	<country:hasPopulation>15399437</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Slovenia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Slovenia</rdfs:label>
+	<country:hasArea>20273</country:hasArea>
+	<country:hasPopulation>2005692</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/ElSalvador">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">El Salvador</rdfs:label>
+	<country:hasArea>21041</country:hasArea>
+	<country:hasPopulation>7185218</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Lesotho">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Lesotho</rdfs:label>
+	<country:hasArea>30355</country:hasArea>
+	<country:hasPopulation>2130819</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/MiddleEast">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Middle east</rdfs:label>
+	<country:hasArea rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5214000</country:hasArea>
+	<country:hasPopulation rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">202687005</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Nauru">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Nauru</rdfs:label>
+	<country:hasArea>21</country:hasArea>
+	<country:hasPopulation>14019</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/MacedoniaTFYR">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">"Macedonia, TFYR"</rdfs:label>
+	<country:hasArea>25433</country:hasArea>
+	<country:hasPopulation>2066718</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Lebanon">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Lebanon</rdfs:label>
+	<country:hasArea>10201</country:hasArea>
+	<country:hasPopulation>4017095</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Gambia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">The Gambia</rdfs:label>
+	<country:hasArea>10689</country:hasArea>
+	<country:hasPopulation>1778081</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Zimbabwe">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Zimbabwe</rdfs:label>
+	<country:hasArea>390784</country:hasArea>
+	<country:hasPopulation>11392629</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Uganda">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Uganda</rdfs:label>
+	<country:hasArea>242554</country:hasArea>
+	<country:hasPopulation>32369558</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Bangladesh">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Bangladesh</rdfs:label>
+	<country:hasArea>142615</country:hasArea>
+	<country:hasPopulation>156050883</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Jordan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Jordan</rdfs:label>
+	<country:hasArea>89342</country:hasArea>
+	<country:hasPopulation>6269285</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Liberia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Liberia</rdfs:label>
+	<country:hasArea>99065</country:hasArea>
+	<country:hasPopulation>3441790</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/SaintLucia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Saint Lucia</rdfs:label>
+	<country:hasArea>616</country:hasArea>
+	<country:hasPopulation>160267</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Philippines">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Philippines</rdfs:label>
+	<country:hasArea>300000</country:hasArea>
+	<country:hasPopulation>97976603</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/GuernseyAndAlderney">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Guernsey and Alderney</rdfs:label>
+	<country:hasArea>91</country:hasArea>
+	<country:hasPopulation>65484</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Norway">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Norway</rdfs:label>
+	<country:hasArea>323759</country:hasArea>
+	<country:hasPopulation>4660539</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Poland">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Poland</rdfs:label>
+	<country:hasArea>312685</country:hasArea>
+	<country:hasPopulation>38482919</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Djibouti">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Djibouti</rdfs:label>
+	<country:hasArea>23200</country:hasArea>
+	<country:hasPopulation>724622</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/NewZealand">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">New Zealand</rdfs:label>
+	<country:hasArea>270534</country:hasArea>
+	<country:hasPopulation>4213418</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/BosniaAndHerzegovina">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Bosnia and Herzegovina</rdfs:label>
+	<country:hasArea>51129</country:hasArea>
+	<country:hasPopulation>4613414</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Guadeloupe">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Guadeloupe</rdfs:label>
+	<country:hasArea>1780</country:hasArea>
+	<country:hasPopulation>441838</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Spain">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Spain</rdfs:label>
+	<country:hasArea>504842</country:hasArea>
+	<country:hasPopulation>40525002</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Iraq">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Iraq</rdfs:label>
+	<country:hasArea>434128</country:hasArea>
+	<country:hasPopulation>28945569</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Kuwait">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Kuwait</rdfs:label>
+	<country:hasArea>17818</country:hasArea>
+	<country:hasPopulation>2692526</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/UnitedKingdom">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">United Kingdom</rdfs:label>
+	<country:hasArea>244140</country:hasArea>
+	<country:hasPopulation>61113205</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Finland">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Finland</rdfs:label>
+	<country:hasArea>338145</country:hasArea>
+	<country:hasPopulation>5250275</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Chad">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Chad</rdfs:label>
+	<country:hasArea>1284000</country:hasArea>
+	<country:hasPopulation>10329208</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Tonga">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Tonga</rdfs:label>
+	<country:hasArea>651</country:hasArea>
+	<country:hasPopulation>120898</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Venezuela">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Venezuela</rdfs:label>
+	<country:hasArea>916445</country:hasArea>
+	<country:hasPopulation>26814843</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Namibia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Namibia</rdfs:label>
+	<country:hasArea>825112</country:hasArea>
+	<country:hasPopulation>2108665</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Gabon">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Gabon</rdfs:label>
+	<country:hasArea>267667</country:hasArea>
+	<country:hasPopulation>1514993</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/FaroeIslands">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Faroe Islands</rdfs:label>
+	<country:hasArea>1414</country:hasArea>
+	<country:hasPopulation>48856</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Honduras">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Honduras</rdfs:label>
+	<country:hasArea>112088</country:hasArea>
+	<country:hasPopulation>7833696</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Liechtenstein">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Liechtenstein</rdfs:label>
+	<country:hasArea>160</country:hasArea>
+	<country:hasPopulation>34761</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Ethiopia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Ethiopia</rdfs:label>
+	<country:hasArea>1127127</country:hasArea>
+	<country:hasPopulation>85237338</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/CaymanIslands">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Cayman Islands</rdfs:label>
+	<country:hasArea>259</country:hasArea>
+	<country:hasPopulation>49035</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Barbados">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Barbados</rdfs:label>
+	<country:hasArea>431</country:hasArea>
+	<country:hasPopulation>284589</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Maldives">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Maldives</rdfs:label>
+	<country:hasArea>298</country:hasArea>
+	<country:hasPopulation>396334</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Mozambique">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Mozambique</rdfs:label>
+	<country:hasArea>799380</country:hasArea>
+	<country:hasPopulation>21669278</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Mali">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Mali</rdfs:label>
+	<country:hasArea>1240198</country:hasArea>
+	<country:hasPopulation>13443225</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Tajikistan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Tajikistan</rdfs:label>
+	<country:hasArea>143100</country:hasArea>
+	<country:hasPopulation>7349145</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/PuertoRico">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Puerto Rico</rdfs:label>
+	<country:hasArea>9104</country:hasArea>
+	<country:hasPopulation>3966213</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/NorfolkIsland">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Norfolk Island</rdfs:label>
+	<country:hasArea>35</country:hasArea>
+	<country:hasPopulation>2554</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Fiji">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Fiji</rdfs:label>
+	<country:hasArea>18274</country:hasArea>
+	<country:hasPopulation>944720</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/FalklandIslands">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Falkland Islands (Malvinas)</rdfs:label>
+	<country:hasArea>16076</country:hasArea>
+	<country:hasPopulation>2483</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Montenegro">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Montenegro</rdfs:label>
+	<country:hasArea>14026</country:hasArea>
+	<country:hasPopulation>672180</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/FrenchPolynesia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">French Polynesia</rdfs:label>
+	<country:hasArea>3894</country:hasArea>
+	<country:hasPopulation>287032</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Aruba">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Aruba</rdfs:label>
+	<country:hasArea>193</country:hasArea>
+	<country:hasPopulation>103065</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Georgia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Georgia</rdfs:label>
+	<country:hasArea>69700</country:hasArea>
+	<country:hasPopulation>4615807</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Italy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Italy</rdfs:label>
+	<country:hasArea>301323</country:hasArea>
+	<country:hasPopulation>58126212</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/UnitedRepublicOfTanzania">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">United Republic Of Tanzania</rdfs:label>
+	<country:hasArea>945088</country:hasArea>
+	<country:hasPopulation>41048532</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Jersey">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Jersey</rdfs:label>
+	<country:hasArea>116</country:hasArea>
+	<country:hasPopulation>91626</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Oman">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Oman</rdfs:label>
+	<country:hasArea>309500</country:hasArea>
+	<country:hasPopulation>3418085</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Cameroon">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Cameroon</rdfs:label>
+	<country:hasArea>475442</country:hasArea>
+	<country:hasPopulation>18879301</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/WesternSahara">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Western Sahara</rdfs:label>
+	<country:hasArea>266000</country:hasArea>
+	<country:hasPopulation>405210</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Brazil">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Brazil</rdfs:label>
+	<country:hasArea>8544418</country:hasArea>
+	<country:hasPopulation>198739269</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Malaysia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Malaysia</rdfs:label>
+	<country:hasArea>329758</country:hasArea>
+	<country:hasPopulation>25715819</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Iceland">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Iceland</rdfs:label>
+	<country:hasArea>102928</country:hasArea>
+	<country:hasPopulation>306694</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Qatar">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Qatar</rdfs:label>
+	<country:hasArea>11521</country:hasArea>
+	<country:hasPopulation>833285</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/AmericanSamoa">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">American Samoa</rdfs:label>
+	<country:hasArea>197</country:hasArea>
+	<country:hasPopulation>65628</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Bolivia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Bolivia</rdfs:label>
+	<country:hasArea>1098581</country:hasArea>
+	<country:hasPopulation>9775246</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/SierraLeone">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Sierra Leone</rdfs:label>
+	<country:hasArea>71740</country:hasArea>
+	<country:hasPopulation>5132138</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Senegal">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Senegal</rdfs:label>
+	<country:hasArea>196722</country:hasArea>
+	<country:hasPopulation>13711597</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Belgium">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Belgium</rdfs:label>
+	<country:hasArea>30518</country:hasArea>
+	<country:hasPopulation>10414336</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Indonesia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Indonesia</rdfs:label>
+	<country:hasArea>1904443</country:hasArea>
+	<country:hasPopulation>240271522</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/EastTimor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">East Timor</rdfs:label>
+	<country:hasArea>14604</country:hasArea>
+	<country:hasPopulation>1131612</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Suriname">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Suriname</rdfs:label>
+	<country:hasArea>163820</country:hasArea>
+	<country:hasPopulation>481261</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/BruneiDarussalam">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Brunei Darussalam</rdfs:label>
+	<country:hasArea>5765</country:hasArea>
+	<country:hasPopulation>388190</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Mauritania">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Mauritania</rdfs:label>
+	<country:hasArea>1035000</country:hasArea>
+	<country:hasPopulation>3129486</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/CocosIslands">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">CocosIslands</rdfs:label>
+	<country:hasArea>14</country:hasArea>
+	<country:hasPopulation>596</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/HeardAndMcDonaldIslands">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Heard and McDonald Islands</rdfs:label>
+	<country:hasArea>not available</country:hasArea>
+	<country:hasPopulation>not available</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Morocco">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Morocco</rdfs:label>
+	<country:hasArea>6600000</country:hasArea>
+	<country:hasPopulation>31285174</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Paraguay">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Paraguay</rdfs:label>
+	<country:hasArea>406752</country:hasArea>
+	<country:hasPopulation>6995655</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Afghanistan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Afghanistan</rdfs:label>
+	<country:hasArea>645807</country:hasArea>
+	<country:hasPopulation>28395716</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Turkmenistan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Turkmenistan</rdfs:label>
+	<country:hasArea>488100</country:hasArea>
+	<country:hasPopulation>4884887</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Serbia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Serbia</rdfs:label>
+	<country:hasArea>77474</country:hasArea>
+	<country:hasPopulation>7379339</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/UnitedArabEmirates">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">United Arab Emirates</rdfs:label>
+	<country:hasArea>77700</country:hasArea>
+	<country:hasPopulation>4798491</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Guinea">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Guinea</rdfs:label>
+	<country:hasArea>245857</country:hasArea>
+	<country:hasPopulation>10057975</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Gibraltar">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Gibraltar</rdfs:label>
+	<country:hasArea>7</country:hasArea>
+	<country:hasPopulation>28796</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/SaintHelena">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Saint Helena</rdfs:label>
+	<country:hasArea>410</country:hasArea>
+	<country:hasPopulation>7637</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Bahrain">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Bahrain</rdfs:label>
+	<country:hasArea>694</country:hasArea>
+	<country:hasPopulation>728709</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Sweden">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Sweden</rdfs:label>
+	<country:hasArea>449965</country:hasArea>
+	<country:hasPopulation>9059651</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/CostaRica">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Costa Rica</rdfs:label>
+	<country:hasArea>51090</country:hasArea>
+	<country:hasPopulation>4253877</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Guam">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Guam</rdfs:label>
+	<country:hasArea>545</country:hasArea>
+	<country:hasPopulation>178430</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Greenland">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Greenland</rdfs:label>
+	<country:hasArea>2175600</country:hasArea>
+	<country:hasPopulation>57600</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/S.GeorgeAndS.Sandwich">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">S.George &amp; S.Sandwich</rdfs:label>
+	<country:hasArea>3903</country:hasArea>
+	<country:hasPopulation>not available</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Taiwan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Taiwan</rdfs:label>
+	<country:hasArea>36175</country:hasArea>
+	<country:hasPopulation>22974347</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/BritishVirginIslands">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">British Virgin Islands</rdfs:label>
+	<country:hasArea>151</country:hasArea>
+	<country:hasPopulation>24491</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/BritishIndianOceanTerritory">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">British Indian Ocean Territory</rdfs:label>
+	<country:hasArea>not available</country:hasArea>
+	<country:hasPopulation>not available</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Thailand">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Thailand</rdfs:label>
+	<country:hasArea>513115</country:hasArea>
+	<country:hasPopulation>65998436</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Belarus">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Belarus</rdfs:label>
+	<country:hasArea>207600</country:hasArea>
+	<country:hasPopulation>9648533</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/TurksAndCaicosIslands">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Turks and Caicos Islands</rdfs:label>
+	<country:hasArea>497</country:hasArea>
+	<country:hasPopulation>22942</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Yemen">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Yemen</rdfs:label>
+	<country:hasArea>528076</country:hasArea>
+	<country:hasPopulation>22858238</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Belize">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Belize</rdfs:label>
+	<country:hasArea>22966</country:hasArea>
+	<country:hasPopulation>307899</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Bahamas">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">The Bahamas</rdfs:label>
+	<country:hasArea>13962</country:hasArea>
+	<country:hasPopulation>307552</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Croatia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Croatia</rdfs:label>
+	<country:hasArea>56542</country:hasArea>
+	<country:hasPopulation>4489409</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Kyrgyzstan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Kyrgyzstan</rdfs:label>
+	<country:hasArea>199900</country:hasArea>
+	<country:hasPopulation>5431747</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Nigeria">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Nigeria</rdfs:label>
+	<country:hasArea>923768</country:hasArea>
+	<country:hasPopulation>149229090</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Zambia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Zambia</rdfs:label>
+	<country:hasArea>752614</country:hasArea>
+	<country:hasPopulation>11862740</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Germany">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Germany</rdfs:label>
+	<country:hasArea>357021</country:hasArea>
+	<country:hasPopulation>82329758</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/CookIslands">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Cook Islands</rdfs:label>
+	<country:hasArea>237</country:hasArea>
+	<country:hasPopulation>11870</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/USMinorOutlyingIslands">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">US Minor Outlying Islands</rdfs:label>
+	<country:hasArea>not available</country:hasArea>
+	<country:hasPopulation>not available</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Andorra">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Andorra</rdfs:label>
+	<country:hasArea>464</country:hasArea>
+	<country:hasPopulation>83888</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/IvoryCoast">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Ivory Coast</rdfs:label>
+	<country:hasArea>322461</country:hasArea>
+	<country:hasPopulation>20617068</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Cambodia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Cambodia</rdfs:label>
+	<country:hasArea>181035</country:hasArea>
+	<country:hasPopulation>14494293</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Pakistan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Pakistan</rdfs:label>
+	<country:hasArea>880254</country:hasArea>
+	<country:hasPopulation>174578558</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Guyana">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Guyana</rdfs:label>
+	<country:hasArea>215083</country:hasArea>
+	<country:hasPopulation>752940</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Haiti">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Haiti</rdfs:label>
+	<country:hasArea>27748</country:hasArea>
+	<country:hasPopulation>9035536</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/SvalbardAndJanMayenIs.">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Svalbard and Jan Mayen Is.</rdfs:label>
+	<country:hasArea>61606</country:hasArea>
+	<country:hasPopulation>2198</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/France">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">France</rdfs:label>
+	<country:hasArea>547030</country:hasArea>
+	<country:hasPopulation>62150775</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Kosovo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Kosovo</rdfs:label>
+	<country:hasArea>10908</country:hasArea>
+	<country:hasPopulation>1804838</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Cyprus">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Cyprus</rdfs:label>
+	<country:hasArea>9251</country:hasArea>
+	<country:hasPopulation>1084748</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Tuvalu">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Tuvalu</rdfs:label>
+	<country:hasArea>26</country:hasArea>
+	<country:hasPopulation>12373</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/DominicanRepublic">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Dominican Republic</rdfs:label>
+	<country:hasArea>48734</country:hasArea>
+	<country:hasPopulation>9650054</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Burundi">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Burundi</rdfs:label>
+	<country:hasArea>27834</country:hasArea>
+	<country:hasPopulation>9511330</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Estonia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Estonia</rdfs:label>
+	<country:hasArea>45226</country:hasArea>
+	<country:hasPopulation>1299371</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Lithuania">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Lithuania</rdfs:label>
+	<country:hasArea>65300</country:hasArea>
+	<country:hasPopulation>3555179</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Austria">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Austria</rdfs:label>
+	<country:hasArea>83858</country:hasArea>
+	<country:hasPopulation>8210281</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/ChristmasIsland">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Christmas Island</rdfs:label>
+	<country:hasArea>135</country:hasArea>
+	<country:hasPopulation>1402</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/PalestinianTerritory">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Palestinian Territory</rdfs:label>
+	<country:hasArea>6242</country:hasArea>
+	<country:hasPopulation>2461267</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/CzechRepublic">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Czech Republic</rdfs:label>
+	<country:hasArea>78866</country:hasArea>
+	<country:hasPopulation>10211904</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Ukraine">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Ukraine</rdfs:label>
+	<country:hasArea>603628</country:hasArea>
+	<country:hasPopulation>45700395</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Australia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Australia</rdfs:label>
+	<country:hasArea>7682557</country:hasArea>
+	<country:hasPopulation>21262641</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Albania">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Albania</rdfs:label>
+	<country:hasArea>28748</country:hasArea>
+	<country:hasPopulation>3639453</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Antarctica">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Antarctica</rdfs:label>
+	<country:hasArea>13209000</country:hasArea>
+	<country:hasPopulation>1169</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Reunion">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Reunion</rdfs:label>
+	<country:hasArea>2547</country:hasArea>
+	<country:hasPopulation>812813</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Nepal">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Nepal</rdfs:label>
+	<country:hasArea>147181</country:hasArea>
+	<country:hasPopulation>28563377</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/SouthAfrica">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">South Africa</rdfs:label>
+	<country:hasArea>1219090</country:hasArea>
+	<country:hasPopulation>49052489</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Turkey">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Turkey</rdfs:label>
+	<country:hasArea>773473</country:hasArea>
+	<country:hasPopulation>76805524</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/IslamicRepublicOfIran">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Islamic Republic of Iran</rdfs:label>
+	<country:hasArea>1648195</country:hasArea>
+	<country:hasPopulation>66429284</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Tokelau">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Tokelau</rdfs:label>
+	<country:hasArea>10</country:hasArea>
+	<country:hasPopulation>1371</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Romania">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Romania</rdfs:label>
+	<country:hasArea>238391</country:hasArea>
+	<country:hasPopulation>22215421</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Azerbaijan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Azerbaijan</rdfs:label>
+	<country:hasArea>86530</country:hasArea>
+	<country:hasPopulation>8238672</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Latvia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Latvia</rdfs:label>
+	<country:hasArea>64598</country:hasArea>
+	<country:hasPopulation>2231503</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Monaco">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Monaco</rdfs:label>
+	<country:hasArea>2</country:hasArea>
+	<country:hasPopulation>32965</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Ghana">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Ghana</rdfs:label>
+	<country:hasArea>238538</country:hasArea>
+	<country:hasPopulation>23887812</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Uzbekistan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Uzbekistan</rdfs:label>
+	<country:hasArea>447400</country:hasArea>
+	<country:hasPopulation>27606007</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Swaziland">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Swaziland</rdfs:label>
+	<country:hasArea>17363</country:hasArea>
+	<country:hasPopulation>1337186</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Israel">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Israel</rdfs:label>
+	<country:hasArea>20991</country:hasArea>
+	<country:hasPopulation>7233701</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Congo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Congo</rdfs:label>
+	<country:hasArea>342000</country:hasArea>
+	<country:hasPopulation>4012809</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Bhutan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Bhutan</rdfs:label>
+	<country:hasArea>46650</country:hasArea>
+	<country:hasPopulation>691141</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Guinea-Bissau">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Guinea-Bissau</rdfs:label>
+	<country:hasArea>36123</country:hasArea>
+	<country:hasPopulation>1533964</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Seychelles">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Seychelles</rdfs:label>
+	<country:hasArea>455</country:hasArea>
+	<country:hasPopulation>87476</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/USVirginIslands">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">U.S. Virgin Islands</rdfs:label>
+	<country:hasArea>352</country:hasArea>
+	<country:hasPopulation>109825</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/MarshallIslands">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Marshall Islands</rdfs:label>
+	<country:hasArea>181</country:hasArea>
+	<country:hasPopulation>64522</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/PitcairnIsland">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Pitcairn Island</rdfs:label>
+	<country:hasArea>not available</country:hasArea>
+	<country:hasPopulation>48</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Samoa">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Samoa</rdfs:label>
+	<country:hasArea>2785</country:hasArea>
+	<country:hasPopulation>219998</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/NetherlandsAntilles">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Netherlands Antilles</rdfs:label>
+	<country:hasArea>800</country:hasArea>
+	<country:hasPopulation>227049</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Tibet">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tibet</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Guatemala">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Guatemala</rdfs:label>
+	<country:hasArea>108894</country:hasArea>
+	<country:hasPopulation>13276517</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/SaudiArabia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Saudi Arabia</rdfs:label>
+	<country:hasArea>2149690</country:hasArea>
+	<country:hasPopulation>28686633</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Rwanda">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Rwanda</rdfs:label>
+	<country:hasArea>26338</country:hasArea>
+	<country:hasPopulation>10746311</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Myanmar">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Myanmar</rdfs:label>
+	<country:hasArea>676577</country:hasArea>
+	<country:hasPopulation>48137741</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/SVincentAndGrenadines">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">S Vincent and Grenadines</rdfs:label>
+	<country:hasArea>392</country:hasArea>
+	<country:hasPopulation>104574</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/SaintBarthelemy">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Saint Barthelemy</rdfs:label>
+	<country:hasArea>21</country:hasArea>
+	<country:hasPopulation>7448</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Macao">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Macao</rdfs:label>
+	<country:hasArea>25</country:hasArea>
+	<country:hasPopulation>559846</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Sudan">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Sudan</rdfs:label>
+	<country:hasArea>2505810</country:hasArea>
+	<country:hasPopulation>41087825</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/SaintMartin">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Saint Martin</rdfs:label>
+	<country:hasArea>37</country:hasArea>
+	<country:hasPopulation>29820</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Martinique">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Martinique</rdfs:label>
+	<country:hasArea>1128</country:hasArea>
+	<country:hasPopulation>403857</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Mongolia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Mongolia</rdfs:label>
+	<country:hasArea>1564160</country:hasArea>
+	<country:hasPopulation>3041142</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/HongKong">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Hong Kong</rdfs:label>
+	<country:hasArea>1085</country:hasArea>
+	<country:hasPopulation>7055071</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Kenya">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Kenya</rdfs:label>
+	<country:hasArea>581787</country:hasArea>
+	<country:hasPopulation>39002772</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/BouvetIsland">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Bouvet Island</rdfs:label>
+	<country:hasArea>49</country:hasArea>
+	<country:hasPopulation>0</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Singapore">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Singapore</rdfs:label>
+	<country:hasArea>683</country:hasArea>
+	<country:hasPopulation>4657542</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/AntiguaAndBarbuda">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Antigua &amp; Barbuda</rdfs:label>
+	<country:hasArea>442</country:hasArea>
+	<country:hasPopulation>85632</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Panama">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Panama</rdfs:label>
+	<country:hasArea>77082</country:hasArea>
+	<country:hasPopulation>3360474</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/TrinidadAndTobago">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Trinidad &amp; Tobago</rdfs:label>
+	<country:hasArea>5128</country:hasArea>
+	<country:hasPopulation>1229953</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Somalia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Somalia</rdfs:label>
+	<country:hasArea>637657</country:hasArea>
+	<country:hasPopulation>9832017</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Niue">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Niue</rdfs:label>
+	<country:hasArea>259</country:hasArea>
+	<country:hasPopulation>1598</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Tunisia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Tunisia</rdfs:label>
+	<country:hasArea>163610</country:hasArea>
+	<country:hasPopulation>10486339</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Nicaragua">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Nicaragua</rdfs:label>
+	<country:hasArea>129454</country:hasArea>
+	<country:hasPopulation>5891199</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/PapuaNewGuinea">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Papua New Guinea</rdfs:label>
+	<country:hasArea>462840</country:hasArea>
+	<country:hasPopulation>5940775</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Armenia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Armenia</rdfs:label>
+	<country:hasArea>29743</country:hasArea>
+	<country:hasPopulation>2967004</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Argentina">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Argentina</rdfs:label>
+	<country:hasArea>2777409</country:hasArea>
+	<country:hasPopulation>40913584</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Portugal">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Portugal</rdfs:label>
+	<country:hasArea>92391</country:hasArea>
+	<country:hasPopulation>10707924</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Grenada">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Grenada</rdfs:label>
+	<country:hasArea>345</country:hasArea>
+	<country:hasPopulation>90739</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/China">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">China</rdfs:label>
+	<country:hasArea>9806391</country:hasArea>
+	<country:hasPopulation>1338612968</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/VietNam">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Viet Nam</rdfs:label>
+	<country:hasArea>332378</country:hasArea>
+	<country:hasPopulation>88576758</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/UnitedStates">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">United States</rdfs:label>
+	<country:hasArea>9629047</country:hasArea>
+	<country:hasPopulation>307212123</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Cuba">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Cuba</rdfs:label>
+	<country:hasArea>114525</country:hasArea>
+	<country:hasPopulation>11451652</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Comoros">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Comoros</rdfs:label>
+	<country:hasArea>1862</country:hasArea>
+	<country:hasPopulation>752438</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Vatican">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Vatican</rdfs:label>
+	<country:hasArea>1</country:hasArea>
+	<country:hasPopulation>545</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Palau">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Palau</rdfs:label>
+	<country:hasArea>491</country:hasArea>
+	<country:hasPopulation>20796</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Greece">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Greece</rdfs:label>
+	<country:hasArea>131957</country:hasArea>
+	<country:hasPopulation>10737428</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Uruguay">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Uruguay</rdfs:label>
+	<country:hasArea>175016</country:hasArea>
+	<country:hasPopulation>3494382</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Ireland">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Ireland</rdfs:label>
+	<country:hasArea>70273</country:hasArea>
+	<country:hasPopulation>4203200</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Togo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Togo</rdfs:label>
+	<country:hasArea>56785</country:hasArea>
+	<country:hasPopulation>6031808</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Netherlands">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Netherlands</rdfs:label>
+	<country:hasArea>41526</country:hasArea>
+	<country:hasPopulation>16715999</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Russia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Russia</rdfs:label>
+	<country:hasArea>16894741</country:hasArea>
+	<country:hasPopulation>140041247</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/SPierreAndMiquelon">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">S Pierre and Miquelon</rdfs:label>
+	<country:hasArea>242</country:hasArea>
+	<country:hasPopulation>7063</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/LibyanArabJamahiriya">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Libyan Arab Jamahiriya</rdfs:label>
+	<country:hasArea>1777060</country:hasArea>
+	<country:hasPopulation>6324357</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Malawi">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Malawi</rdfs:label>
+	<country:hasArea>118480</country:hasArea>
+	<country:hasPopulation>15028757</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/WallisAndFutuna">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Wallis and Futuna</rdfs:label>
+	<country:hasArea>274</country:hasArea>
+	<country:hasPopulation>15289</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/SanMarino">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">San Marino</rdfs:label>
+	<country:hasArea>61</country:hasArea>
+	<country:hasPopulation>30164</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/NewCaledonia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">New Caledonia</rdfs:label>
+	<country:hasArea>18736</country:hasArea>
+	<country:hasPopulation>227436</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Benin">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Benin</rdfs:label>
+	<country:hasArea>112622</country:hasArea>
+	<country:hasPopulation>8791832</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Mauritius">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Mauritius</rdfs:label>
+	<country:hasArea>2040</country:hasArea>
+	<country:hasPopulation>1284264</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Peru">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Peru</rdfs:label>
+	<country:hasArea>1285216</country:hasArea>
+	<country:hasPopulation>29546963</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/EquatorialGuinea">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Equatorial Guinea</rdfs:label>
+	<country:hasArea>28051</country:hasArea>
+	<country:hasPopulation>633441</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/CoteDIvoire">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Cote D'Ivoire</rdfs:label>
+	<country:hasArea>322461</country:hasArea>
+	<country:hasPopulation>20617068</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/DemocraticRepublicOfTheCongo">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Democratic Republic of the Congo</rdfs:label>
+	<country:hasArea>2344798</country:hasArea>
+	<country:hasPopulation>68692542</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/CapeVerde">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Cape Verde</rdfs:label>
+	<country:hasArea>4033</country:hasArea>
+	<country:hasPopulation>429474</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Malta">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Malta</rdfs:label>
+	<country:hasArea>315</country:hasArea>
+	<country:hasPopulation>405165</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/LaoPeoplesDemocraticRepublic">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Lao People's Democratic Republic</rdfs:label>
+	<country:hasArea>236800</country:hasArea>
+	<country:hasPopulation>6834345</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Colombia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Colombia</rdfs:label>
+	<country:hasArea>1141748</country:hasArea>
+	<country:hasPopulation>43677372</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Jamaica">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Jamaica</rdfs:label>
+	<country:hasArea>10991</country:hasArea>
+	<country:hasPopulation>2825928</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Slovakia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Slovakia</rdfs:label>
+	<country:hasArea>49034</country:hasArea>
+	<country:hasPopulation>5463046</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Algeria">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Algeria</rdfs:label>
+	<country:hasArea>2381741</country:hasArea>
+	<country:hasPopulation>34178188</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/BurkinaFaso">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Burkina Faso</rdfs:label>
+	<country:hasArea>267950</country:hasArea>
+	<country:hasPopulation>15746232</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Egypt">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Egypt</rdfs:label>
+	<country:hasArea>1001450</country:hasArea>
+	<country:hasPopulation>78866635</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Switzerland">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Switzerland</rdfs:label>
+	<country:hasArea>41285</country:hasArea>
+	<country:hasPopulation>41285</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Niger">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Niger</rdfs:label>
+	<country:hasArea>1186408</country:hasArea>
+	<country:hasPopulation>15306252</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/FrenchGuiana">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">French Guiana</rdfs:label>
+	<country:hasArea>83534</country:hasArea>
+	<country:hasPopulation>228604</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Botswana">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Botswana</rdfs:label>
+	<country:hasArea>581730</country:hasArea>
+	<country:hasPopulation>1990876</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Mayotte">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Mayotte</rdfs:label>
+	<country:hasArea>373</country:hasArea>
+	<country:hasPopulation>223765</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Anguilla">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Anguilla</rdfs:label>
+	<country:hasArea>96</country:hasArea>
+	<country:hasPopulation>14436</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/SriLanka">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Sri Lanka</rdfs:label>
+	<country:hasArea>65610</country:hasArea>
+	<country:hasPopulation>21324791</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/SolomonIslands">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Solomon Islands</rdfs:label>
+	<country:hasArea>28400</country:hasArea>
+	<country:hasPopulation>595613</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Angola">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Angola</rdfs:label>
+	<country:hasArea>1246700</country:hasArea>
+	<country:hasPopulation>12799293</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Vanuatu">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Vanuatu</rdfs:label>
+	<country:hasArea>12190</country:hasArea>
+	<country:hasPopulation>218519</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/Montserrat">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Montserrat</rdfs:label>
+	<country:hasArea>102</country:hasArea>
+	<country:hasPopulation>5097</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/FederatedStatesOfMicronesia">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:label xml:lang="en">Federated states of Micronesia</rdfs:label>
+	<country:hasArea>721</country:hasArea>
+	<country:hasPopulation>107434</country:hasPopulation>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.wurvoc.org/vocabularies/countries/hasCountryCode">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:domain rdf:resource="http://www.wurvoc.org/vocabularies/countries/Country"/>
+	<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+	<rdfs:comment xml:lang="nl">Dit attribuut geeft de internationale landcode weer van een land.</rdfs:comment>
+	<rdfs:comment xml:lang="en">This property represents the internationally acknowledged country code of a country.</rdfs:comment>
+	<rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has country code</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+	<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+	<rdfs:comment xml:lang="nl">De informatie in deze ontologie is afkomstig van http://www.internetworldstats.com/list2.htm</rdfs:comment>
+	<rdfs:comment xml:lang="en">The information in this ontology originates from http://www.internetworldstats.com/list2.htm</rdfs:comment>
+</rdf:Description>
+
+</rdf:RDF>

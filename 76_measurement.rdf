@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:measurement="http://www.telegraphis.net/ontology/measurement/measurement#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:scv="http://purl.org/NET/scovo#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Ontology rdf:about="http://www.telegraphis.net/ontology/measurement/measurement#">
+    <dc:creator rdf:resource="http://www.pipian.com/people/pipian/card#me"/>
+    <dc:description xml:lang="en">The Measurement Ontology is an ontology in which measurements may be rendered.</dc:description>
+    <dc:title>Measurement Ontology</dc:title>
+  </owl:Ontology>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+  <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+  <owl:Class rdf:about="http://www.telegraphis.net/ontology/measurement/measurement#Measurement">
+    <rdfs:description xml:lang="en">A measurement is a statistic that measures a quantity that may or may not have units.</rdfs:description>
+    <rdfs:label xml:lang="en">Measurement</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/scovo#Item"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#quantityMeasured"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.telegraphis.net/ontology/measurement/measurement#Quantity">
+    <rdfs:description xml:lang="en">A quantity is a quantifiable quality of an object.</rdfs:description>
+    <rdfs:label xml:lang="en">Quantity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/scovo#Dimension"/>
+    <owl:disjointWith rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#Unit"/>
+    <owl:disjointWith rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#UnitClass"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.telegraphis.net/ontology/measurement/measurement#Unit">
+    <rdfs:description xml:lang="en">A unit is a particular quantity against which another quantity may be compared.  Hence, a unit is dimensionful and provides a ratio by which a quantity may be measured.</rdfs:description>
+    <rdfs:label xml:lang="en">Unit</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://purl.org/NET/scovo#Dimension"/>
+    <owl:disjointWith rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#Quantity"/>
+    <owl:disjointWith rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#UnitClass"/>
+  </owl:Class>
+  <owl:Restriction rdf:about="http://www.telegraphis.net/ontology/measurement/measurement#UnitClass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:description xml:lang="en">A unit class is a subset of units, with no particular restriction on its contents (i.e. it may be a set of units measuring orthogonal quantities, making a UnitSystem, or a set of units measuring the same quantity).</rdfs:description>
+    <rdfs:label xml:lang="en">Unit Class</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:disjointWith rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#Quantity"/>
+    <owl:disjointWith rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#Unit"/>
+    <owl:hasValue rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#Unit"/>
+    <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+  </owl:Restriction>
+  <owl:Class rdf:about="http://www.telegraphis.net/ontology/measurement/measurement#UnitSystem">
+    <rdfs:description xml:lang="en">A unit system is a class of units for which no two elements in the class measure the same dimension (i.e. all dimensions are orthogonal to each other, or measure dimensions derived from a set of orthogonal dimensions with units derived from the units that measure those orthogonal dimensions specified in the system.</rdfs:description>
+    <rdfs:label xml:lang="en">Unit System</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#UnitClass"/>
+  </owl:Class>
+  <owl:FunctionalProperty rdf:about="http://www.telegraphis.net/ontology/measurement/measurement#equivalentUnitClass">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:description xml:lang="en">An equivalent unit class of a quantity is the unit class corresponding to units that measure the quantity.</rdfs:description>
+    <rdfs:domain rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#Quantity"/>
+    <rdfs:label xml:lang="en">equivalent unit class</rdfs:label>
+    <rdfs:range rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#UnitClass"/>
+    <owl:inverseOf rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#quantityMeasured"/>
+  </owl:FunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="http://www.telegraphis.net/ontology/measurement/measurement#equivalentQuantity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:description xml:lang="en">An equivalent quantity of a unit class is the quantity measured by all units in the unit class.</rdfs:description>
+    <rdfs:domain rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#UnitClass"/>
+    <rdfs:label xml:lang="en">equivalent quantity</rdfs:label>
+    <rdfs:range rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#Quantity"/>
+    <owl:inverseOf rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#unitClass"/>
+  </owl:InverseFunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://www.telegraphis.net/ontology/measurement/measurement#quantityMeasured">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:description xml:lang="en">The quantity measured for a measurement.</rdfs:description>
+    <rdfs:domain rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#Measurement"/>
+    <rdfs:label xml:lang="en">measured quantity</rdfs:label>
+    <rdfs:range rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#Quantity"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/NET/scovo#dimension"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://www.telegraphis.net/ontology/measurement/measurement#unit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:description xml:lang="en">The unit a measurement is made in.</rdfs:description>
+    <rdfs:domain rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#Measurement"/>
+    <rdfs:label xml:lang="en">unit</rdfs:label>
+    <rdfs:range rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#Unit"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/NET/scovo#dimension"/>
+  </owl:FunctionalProperty>
+  <measurement:Quantity rdf:about="http://www.telegraphis.net/ontology/measurement/measurement#Area">
+    <measurement:equivalentUnitClass rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#AreaUnit"/>
+    <rdfs:label xml:lang="en">Area</rdfs:label>
+  </measurement:Quantity>
+  <measurement:UnitClass rdf:about="http://www.telegraphis.net/ontology/measurement/measurement#AreaUnit">
+    <measurement:equivalentQuantity rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#Area"/>
+    <rdfs:label xml:lang="en">Area Unit</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#Unit"/>
+  </measurement:UnitClass>
+  <measurement:AreaUnit rdf:about="http://www.telegraphis.net/ontology/measurement/measurement#Km2">
+    <rdfs:label xml:lang="en">square kilometers</rdfs:label>
+  </measurement:AreaUnit>
+  <owl:Class rdf:about="http://www.telegraphis.net/ontology/measurement/measurement#AreaMeasurement">
+    <rdfs:label xml:lang="en">Area Measurement</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#Measurement"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#Area"/>
+        <owl:onProperty rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#measuredQuantity"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <measurement:AreaUnit/>
+        </owl:hasValue>
+        <owl:onProperty rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#unit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.telegraphis.net/ontology/measurement/measurement#area">
+    <rdfs:label xml:lang="en">area</rdfs:label>
+    <rdfs:range rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#AreaMeasurement"/>
+  </owl:ObjectProperty>
+  <owl:Restriction>
+    <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    <owl:onProperty rdf:resource="http://www.telegraphis.net/ontology/measurement/measurement#units"/>
+  </owl:Restriction>
+</rdf:RDF>

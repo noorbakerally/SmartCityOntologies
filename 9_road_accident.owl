@@ -1,0 +1,999 @@
+# this content loads fine in webprotege and protege, giving this layout
+
+
+
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: : <http://www.w3.org/ontologies/2012/6/ra.owl#>
+Prefix: ra: <ra:http://www.w3.org/2012/7/ra3.owl#>
+
+Ontology: <http://www.w3.org/2012/7/ra3.owl>
+
+
+AnnotationProperty: rdfs:comment
+
+    
+Datatype: xsd:positiveInteger
+
+    
+Datatype: xsd:anyURI
+
+    
+Datatype: xsd:date
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:boolean
+
+    
+Datatype: xsd:string
+
+    
+Datatype: xsd:integer
+
+    
+ObjectProperty: ra:drives
+
+    SubPropertyOf: 
+        ra:isIn
+    
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        ra:Vehicle
+    
+    
+ObjectProperty: isPassengerOf
+
+    SubPropertyOf: 
+        ra:isIn
+    
+    Range: 
+        ra:Vehicle
+    
+    
+ObjectProperty: ra:involves
+
+    Annotations: 
+        rdfs:comment "involves Person, Vehicle, Animal, NonLivingThing like a stone on the road, another RoadAccident, etc"
+    
+    Domain: 
+        ra:RoadAccident
+    
+    Range: 
+        owl:Thing
+    
+    
+ObjectProperty: ra:carries
+
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        owl:Thing
+    
+    
+ObjectProperty: ra:insures
+
+    Domain: 
+        ra:InsuranceCompany
+    
+    Range: 
+        owl:Thing
+    
+    InverseOf: 
+        ra:insuredBy
+    
+    
+ObjectProperty: ra:isIn
+
+    Annotations: 
+        rdfs:comment "anything can be in anything"@en
+    
+    EquivalentTo: 
+        ra:isOn
+    
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        owl:Thing
+    
+    
+ObjectProperty: ra:location
+
+    Domain: 
+        ra:Event
+    
+    Range: 
+        ra:Location
+    
+    
+ObjectProperty: ra:isOn
+
+    EquivalentTo: 
+        ra:isIn
+    
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        owl:Thing
+    
+    
+ObjectProperty: ra:drivenBy
+
+    Domain: 
+        ra:Vehicle
+    
+    
+ObjectProperty: ra:isOwnedBy
+
+    Annotations: 
+        rdfs:comment "a person cannot be owned"
+    
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        ra:Person
+    
+    
+ObjectProperty: ra:deliveredBy
+
+    Domain: 
+        ra:OfficialID
+    
+    Range: 
+        ra:Organization
+    
+    
+ObjectProperty: ra:insuredBy
+
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        ra:InsuranceCompany
+    
+    InverseOf: 
+        ra:insures
+    
+    
+ObjectProperty: ra:isPartOf
+
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        owl:Thing
+    
+    
+ObjectProperty: ra:includes
+
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        owl:Thing
+    
+    
+ObjectProperty: ra:delivers
+
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        owl:Thing
+    
+    
+ObjectProperty: ra:owns
+
+    Annotations: 
+        rdfs:comment "only Person and org owns things, several possible"
+    
+    Domain: 
+        ra:Person
+    
+    Range: 
+        owl:Thing
+    
+    
+ObjectProperty: ra:involvedIn
+
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        ra:RoadAccident
+    
+    
+DataProperty: ra:insuranceType
+
+    Annotations: 
+        rdfs:comment "name of coverage package in the given insurance"
+    
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: ra:ageInyears
+
+    Annotations: 
+        rdfs:comment "age at event time"
+    
+    Range: 
+        xsd:positiveInteger
+    
+    
+DataProperty: ra:lastName
+
+    Domain: 
+        ra:LivingBeing
+    
+    Range: 
+        xsd:string
+    
+    EquivalentTo: 
+        ra:Name
+    
+    
+DataProperty: ra:vehicleCategory
+
+    Domain: 
+        ra:Vehicle
+    
+    Range: 
+        {"bicycle" , "bus" , "car" , "motocycle" , "truck"}
+    
+    
+DataProperty: ra:driverLicenceCategory
+
+    Domain: 
+        ra:DriverLicence
+    
+    Range: 
+        {"lightvehicle" , "motorcycle" , "truck"}
+    
+    
+DataProperty: ra:positionInVehicle
+
+    Range: 
+        {"backseat" , "front passenger" , "truck platform"}
+    
+    
+DataProperty: ra:accidentDetails
+
+    Domain: 
+        ra:RoadAccident
+    
+    Range: 
+        xsd:anyURI
+    
+    
+DataProperty: ra:vehicleColor
+
+    Domain: 
+        ra:Vehicle
+    
+    Range: 
+        {"darkgrey" , "green" , "lightgrey"}
+    
+    
+DataProperty: ra:orgAddress
+
+    Domain: 
+        ra:Organization
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: ra:vehicleProblem
+
+    Domain: 
+        ra:Vehicle
+    
+    Range: 
+        {"brake" , "deadengine" , "flattire"}
+    
+    
+DataProperty: ra:relatedDamage
+
+    Annotations: 
+        rdfs:comment "apply to non living thing, cars, robot, same as injury for person/animal"
+    
+    Domain: 
+        ra:NonLivingThing
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: ra:parked
+
+    Domain: 
+        ra:Vehicle
+    
+    Range: 
+        xsd:boolean
+    
+    
+DataProperty: ra:birthDate
+
+    Domain: 
+        ra:LivingBeing
+    
+    EquivalentTo: 
+        ra:makeDate
+    
+    
+DataProperty: ra:animalRace
+
+    Annotations: 
+        rdfs:comment "Person are not Animal in my universe"
+    
+    Range: 
+        {"boar" , "cat" , "deer" , "dog" , "donkey" , "horse"}
+    
+    
+DataProperty: ra:relatedInjuryDesc
+
+    Annotations: 
+        rdfs:comment "sms size description of injury"
+    
+    Domain: 
+        ra:LivingBeing
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: ra:insuranceID
+
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: ra:Name
+
+    Annotations: 
+        rdfs:comment "same as lastName if not present"
+    
+    Domain: 
+        ra:LivingBeing
+    
+    Range: 
+        xsd:string
+    
+    EquivalentTo: 
+        ra:lastName
+    
+    
+DataProperty: ra:isWitness
+
+    Annotations: 
+        rdfs:comment "robot and animal cannot be witness or declares something in my universe"
+    
+    Domain: 
+        ra:Person
+    
+    Range: 
+        xsd:boolean
+    
+    
+DataProperty: ra:speedUnit
+
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        {"kmh" , "mph"}
+    
+    
+DataProperty: ra:vehicleBrand
+
+    Domain: 
+        ra:Vehicle
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: ra:email
+
+    Domain: 
+        ra:LivingBeing
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: ra:orgShortName
+
+    Domain: 
+        ra:Organization
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: ra:trafficViolation
+
+    Annotations: 
+        rdfs:comment "robot, animal, pedestrian included"
+    
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        {"crossingfordidden" , "priority" , "redlight" , "speed" , "stop"}
+    
+    
+DataProperty: ra:driverLicenceNumber
+
+    Domain: 
+        ra:DriverLicence
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: ra:gps
+
+    Annotations: 
+        rdfs:comment "e.g. lat:45.0 long:-6.5"
+    
+    Domain: 
+        ra:Location
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: ra:weatherCondition
+
+    Domain: 
+        ra:RoadAccident
+    
+    Range: 
+        {"earthquake" , "flood" , "ice" , "mud" , "normal" , "rain" , "smoke" , "snow" , "wind"}
+    
+    
+DataProperty: ra:isRemote
+
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        xsd:boolean
+    
+    
+DataProperty: ra:passengerProtection
+
+    Annotations: 
+        rdfs:comment "use None to say that the passenger didn't have one"
+    
+    Range: 
+        {"airbag" , "arceau" , "helmet" , "seatbelt"}
+    
+    
+DataProperty: ra:deliveredDate
+
+    Domain: 
+        ra:OfficialID
+    
+    Range: 
+        xsd:date
+    
+    
+DataProperty: ra:vehicleID
+
+    Domain: 
+        ra:Vehicle
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: ra:makeDate
+
+    Annotations: 
+        rdfs:comment "creation or delivered date"
+    
+    Domain: 
+        ra:NonLivingThing
+    
+    Range: 
+        xsd:date
+    
+    EquivalentTo: 
+        ra:birthDate
+    
+    
+DataProperty: ra:speed
+
+    Annotations: 
+        rdfs:comment "speed in speedunit, default kmh"@en
+    
+    Domain: 
+        owl:Thing
+    
+    Range: 
+        xsd:integer
+    
+    
+DataProperty: ra:isSerious
+
+    Domain: 
+        ra:RoadAccident
+    
+    Range: 
+        xsd:boolean
+    
+    
+DataProperty: ra:relatedInjury
+
+    Annotations: 
+        rdfs:comment "use some kind of existing classification"
+    
+    Domain: 
+        ra:LivingBeing
+    
+    Range: 
+        {"fatal" , "light" , "none" , "severe"}
+    
+    
+DataProperty: ra:declares
+
+    Domain: 
+        ra:Person
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: ra:driverProblem
+
+    Range: 
+        {"asleep" , "heartattack" , "lostcontrol" , "mistake" , "notlooking" , "onthephone"}
+    
+    
+DataProperty: ra:orgFullName
+
+    Domain: 
+        ra:Organization
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: ra:isOnRoadType
+
+    Annotations: 
+        rdfs:comment "roadType of Road the accident happens on"
+    
+    Domain: 
+        ra:RoadAccident
+    
+    Range: 
+        {"freeway" , "motorway" , "street"}
+    
+    
+DataProperty: ra:SSN
+
+    Annotations: 
+        rdfs:comment "every living being can have a social security number, a person HAS one"
+    
+    Domain: 
+        ra:LivingBeing
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: ra:address
+
+    Domain: 
+        ra:Location
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: ra:firstName
+
+    Domain: 
+        ra:LivingBeing
+    
+    Range: 
+        xsd:string
+    
+    
+DataProperty: ra:lightCondition
+
+    Domain: 
+        ra:RoadAccident
+    
+    Range: 
+        {"darkness" , "daylight" , "inbetween" , "unknown"}
+    
+    
+DataProperty: ra:date
+
+    Domain: 
+        ra:Event
+    
+    Range: 
+        xsd:date
+    
+    
+DataProperty: ra:validityDate
+
+    Domain: 
+        ra:OfficialID
+    
+    Range: 
+        xsd:date
+    
+    
+DataProperty: ra:isInService
+
+    Annotations: 
+        rdfs:comment "someone working at the time of the even. dog can work by themselves"
+    
+    Domain: 
+        ra:LivingBeing
+    
+    Range: 
+        xsd:boolean
+    
+    
+Class: owl:Thing
+
+    
+Class: ra:Infant
+
+    SubClassOf: 
+        ra:Child
+    
+    
+Class: ra:LivingBeing
+
+    DisjointWith: 
+        ra:NonLivingThing
+    
+    
+Class: ra:Teenager
+
+    SubClassOf: 
+        ra:Child
+    
+    
+Class: ra:Event
+
+    SubClassOf: 
+        ra:NonLivingThing
+    
+    
+Class: ra:Child
+
+    SubClassOf: 
+        ra:Person
+    
+    
+Class: ra:RoadAccident
+
+    SubClassOf: 
+        ra:Event
+    
+    
+Class: ra:DriverLicence
+
+    SubClassOf: 
+        ra:OfficialID
+    
+    HasKey: 
+        ra:driverLicenceNumber
+    
+    
+Class: ra:Location
+
+    SubClassOf: 
+        ra:NonLivingThing
+    
+    
+Class: ra:Senior
+
+    SubClassOf: 
+        ra:Adult
+    
+    
+Class: ra:InsuranceCert
+
+    SubClassOf: 
+        ra:OfficialID
+    
+    
+Class: ra:Woman
+
+    SubClassOf: 
+        ra:Person
+    
+    DisjointWith: 
+        ra:Man
+    
+    
+Class: ra:OfficialAgency
+
+    SubClassOf: 
+        ra:Organization
+    
+    
+Class: ra:Robot
+
+    SubClassOf: 
+        ra:NonLivingThing
+    
+    
+Class: ra:Organization
+
+    SubClassOf: 
+        ra:NonLivingThing
+    
+    
+Class: ra:Document
+
+    SubClassOf: 
+        ra:NonLivingThing
+    
+    
+Class: ra:Person
+
+    SubClassOf: 
+        ra:LivingBeing
+    
+    DisjointWith: 
+        ra:Animal
+    
+    
+Class: ra:InsuranceCompany
+
+    SubClassOf: 
+        ra:OfficialAgency
+    
+    HasKey: 
+        ra:orgShortName
+    
+    
+Class: ra:Man
+
+    SubClassOf: 
+        ra:Person
+    
+    DisjointWith: 
+        ra:Woman
+    
+    
+Class: ra:Animal
+
+    SubClassOf: 
+        ra:LivingBeing
+    
+    DisjointWith: 
+        ra:Person
+    
+    
+Class: ra:Vehicle
+
+    SubClassOf: 
+        ra:NonLivingThing
+    
+    HasKey: 
+        ra:vehicleID
+    
+    
+Class: ra:NonLivingThing
+
+    Annotations: 
+        rdfs:comment "Top class for non living thing like vehicle, robot, etc"
+    
+    DisjointWith: 
+        ra:LivingBeing
+    
+    
+Class: ra:OfficialID
+
+    SubClassOf: 
+        ra:Document
+    
+    
+Class: ra:Adult
+
+    SubClassOf: 
+        ra:Person
+    
+    
+Individual: TrashCan
+
+    Types: 
+        ra:NonLivingThing
+    
+    
+Individual: VETSUP
+
+    Types: 
+        ra:InsuranceCompany
+    
+    Facts:  
+     ra:insures  Nala
+    
+    
+Individual: Carpentras
+
+    Types: 
+        ra:Location
+    
+    
+Individual: Nala
+
+    Types: 
+        ra:Animal
+    
+    Facts:  
+     ra:involvedIn  RA170560,
+     ra:isOn  Alice,
+     ra:insuredBy  VETSUP,
+     ra:isOwnedBy  DanielD,
+     ra:passengerProtection  "none",
+     ra:relatedInjuryDesc  "broken nail and vomit on fur",
+     ra:insuranceID  "mieaou007",
+     ra:ageInyears  "17",
+     ra:relatedInjury  "light",
+     ra:positionInVehicle  "backseat",
+     ra:animalRace  "maine coon female cat",
+     ra:Name  "Nala"
+    
+    
+Individual: RA170560
+
+    Types: 
+        ra:RoadAccident
+    
+    Facts:  
+     ra:location  Carpentras,
+     ra:involves  Laurie,
+     ra:involves  Yaya,
+     ra:involves  GreenPunto,
+     ra:involves  Nala,
+     ra:involves  Alice,
+     ra:involves  DanielD,
+     ra:date  "17/05/1960",
+     ra:isOnRoadType  "motorway",
+     ra:address  "11 rue du temple",
+     ra:weatherCondition  "rain",
+     ra:gps  "lat 43 long 6",
+     ra:accidentDetails  "http://dardailler.net",
+     ra:lightCondition  "night",
+     ra:isSerious  "false"
+    
+    
+Individual: Yaya
+
+    Types: 
+        ra:Vehicle
+    
+    Facts:  
+     ra:insuredBy  MAIF,
+     ra:isOwnedBy  DanielD,
+     ra:parked  "yes",
+     ra:vehicleColor  "lightgrey",
+     ra:speed  "0",
+     ra:relatedDamage  "back door left side bumped",
+     ra:vehicleBrand  "Toyota",
+     ra:vehicleCategory  "car",
+     ra:vehicleID  "765 DD 12"
+    
+    
+Individual: GreenPunto
+
+    Types: 
+        ra:Vehicle
+    
+    Facts:  
+     ra:involvedIn  RA170560,
+     ra:insuredBy  MAIF,
+     ra:carries  Alice,
+     ra:carries  Laurie,
+     ra:isOwnedBy  DanielD,
+     ra:drivenBy  Laurie,
+     ra:speedUnit  "kmh",
+     ra:speed  "-20",
+     ra:vehicleColor  "green metal",
+     ra:isOnRoadType  "street one way",
+     ra:parked  "false",
+     ra:relatedDamage  "back paint gone on right side",
+     ra:vehicleBrand  "Fiat",
+     ra:vehicleProblem  "rear mirro broken",
+     ra:vehicleID  "876 GH 71",
+     ra:vehicleCategory  "car"
+    
+    
+Individual: DanielD
+
+    Types: 
+        ra:Man
+    
+    Facts:  
+     ra:insuredBy  MAIF,
+     ra:owns  Nala,
+     ra:owns  GreenPunto,
+     ra:owns  Yaya,
+     ra:insuranceID  "2326779P"@fr,
+     ra:email  "danield@w3.org"@fr,
+     ra:declares  "Laurie can't see a thing"@fr,
+     ra:isWitness  "true"@fr,
+     ra:insuranceType  "full full full"@en,
+     ra:firstName  "Daniel",
+     ra:SSN  "160031294"@fr,
+     ra:isRemote  "yes"@fr
+    
+    
+Individual: Alice
+
+    Types: 
+        ra:Teenager,
+        ra:Woman
+    
+    Facts:  
+     isPassengerOf  GreenPunto,
+     ra:involvedIn  RA170560,
+     ra:carries  Nala,
+     ra:relatedInjury  "none",
+     ra:isWitness  "yes",
+     ra:firstName  "Alice",
+     ra:positionInVehicle  "backseat",
+     ra:declares  "Laurie! stop !! Ya la voiture de Papa derriÃ¨re !"@fr,
+     ra:passengerProtection  "none"
+    
+    
+Individual: MAIF
+
+    Types: 
+        ra:InsuranceCompany
+    
+    Facts:  
+     ra:insures  Laurie,
+     ra:insures  DanielD,
+     ra:orgAddress  "Le Cannet"
+    
+    
+Individual: Laurie
+
+    Types: 
+        ra:Woman
+    
+    Facts:  
+     ra:insuredBy  MAIF,
+     ra:involvedIn  RA170560,
+     ra:drives  GreenPunto,
+     ra:declares  "the read mirror was broken !",
+     ra:insuranceID  "2326779P",
+     ra:trafficViolation  "wrongway",
+     ra:driverProblem  "not looking back",
+     ra:SSN  "28806031",
+     ra:passengerProtection  "seatbelt",
+     ra:firstName  "Laurie"
